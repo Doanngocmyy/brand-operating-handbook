@@ -1,0 +1,11 @@
+﻿Trạng thái,Shopify,Điều kiện vào
+CHỜ MUA,Unfulfilled,Đã qua 1.1 & 1.2
+ĐÃ MUA,Unfulfilled,Có 淘宝订单号
+SELLER ĐÃ GỬI,Unfulfilled,Có vận đơn nội địa
+TẠI KHO GOM,Unfulfilled,"Kho báo 入库, đủ kiện"
+ĐÃ XUẤT QT,Fulfilled + tracking,Có vận đơn quốc tế tra được
+THÔNG QUAN,Fulfilled,Tracking báo đến cảng/HQ
+ĐANG GIAO,Fulfilled,Giao cho courier nội địa
+ĐÃ GIAO,Fulfilled,Courier xác nhận/ảnh giao
+ĐÓNG,Archived,"Hết case, đủ chi phí"
+HỦY / HOÀN,Refunded,Đã hoàn tiền

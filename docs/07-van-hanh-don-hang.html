@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vận hành đơn hàng · [BRAND] Operating Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="top"><a class="brand" href="index.html">[BRAND]</a><span class="sub">Operating Handbook</span>
+<button class="menu" onclick="document.body.classList.toggle('nav-open')" aria-label="Menu">Menu</button></header>
+<div class="wrap">
+<nav class="side"><a class="" href="index.html"><span>00</span>Thư của Founder</a><a class="" href="01-nguyen-tac.html"><span>01</span>Nguyên tắc cốt lõi</a><a class="" href="02-mo-hinh-kinh-doanh.html"><span>02</span>Mô hình kinh doanh</a><a class="" href="03-to-chuc-vai-tro.html"><span>03</span>Tổ chức &amp; vai trò</a><a class="" href="04-san-pham-chuan-hoa.html"><span>04</span>Chuẩn hóa sản phẩm</a><a class="" href="05-nha-cung-cap.html"><span>05</span>Nhà cung cấp</a><a class="" href="06-dong-goi-nhan-chung-tu.html"><span>06</span>Đóng gói, nhãn &amp; chứng từ</a><a class="on" href="07-van-hanh-don-hang.html"><span>07</span>Vận hành đơn hàng</a><a class="" href="08-cskh.html"><span>08</span>Chăm sóc khách hàng</a><a class="" href="09-chinh-sach.html"><span>09</span>Chính sách (bản cho website)</a><a class="" href="10-marketing.html"><span>10</span>Marketing &amp; mạng xã hội</a><a class="" href="11-kpi-nhip-van-hanh.html"><span>11</span>KPI &amp; nhịp vận hành</a><a class="" href="12-lo-trinh-90-ngay.html"><span>12</span>Lộ trình 90 ngày</a><a class="" href="13-cong-cu-mau.html"><span>13</span>Công cụ &amp; biểu mẫu</a><p class="meta">Cập nhật 02/10/2026<br><a href="https://github.com/Doanngocmyy/brand-operating-handbook">Mã nguồn trên GitHub</a></p></nav>
+<main><article><h1 id="van-hanh-on-hang">Vận hành đơn hàng</h1>
+<p>Mỗi đơn đi qua 10 trạng thái. Trạng thái trên Shopify và trong sheet theo dõi phải <strong>luôn khớp với thực tế</strong>. Đây là quy tắc quan trọng nhất của bộ phận vận hành.</p>
+<h2 id="1-trang-thai-on">1. Trạng thái đơn</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Trạng thái</th>
+<th>Trên Shopify</th>
+<th>Điều kiện để chuyển sang</th>
+<th>Báo khách</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHỜ MUA</td>
+<td>Unfulfilled</td>
+<td>Đã kiểm đơn và xác nhận với khách</td>
+<td>Email xác nhận + khung thời gian giao</td>
+</tr>
+<tr>
+<td>ĐÃ MUA</td>
+<td>Unfulfilled</td>
+<td>Có mã đơn đặt xưởng</td>
+<td>–</td>
+</tr>
+<tr>
+<td>XƯỞNG ĐÃ GỬI</td>
+<td>Unfulfilled</td>
+<td>Có vận đơn nội địa TQ</td>
+<td>–</td>
+</tr>
+<tr>
+<td>TẠI KHO GOM</td>
+<td>Unfulfilled</td>
+<td>Kho xác nhận nhập đủ kiện, QC đạt</td>
+<td>"Đơn của bạn đã qua kiểm tra" + ảnh QC</td>
+</tr>
+<tr>
+<td>ĐÃ XUẤT</td>
+<td>Fulfilled + tracking</td>
+<td>Có vận đơn quốc tế <strong>và lượt quét đầu tiên</strong></td>
+<td>Email tracking</td>
+</tr>
+<tr>
+<td>THÔNG QUAN</td>
+<td>Fulfilled</td>
+<td>Tracking báo tới cảng hoặc hải quan</td>
+<td>Cập nhật</td>
+</tr>
+<tr>
+<td>ĐANG GIAO</td>
+<td>Fulfilled</td>
+<td>Đã giao cho hãng giao nội địa</td>
+<td>Hãng giao hẹn ngày</td>
+</tr>
+<tr>
+<td>ĐÃ GIAO</td>
+<td>Fulfilled</td>
+<td>Hãng giao xác nhận hoặc có ảnh giao</td>
+<td>Hướng dẫn lắp + mời review sau 3 ngày</td>
+</tr>
+<tr>
+<td>ĐÓNG</td>
+<td>Archived</td>
+<td>Không còn vấn đề, đủ chi phí</td>
+<td>–</td>
+</tr>
+<tr>
+<td>HỦY / HOÀN</td>
+<td>Refunded</td>
+<td>Đã hoàn tiền</td>
+<td>Email hoàn tiền</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Không bao giờ</strong> bấm Fulfilled hay gửi tracking khi hàng chưa có lượt quét thật của hãng vận chuyển.</p>
+<h2 id="2-cac-buoc-va-thoi-han-sla">2. Các bước và thời hạn (SLA)</h2>
+<h3 id="b0-truoc-khi-ban-chuan-listing">B0. Trước khi bán: chuẩn listing</h3>
+<p>Mã hàng phải đạt 7 tiêu chí ở trang <a href="04-san-pham-chuan-hoa.html">Chuẩn hóa sản phẩm</a>, có 2 NCC, đạt ngưỡng lãi trong bảng tính giá, và khung thời gian giao đúng theo thị trường.</p>
+<h3 id="b1-nhan-on-trong-4-gio-lam-viec-cskh-listing">B1. Nhận đơn — trong 4 giờ làm việc (CSKH &amp; Listing)</h3>
+<ol>
+<li>Kiểm địa chỉ có giao được không (vùng xa, đảo), số điện thoại đủ chưa. Đơn giá trị cao bất thường hoặc tên/địa chỉ không khớp: hỏi lại trước khi mua.</li>
+<li>Gửi email xác nhận: sản phẩm, khung thời gian giao thật, điều kiện hủy miễn phí.</li>
+<li>Tạo dòng trong sheet theo dõi, trạng thái CHỜ MUA.</li>
+</ol>
+<h3 id="b2-at-hang-xuong-trong-24-gio-sau-khi-khach-thanh-toan-mua-hang-qc">B2. Đặt hàng xưởng — trong 24 giờ sau khi khách thanh toán (Mua hàng &amp; QC)</h3>
+<ol>
+<li>Hỏi lại tồn kho và <strong>ngày xuất cụ thể</strong>. Không có hàng thì chuyển NCC dự phòng. Không có cả hai thì báo khách trong 24 giờ.</li>
+<li>Đúng mã màu NCC, size, chất liệu. Không trộn 2 NCC trong một đơn (lệch màu).</li>
+<li>Gửi ngay mẫu tin nhắn NCC (<a href="05-nha-cung-cap.html">trang Nhà cung cấp</a>): đóng gói xuất khẩu, nhãn kiện X/Y, túi phụ kiện, ảnh trước khi gửi.</li>
+<li>Thanh toán qua sàn để có bảo vệ người mua. NCC ngoài sàn chỉ khi có thỏa thuận rõ.</li>
+<li>Ghi mã đơn xưởng, giá, NCC vào sheet. Trạng thái ĐÃ MUA.</li>
+</ol>
+<h3 id="b3-theo-doi-xuong-gui-hang-co-van-on-noi-ia-trong-72-gio-sau-ngay-hen">B3. Theo dõi xưởng gửi hàng — có vận đơn nội địa trong 72 giờ sau ngày hẹn</h3>
+<ul>
+<li>Quá 2 ngày: nhắc NCC. Quá 5 ngày: báo Ops Lead, cân nhắc chuyển NCC dự phòng và báo khách. Quá 7 ngày: đổi NCC.</li>
+</ul>
+<h3 id="b4-nhan-tai-kho-gom-va-qc-qc-trong-2-ngay-sau-khi-nhap-kho">B4. Nhận tại kho gom và QC — QC trong 2 ngày sau khi nhập kho</h3>
+<ol>
+<li>Kho xác nhận nhập kho và chụp ảnh, quay video: đủ số kiện, bao bì nguyên, nhãn X/Y, bao bì gỗ có dấu ISPM-15 (nếu có).</li>
+<li>Hàng giá trị cao hoặc dễ hỏng: mở kiểm màu, kích thước, bề mặt.</li>
+<li>Lỗi hoặc sai: <strong>trả lại NCC ngay tại TQ</strong>, trong thời hạn trả hàng của kho. Đây là điểm trả hàng rẻ nhất và cuối cùng.</li>
+<li>Đủ kiện: trạng thái TẠI KHO GOM. Gửi khách ảnh QC.</li>
+</ol>
+<h3 id="b5-cat-lo-va-gui-quoc-te-1-ngay-co-inh-moi-tuan">B5. Cắt lô và gửi quốc tế — 1 ngày cố định mỗi tuần</h3>
+<ul>
+<li>Chứng từ đủ theo <a href="06-dong-goi-nhan-chung-tu.html">trang Đóng gói &amp; chứng từ</a>. Mô tả hàng đúng, giá trị đúng.</li>
+<li>Có tracking quốc tế <strong>và lượt quét đầu tiên</strong> thì mới chuyển ĐÃ XUẤT và gửi tracking cho khách.</li>
+</ul>
+<h3 id="b6-thong-quan-va-giao-chang-cuoi">B6. Thông quan và giao chặng cuối</h3>
+<ul>
+<li>Bị giữ ở hải quan hoặc kiểm dịch: báo khách trong 24 giờ, nói lý do thật và ngày dự kiến mới.</li>
+<li>Hãng giao hẹn ngày với khách. Đơn nhiều kiện phải giao đủ số kiện.</li>
+</ul>
+<h3 id="b7-sau-giao">B7. Sau giao</h3>
+<ul>
+<li>Sau 3 ngày: email hướng dẫn lắp và mời review. Mời mọi khách như nhau, không trả tiền đổi review tốt, không lọc review xấu.</li>
+<li>Có vấn đề: chuyển sang quy trình <a href="08-cskh.html">CSKH</a>.</li>
+</ul>
+<h2 id="3-cap-nhat-chu-ong-cho-khach">3. Cập nhật chủ động cho khách</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mốc</th>
+<th>Nội dung</th>
+<th>Kênh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xác nhận đơn</td>
+<td>Sản phẩm, khung thời gian, điều kiện hủy</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Mỗi 7 ngày khi chưa giao</td>
+<td>Trạng thái thật hiện tại, kể cả khi chưa có gì mới</td>
+<td>Email hoặc SMS</td>
+</tr>
+<tr>
+<td>QC đạt</td>
+<td>Ảnh QC của chính đơn đó</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Đã xuất</td>
+<td>Tracking + giải thích tracking đường biển có thể đứng yên vài ngày</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>Sắp trễ</td>
+<td>Báo trước ít nhất 7 ngày: lý do thật, ngày mới, lựa chọn chờ, đổi hoặc hủy</td>
+<td>Email + tin nhắn</td>
+</tr>
+<tr>
+<td>Đã giao</td>
+<td>Hướng dẫn lắp, cách liên hệ hỗ trợ</td>
+<td>Email</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="4-canh-bao-tu-ong-trong-sheet-theo-doi">4. Cảnh báo tự động trong sheet theo dõi</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Cảnh báo</th>
+<th>Điều kiện</th>
+<th>Ai xử lý</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chưa đặt hàng</td>
+<td>&gt; 48 giờ sau thanh toán vẫn CHỜ MUA</td>
+<td>Mua hàng &amp; QC</td>
+</tr>
+<tr>
+<td>Xưởng quá hẹn</td>
+<td>Quá ngày hẹn gửi 2 ngày</td>
+<td>Mua hàng &amp; QC</td>
+</tr>
+<tr>
+<td>Sắp vượt khung</td>
+<td>Còn 14 ngày tới hạn cuối mà chưa ĐÃ XUẤT</td>
+<td>Ops Lead + CSKH</td>
+</tr>
+<tr>
+<td>Vượt khung</td>
+<td>Quá hạn cuối đã hứa</td>
+<td>CSKH chủ động đề nghị chờ có bồi thường hoặc hủy hoàn 100%</td>
+</tr>
+<tr>
+<td>Khách chờ trả lời</td>
+<td>Tin nhắn &gt; 24 giờ chưa có người trả lời</td>
+<td>CSKH</td>
+</tr>
+</tbody>
+</table></div>
+<p>Mẫu sheet theo dõi: <a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/templates/order-tracker-template.csv">templates/order-tracker-template.csv</a>.</p></article>
+<div class="pager"><a class="prev" href="06-dong-goi-nhan-chung-tu.html">← Đóng gói, nhãn &amp; chứng từ</a><a class="next" href="08-cskh.html">Chăm sóc khách hàng →</a></div>
+<footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
+</body></html>

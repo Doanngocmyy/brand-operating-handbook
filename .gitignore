@@ -1,0 +1,16 @@
+# Data never goes into this public repo
+*.xlsx
+*.xls
+*.csv
+*.json
+!site.json
+!templates/*.xlsx
+!templates/*.csv
+export_*/
+clean_db/
+images/
+data/
+*.zip
+.env
+__pycache__/
+.DS_Store
