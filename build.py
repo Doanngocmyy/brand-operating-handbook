@@ -218,7 +218,7 @@ BLOCK_ARG = {"SVG": c_svg, "PANEL": c_panel, "SOT": c_sot, "BLOCKER": c_blocker}
 
 
 def expand(raw):
-    raw = raw.replace("{{BRAND}}", CFG["brand"]).replace("{{REPO}}", REPO)
+    raw = raw.replace("{{BRAND}}", CFG["brand"]).replace("{{REPO}}", REPO).replace("{{SHEET}}", LINKS["SHEET"])
     raw = re.sub(r"\{\{BLK:(\w+)\}\}", c_blk_inline, raw)
     raw = re.sub(r"^\{\{(\w+)\}\}$", lambda m: "\n" + BLOCK[m.group(1)]() + "\n", raw, flags=re.M)
     raw = re.sub(r"^\{\{(\w+):([\w,-]+)\}\}$", lambda m: "\n" + BLOCK_ARG[m.group(1)](m.group(2)) + "\n", raw, flags=re.M)

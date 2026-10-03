@@ -111,6 +111,9 @@ DONF = {
 }
 for col, f in DONF.items():
     don[f"{col}3"] = f
+for r in range(3, MAXR + 1):  # date formats for input + ETA columns
+    for i in range(5, 20):
+        don.cell(row=r, column=i).number_format = "dd/mm/yyyy"
 dv = DataValidation(type="list", formula1="=DS!$K$2:$K$4", allow_blank=True)
 don.add_data_validation(dv)
 dv.add(f"B3:B{MAXR}")
@@ -141,6 +144,9 @@ CASEF = {
 }
 for col, f in CASEF.items():
     cs[f"{col}3"] = f
+for r in range(3, MAXR + 1):
+    for col, fmt in (("E", "dd/mm/yyyy hh:mm"), ("F", "dd/mm/yyyy hh:mm"), ("G", "dd/mm/yyyy"), ("M", "dd/mm/yyyy"), ("N", "dd/mm/yyyy"), ("O", "dd/mm/yyyy")):
+        cs[f"{col}{r}"].number_format = fmt
 for col, rng in (("C", "=DS!$E$2:$E$9"), ("D", "=DS!$O$2:$O$8"), ("H", "=DS!$G$2:$G$9"), ("K", "=DS!$H$2:$H$4"), ("P", "=DS!$I$2:$I$9")):
     v = DataValidation(type="list", formula1=rng, allow_blank=True)
     cs.add_data_validation(v)

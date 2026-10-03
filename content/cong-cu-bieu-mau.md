@@ -28,7 +28,7 @@ Mỗi loại thông tin có **một** bản ghi gốc. Trang SOP mô tả cách 
 
 {{SOT_TABLE}}
 
-Bản online: Google Sheet **[BRAND] Source of Truth** (tab SOURCE_OF_TRUTH, DON, CASE, DASHBOARD, MASTER_SKU, LAUNCH_BLOCKERS). File chi phí FIN và danh tính NCC để ở file riêng, hạn chế quyền ([phân quyền dữ liệu](vai-tro-quyen-han.html#data-access)).
+Bản online: Google Sheet **[BRAND] Source of Truth** (tab SOURCE_OF_TRUTH, DON, CASE, DASHBOARD, MASTER_SKU, LAUNCH_BLOCKERS) · [Mở sheet (cần quyền truy cập)]({{SHEET}}). Bản Excel offline: [SOP-Tracker.xlsx](https://github.com/{{REPO}}/raw/main/templates/SOP-Tracker.xlsx) (có dòng DEMO). Mẫu để dựng lại sheet: [SOT-Google-Sheet.xlsx](https://github.com/{{REPO}}/raw/main/templates/SOT-Google-Sheet.xlsx). File chi phí FIN và danh tính NCC để ở file riêng, hạn chế quyền ([phân quyền dữ liệu](vai-tro-quyen-han.html#data-access)).
 
 ## Công cụ dữ liệu sản phẩm (Python) {#data-tools}
 

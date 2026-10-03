@@ -53,7 +53,7 @@ B = "sop-b-hau-mai.html"
 K = "kpi-sla-nhip.html"
 R = "vai-tro-quyen-han.html"
 T = "cong-cu-bieu-mau.html"
-TRACKER = "templates/SOP-Tracker.xlsx"          # rendered as GitHub raw link
+TRACKER = "SHEET"                              # live Google Sheet (falls back to the Excel template)
 DOCS_XLSX = "templates/Mau_chung_tu_NCC.xlsx"
 
 ROLES = [
@@ -302,9 +302,9 @@ PANELS = {
 
 # ----------------------------------------------------------------------------- source of truth
 SOT = {
-    "order":    ("Trạng thái đơn, cờ SLA, ETA", "SOP Tracker · tab DON", "TRACKER"),
-    "case":     ("Case khách và người duyệt", "SOP Tracker · tab CASE", "TRACKER"),
-    "sku":      ("Thông số, kích thước, màu, chất liệu", "Master SKU", "SHEET"),
+    "order":    ("Trạng thái đơn, cờ SLA, ETA", "Source of Truth sheet · tab DON", "SHEET"),
+    "case":     ("Case khách và người duyệt", "Source of Truth sheet · tab CASE", "SHEET"),
+    "sku":      ("Thông số, kích thước, màu, chất liệu", "Source of Truth sheet · tab MASTER_SKU", "SHEET"),
     "supplier": ("Bằng chứng NCC, PO, ảnh QC", "Thư mục NCC / PO / QC trên Drive", "DOCS"),
     "shipment": ("Chứng từ lô hàng", "Thư mục lô hàng theo container", "DOCS"),
     "cost":     ("Landed cost thực, biên lãi", "File chi phí FIN · hạn chế quyền", "COST"),
