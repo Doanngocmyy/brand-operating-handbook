@@ -1,6 +1,6 @@
 ---
 title: Đóng gói, nhãn & chứng từ
-order: 6
+badges: onboarding, signoff
 ---
 
 # Đóng gói, nhãn và chứng từ hải quan
@@ -9,7 +9,11 @@ Nguyên tắc: **hàng thật, nhãn và chứng từ phải nói cùng một đ
 
 *Hướng dẫn vận hành, không phải tư vấn pháp lý. Trước lô đầu tiên, nhờ đại lý hải quan (customs broker) tại Úc xác nhận mã HS và điều kiện nhập khẩu cho từng mã hàng.*
 
-## 1. Tiêu chuẩn đóng gói
+{{BLOCKER:broker}}
+
+{{SOT:shipment,supplier}}
+
+## 1. Tiêu chuẩn đóng gói {#packing}
 
 | Hạng mục | Tiêu chuẩn | Chống lỗi gì |
 |---|---|---|
@@ -25,7 +29,7 @@ Nguyên tắc: **hàng thật, nhãn và chứng từ phải nói cùng một đ
 
 **Kiểm đóng gói:** mã mới phải có video thả rơi thử (mỗi góc, cạnh, mặt; cao 60–80 cm tùy cân nặng) rồi mở ra kiểm. Mỗi lô: NCC gửi ảnh và video lúc đóng kiện, phải thấy túi phụ kiện, màng PE, nẹp góc, nhãn kiện X/Y và việc đo kích thước. Tại kho gom: đếm đủ kiện, kiểm ngẫu nhiên 10% số kiện.
 
-## 2. Quy định chính khi nhập nội thất vào Úc
+## 2. Quy định chính khi nhập nội thất vào Úc {#au-rules}
 
 | Quy định | Yêu cầu | Việc của {{BRAND}} |
 |---|---|---|
@@ -39,7 +43,7 @@ Nguyên tắc: **hàng thật, nhãn và chứng từ phải nói cùng một đ
 
 **Singapore:** khai báo qua TradeNet (forwarder làm), GST 9% khi nhập. **New Zealand:** quy định sinh học của MPI tương tự Úc. Chưa bán NZ cho tới khi có forwarder xác nhận quy trình.
 
-## 3. Bộ chứng từ cho mỗi lô hàng
+## 3. Bộ chứng từ cho mỗi lô hàng {#documents}
 
 - [ ] **Commercial invoice** theo mẫu {{BRAND}}: bên xuất, bên nhập, mã HS, mô tả tiếng Anh kèm chất liệu thật (ví dụ "TV cabinet, MDF with oak veneer, lacquered"), số lượng, đơn giá, Incoterm, xuất xứ
 - [ ] **Packing list:** mỗi dòng một kiện: mã kiện, SKU, kích thước, trọng lượng tịnh và cả bì, CBM
@@ -49,7 +53,7 @@ Nguyên tắc: **hàng thật, nhãn và chứng từ phải nói cùng một đ
 - [ ] **Chứng nhận xuất xứ ChAFTA**
 - [ ] **Hồ sơ nguồn gốc gỗ** cho hàng gỗ
 
-## 4. Ba loại nhãn NCC phải in
+## 4. Ba loại nhãn NCC phải in {#labels}
 
 | Nhãn | Dán ở đâu | Nội dung bắt buộc |
 |---|---|---|

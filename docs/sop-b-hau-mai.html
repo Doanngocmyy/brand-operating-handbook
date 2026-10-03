@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Exceptions &amp; Cases (SOP-B) · [BRAND] Operating Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body class="" id="top">
+<a class="skip" href="#main">Bỏ qua tới nội dung</a>
+<header class="top"><a class="brand" href="index.html">[BRAND]<span class="sub">Operating System</span></a>
+<nav class="topnav" aria-label="Khu vực"><a href="index.html">Start here</a><a href="sop-a-don-chuan.html" aria-current="true" class="on">Run the business</a><a href="chuan-san-pham.html">Standards</a><a href="vai-tro-quyen-han.html">Management</a></nav>
+<button class="menu" type="button" aria-expanded="false" aria-controls="side" onclick="var o=document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',o)">Menu</button></header>
+<div class="wrap">
+<nav class="side" id="side" aria-label="Mục lục"><div class="nav-group"><p class="nav-h">Start here</p><a href="index.html">Operating Map</a><a href="tim-theo-vai-tro.html">Find by role</a><a href="tim-theo-su-kien.html">Find by task / event</a></div><div class="nav-group"><p class="nav-h">Run the business</p><a href="sop-a-don-chuan.html">Standard Order (SOP-A)</a><a href="sop-b-hau-mai.html" aria-current="page" class="on">Exceptions &amp; Cases (SOP-B)</a><a href="kpi-sla-nhip.html">KPI, SLA &amp; Rhythm</a></div><div class="nav-group"><p class="nav-h">Standards</p><a href="chuan-san-pham.html">Product &amp; SKU Standard</a><a href="nha-cung-cap-qc.html">Supplier &amp; QC Standard</a><a href="dong-goi-chung-tu.html">Packaging, Labels &amp; Import Docs</a><a href="thuong-hieu-marketing.html">Brand &amp; Marketing Rules</a><a href="chinh-sach-khach-hang.html">Customer-facing Policy</a></div><div class="nav-group"><p class="nav-h">Management</p><a href="vai-tro-quyen-han.html">Roles, Authority &amp; Access</a><a href="mo-hinh-kinh-doanh.html">Business Model &amp; Unit Economics</a><a href="lo-trinh-90-ngay.html">90-Day Launch Plan</a><a href="cong-cu-bieu-mau.html">Tools &amp; Templates</a></div><p class="meta">About: <a href="nguyen-tac.html">Operating principles</a> · <a href="thu-founder.html">Founder note</a><br>Cập nhật 04/10/2026 · <a href="https://github.com/Doanngocmyy/brand-operating-handbook">GitHub</a></p></nav>
+<main id="main"><article><p class="crumb">Run the business</p><h1 id="sop-b">SOP-B · Hậu mãi: đổi trả, hoàn tiền, khiếu nại</h1><div class="badges"><span class="badge b-daily">Daily use</span><span class="badge b-int">Internal</span></div>
+<p>Mọi lệch chuẩn thành <strong>một case</strong> có mã loại, mức duyệt, giải pháp chuẩn và nguyên nhân gốc. Không bồi thường theo cảm tính.</p>
+<h2 id="cases">Khách đang gặp gì? Chọn loại case</h2>
+<div class="grid cases"><div class="card case-card"><a class="cc-main" href="#c1"><span class="cc-code">C1</span><strong>Hủy đơn</strong><span class="muted">Khách hủy · đơn không hợp lệ · hết hàng</span></a><a class="cc-flow" href="#b1">Luồng B1 → R5 →</a></div><div class="card case-card"><a class="cc-main" href="#c2"><span class="cc-code">C2</span><strong>Trễ hạn</strong><span class="muted">≤ 14 ngày tới ETA max chưa xuất · quá ETA</span></a><a class="cc-flow" href="#b1">Luồng B1 →</a></div><div class="card case-card"><a class="cc-main" href="#c3"><span class="cc-code">C3</span><strong>Hư hỏng khi nhận</strong><span class="muted">Trầy, mẻ, vỡ, ẩm</span></a><a class="cc-flow" href="#b1">Luồng B1 · B2 →</a></div><div class="card case-card"><a class="cc-main" href="#c4"><span class="cc-code">C4</span><strong>Thiếu kiện / phụ kiện</strong><span class="muted">Thiếu ốc, kiện X/Y, hướng dẫn</span></a><a class="cc-flow" href="#b1">Luồng B1 →</a></div><div class="card case-card"><a class="cc-main" href="#c5"><span class="cc-code">C5</span><strong>Sai hàng / khác mô tả</strong><span class="muted">Sai mã, size, màu, chất liệu</span></a><a class="cc-flow" href="#b1">Luồng B1 · B2 →</a></div><div class="card case-card"><a class="cc-main" href="#c6"><span class="cc-code">C6</span><strong>Đổi ý</strong><span class="muted">≤ 14 ngày, chưa lắp, nguyên hộp</span></a><a class="cc-flow" href="#b2">Luồng B2 →</a></div><div class="card case-card"><a class="cc-main" href="#c7"><span class="cc-code">C7</span><strong>Chargeback</strong><span class="muted">Ngân hàng / cổng báo dispute</span></a><a class="cc-flow" href="#b3">Luồng B3 →</a></div><div class="card case-card"><a class="cc-main" href="#c8"><span class="cc-code">C8</span><strong>Bảo hành</strong><span class="muted">Lỗi phát sinh khi dùng</span></a><a class="cc-flow" href="#b1">Luồng B1 →</a></div></div>
+
+<section class="panel" id="control-panel" aria-label="SOP control panel"><h2 class="panel-h">SOP control panel</h2><dl><div class="pr"><dt>Dùng khi</dt><dd>Khách báo vấn đề, cờ ETA bật, khách hủy hoặc đổi ý, có dispute thanh toán.</dd></div><div class="pr"><dt>Không dùng khi</dt><dd>Đơn đang chạy bình thường → <a href='sop-a-don-chuan.html'>SOP-A</a>. Câu hỏi chung → <a href='#faq'>FAQ</a>. Đổi chính sách → CEO.</dd></div><div class="pr"><dt>Chủ quy trình</dt><dd><span class='r cx'>CX</span> mở và đóng case. <span class='r ops'>OPS</span> review nguyên nhân gốc thứ Sáu.</dd></div><div class="pr"><dt>Duyệt / leo thang</dt><dd>≤ A$50 <span class='r cx'>CX</span> · A$51–150 <span class='r ops'>OPS</span> · > A$150 hoặc hoàn 100% <span class='r ceo'>CEO</span> · chargeback <span class='r ops'>OPS</span>.</dd></div><div class="pr"><dt>SLA</dt><dd>Phản hồi ≤ 4h LV (hỏng/sai), ≤ 24h kênh khác · quyết định ≤ 24h sau đủ chứng cứ · gửi bù ≤ 5 ngày LV · hoàn ≤ 7 ngày LV · claim ≤ 48h · chargeback gọi ≤ 24h.</dd></div><div class="pr"><dt>Đầu vào</dt><dd>Mã đơn · loại case · bằng chứng của khách (nhãn kiện, ảnh lỗi, ảnh toàn món).</dd></div><div class="pr"><dt>Bằng chứng trước khi đổi trạng thái</dt><dd>Bằng chứng khách · người duyệt đúng mức · xác nhận cổng thanh toán đã nhận lệnh hoàn · mã nguyên nhân gốc khi đóng.</dd></div><div class="pr"><dt>Cập nhật tracker</dt><dd>Tab CASE: một dòng/case; đóng case phải có mã RC.</dd></div><div class="pr"><dt>Biểu mẫu</dt><dd><a href='#templates'>Mẫu tin nhắn tiếng Anh</a> · <a href='https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx'>SOP-Tracker.xlsx (CASE)</a> · <a href='#refund-steps'>Hoàn tiền 5 bước</a></dd></div><div class="pr"><dt>Ngoại lệ / bước tiếp</dt><dd>R3 đổi mới → <a href='sop-a-don-chuan.html#s2'>SOP-A từ S2</a> · lỗi lặp → <a href='#root-cause'>tắt SKU/NCC</a> · <a href='kpi-sla-nhip.html#weekly-report'>báo cáo tuần</a>.</dd></div></dl></section>
+
+<aside class="sot" aria-label="Source of truth"><span class="sot-h">Source of truth</span><ul><li><span class="sot-i">Case khách và người duyệt</span><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">SOP Tracker · tab CASE</a></li><li><span class="sot-i">Lời hứa với khách</span><a href="chinh-sach-khach-hang.html">Customer-facing Policy + email xác nhận đơn</a></li><li><span class="sot-i">Landed cost thực, biên lãi</span><a href="cong-cu-bieu-mau.html#source-of-truth">File chi phí FIN · hạn chế quyền</a></li></ul></aside>
+
+<div class="flow">
+<div class="st"><b>B1–B2 · ≤ 4h LV</b><span class="n">Mở case · bằng chứng</span><span class="r cx">CX</span></div>
+<div class="st"><b>B3 · ≤ 24h</b><span class="n">Duyệt theo mức</span><span class="r cx">CX</span> <span class="r ops">OPS</span> <span class="r ceo">CEO</span></div>
+<div class="st"><b>B4–B5 · ≤ 5–7d</b><span class="n">Đề xuất · thực thi</span><span class="r src">SRC</span> <span class="r log">LOG</span> <span class="r fin">FIN</span></div>
+<div class="st"><b>B6–B7 · ≤ 48h · thứ Sáu</b><span class="n">Truy đòi · đóng · học</span><span class="r src">SRC</span> <span class="r ops">OPS</span></div>
+</div>
+
+<h2 id="case-types">1. Tám loại case</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mã</th>
+<th>Loại</th>
+<th>Dấu hiệu</th>
+<th>Giải pháp chuẩn</th>
+<th>Duyệt</th>
+<th>Luồng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="anchor" id="c1"></span><strong>C1</strong></td>
+<td>Hủy đơn</td>
+<td>Khách hủy · đơn không hợp lệ · hết hàng</td>
+<td>Trước khi đặt NCC (≤ 48h): hoàn 100%. Sau đó: phí hủy đã công bố, trừ khi brand trễ hoặc lỗi</td>
+<td>CX</td>
+<td>B1 → R5</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c2"></span><strong>C2</strong></td>
+<td>Trễ hạn</td>
+<td>Còn 14 ngày tới ETA max chưa xuất · quá ETA max</td>
+<td>Báo trước ≥ 7 ngày, 3 lựa chọn: chờ + tín dụng 5% (tối đa A$100) · đổi mã · hủy hoàn 100%</td>
+<td>CX</td>
+<td>B1</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c3"></span><strong>C3</strong></td>
+<td>Hư hỏng khi nhận</td>
+<td>Trầy, mẻ, vỡ, ẩm</td>
+<td>Trầy nhẹ: bộ sửa + 10% · hỏng bộ phận: gửi bộ phận hoặc ≤ A$150 · hỏng nặng: đổi hoặc hoàn 100% (khách chọn)</td>
+<td>theo mức</td>
+<td>B1 · B2</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c4"></span><strong>C4</strong></td>
+<td>Thiếu kiện / phụ kiện</td>
+<td>Thiếu ốc, thiếu kiện X/Y, thiếu hướng dẫn</td>
+<td>PDF ngay · phụ kiện gửi nhanh ≤ 5 ngày LV · thiếu kiện: truy hãng giao rồi gửi bù</td>
+<td>CX · OPS</td>
+<td>B1</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c5"></span><strong>C5</strong></td>
+<td>Sai hàng / khác mô tả</td>
+<td>Sai mã, sai size, màu khác rõ, chất liệu khác trang</td>
+<td>Đổi đúng hoặc hoàn 100%. Brand thu hồi, <strong>không bắt khách gửi về TQ</strong></td>
+<td>theo mức</td>
+<td>B1 · B2</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c6"></span><strong>C6</strong></td>
+<td>Đổi ý</td>
+<td>Còn mới, chưa lắp, nguyên hộp, ≤ 14 ngày từ khi giao</td>
+<td>Khách trả cước về điểm nhận tại Úc · hoàn ≤ 7 ngày LV sau khi nhận</td>
+<td>CX</td>
+<td>B2</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c7"></span><strong>C7</strong></td>
+<td>Tranh chấp thanh toán</td>
+<td>Ngân hàng / cổng báo dispute · khách nhắc chargeback</td>
+<td>Gọi ≤ 24h, đưa lựa chọn đúng bảng · nộp hồ sơ trước hạn</td>
+<td>OPS</td>
+<td>B3</td>
+</tr>
+<tr>
+<td><span class="anchor" id="c8"></span><strong>C8</strong></td>
+<td>Bảo hành</td>
+<td>Lỗi phát sinh khi dùng (bản lề, ray, sơn bong)</td>
+<td>Sửa · thay bộ phận · đổi · hoàn theo luật tiêu dùng (AU: ACL; SG: 6 tháng Lemon Law)</td>
+<td>theo mức</td>
+<td>B1</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="approval">2. Mức duyệt và mã giải pháp</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Giá trị đền bù</th>
+<th>Duyệt</th>
+<th>Thời hạn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>≤ A$50</td>
+<td><span class="r cx">CX</span> tự duyệt</td>
+<td>ngay</td>
+</tr>
+<tr>
+<td>A$51–150</td>
+<td><span class="r ops">OPS</span></td>
+<td>≤ 4h làm việc</td>
+</tr>
+<tr>
+<td>&gt; A$150 hoặc hoàn 100%</td>
+<td><span class="r ceo">CEO</span></td>
+<td>≤ 24h</td>
+</tr>
+</tbody>
+</table></div>
+<p class="anchor-p" id="solutions">Mã giải pháp</p>
+
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mã</th>
+<th>Giải pháp</th>
+<th>Ai thực thi</th>
+<th>SLA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R1</td>
+<td>Sửa: bộ sửa, hướng dẫn, kỹ thuật viên</td>
+<td><span class="r src">SRC</span> / <span class="r log">LOG</span></td>
+<td>gửi ≤ 5 ngày LV</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>Gửi bù bộ phận, phụ kiện, kiện thiếu</td>
+<td><span class="r src">SRC</span></td>
+<td>gửi ≤ 5 ngày LV</td>
+</tr>
+<tr>
+<td>R3</td>
+<td>Đổi sản phẩm mới</td>
+<td><span class="r src">SRC</span> → SOP-A từ S2</td>
+<td>ETA mới báo khách</td>
+</tr>
+<tr>
+<td>R4</td>
+<td>Hoàn tiền (một phần / toàn bộ / tín dụng)</td>
+<td><span class="r fin">FIN</span></td>
+<td>≤ 7 ngày LV sau duyệt</td>
+</tr>
+<tr>
+<td>R5</td>
+<td>Thu hồi hàng</td>
+<td><span class="r log">LOG</span></td>
+<td>đặt lịch ≤ 2 ngày LV</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="b1">3. Swimlane B1 · Xử lý case</h2>
+<div class="swim" tabindex="0" role="region" aria-label="Swimlane, kéo ngang để xem hết"><svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1332 702" width="1332" height="702" role="img" aria-label="SOP-B1 Xử lý case hậu mãi: tiếp nhận tới đóng case" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1NzJhZTNiOC1iZjEzLTQyMWMtYWEwNS02M2ZlODNkMzc3YmMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJmZmQbh+zdSwAcfjd/GdakAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiZGM2M2NlZC1lMjk4LTQ0MDEtYjk5Ni1iNmEyMjg4NGFlMTdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoLFnoEDjBE25aOr6C+ZHOyAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggBjxKW7dHlCxkVBUZ5XuMIxfDVyDbAKfIEHZ68FScBaukZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaNU+ooYJMpEVHes6G2MhSdsAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCCTFtMuw6vT4uOIQ1GHLoMPaCbtE5COK6AsrUTR8xzLQ2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBj8Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjU3MmFlM2I4LWJmMTMtNDIxYy1hYTA1LTYzZmU4M2QzNzdiYy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk4ODUyOTUwLTAxODQtNDA3ZS05M2YyLTMxNzlhNTdhYTVmN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAGPEpbt0eULGRUFRnle4wjF8NXINsAp8gQdnrwVJwFq6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggMKQBNazwkhXL/hwFCHdxPUak5qm2RIwZdiK5ypKAtOWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggXxwFZQRVkBJNBtrNgvs01KNjPQkYDa/nmUtaJpjoWnR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIQ9Ol4Kb/HmPMc+y8/fxXvbJzzO2gyOaEXcfMR4qJN9stHV/WrjmM5GMktzLi/H7ryRJSrhWcR5PCFqftio6cw=</c2pa:manifest></metadata>
+<title>SOP-B1 Xử lý case hậu mãi: tiếp nhận tới đóng case</title><style>
+.sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
+.sw .bg{fill:var(--panel,#fff)}
+.sw .lane{fill:var(--panel,#fff);stroke:var(--line,#e5e5e7)}
+.sw .lane.alt{fill:var(--bg,#fbfbfa)}
+.sw .hdr{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .stg{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .sep{stroke:var(--line,#e5e5e7);stroke-dasharray:3 4}
+.sw .t{fill:var(--ink,#1d1d1f);font-size:10.5px}
+.sw .tb{fill:var(--ink,#1d1d1f);font-size:12px;font-weight:650}
+.sw .tm{fill:var(--muted,#6e6e73);font-size:10px}
+.sw .ts{fill:var(--accent,#6b5a45);font-size:10px;font-weight:600}
+.sw .n{fill:var(--panel,#fff);stroke-width:1.4}
+.sw .n.ext{stroke-dasharray:4 3}
+.sw .n.cust{fill:var(--bg,#fbfbfa)}
+.sw .n.term{fill:var(--accent-soft,#f3efe9)}
+.sw .e{fill:none;stroke:var(--ink,#1d1d1f);stroke-width:1.2;opacity:.75}
+.sw .e.info{stroke-dasharray:4 3;opacity:.55}
+.sw .ah{fill:var(--ink,#1d1d1f);opacity:.75}
+.sw .lbl{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:600}
+.sw .lblbg{fill:var(--panel,#fff);opacity:.92}
+.sw .tag{fill:var(--ink,#1d1d1f)}
+.sw .tagt{fill:var(--bg,#fff);font-size:9.5px;font-weight:700}
+.sw .x{fill:#fdecea;stroke:#c0392b;stroke-width:1}
+.sw .xt{fill:#a5281b;font-size:9.5px;font-weight:600}
+.sw .band{fill:none;stroke-width:1.2;stroke-dasharray:6 4;opacity:.8}
+.sw .bandt{font-size:9.5px;font-weight:600}
+@media (prefers-color-scheme:dark){.sw .x{fill:#3a1f1c}.sw .xt{fill:#f5a097}}
+</style>
+<defs><marker id="ah-b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1332" height="702" rx="12"/>
+<rect class="hdr" x="0" y="0" width="118" height="50"/>
+<text class="tm" x="12" y="22">Vị trí ↓</text><text class="tm" x="12" y="38">Giai đoạn →</text>
+<rect class="stg" x="118" y="0" width="134" height="50"/>
+<text class="tb" x="128" y="21"><tspan class="ts">B1</tspan>  Tiếp nhận</text>
+<text class="tm" x="128" y="38">⏱ phản hồi ≤ 4h LV</text>
+<rect class="stg" x="252" y="0" width="134" height="50"/>
+<text class="tb" x="262" y="21"><tspan class="ts">B2</tspan>  Bằng chứng</text>
+<text class="tm" x="262" y="38">⏱ KH gửi ≤ 7 ngày</text>
+<rect class="stg" x="386" y="0" width="268" height="50"/>
+<text class="tb" x="396" y="21"><tspan class="ts">B3</tspan>  Duyệt theo mức</text>
+<text class="tm" x="396" y="38">⏱ ≤ 24h sau đủ chứng cứ</text>
+<rect class="stg" x="654" y="0" width="134" height="50"/>
+<text class="tb" x="664" y="21"><tspan class="ts">B4</tspan>  Đề xuất</text>
+<text class="tm" x="664" y="38">⏱ KH chọn</text>
+<rect class="stg" x="788" y="0" width="268" height="50"/>
+<text class="tb" x="798" y="21"><tspan class="ts">B5</tspan>  Thực thi</text>
+<text class="tm" x="798" y="38">⏱ gửi bù ≤ 5d · hoàn ≤ 7d LV</text>
+<rect class="stg" x="1056" y="0" width="134" height="50"/>
+<text class="tb" x="1066" y="21"><tspan class="ts">B6</tspan>  Truy đòi</text>
+<text class="tm" x="1066" y="38">⏱ claim ≤ 48h</text>
+<rect class="stg" x="1190" y="0" width="134" height="50"/>
+<text class="tb" x="1200" y="21"><tspan class="ts">B7</tspan>  Đóng · học</text>
+<text class="tm" x="1200" y="38">⏱ review thứ Sáu</text>
+<rect class="lane" x="0" y="50" width="1324" height="92"/>
+<rect x="0" y="50" width="5" height="92" fill="#8e8e93"/>
+<text class="tb" x="14" y="93.0">Khách hàng</text>
+<text class="tm" x="14" y="108.0">Customer</text>
+<rect class="lane alt" x="0" y="142" width="1324" height="92"/>
+<rect x="0" y="142" width="5" height="92" fill="#2f6fb0"/>
+<text class="tb" x="14" y="185.0">P4 · CX</text>
+<text class="tm" x="14" y="200.0">Chăm sóc KH</text>
+<rect class="lane" x="0" y="234" width="1324" height="92"/>
+<rect x="0" y="234" width="5" height="92" fill="#6b5a45"/>
+<text class="tb" x="14" y="277.0">P1 · OPS</text>
+<text class="tm" x="14" y="292.0">Điều phối</text>
+<rect class="lane alt" x="0" y="326" width="1324" height="92"/>
+<rect x="0" y="326" width="5" height="92" fill="#1d1d1f"/>
+<text class="tb" x="14" y="369.0">P0 · CEO</text>
+<text class="tm" x="14" y="384.0">Duyệt cấp cao</text>
+<rect class="lane" x="0" y="418" width="1324" height="92"/>
+<rect x="0" y="418" width="5" height="92" fill="#2e7d4f"/>
+<text class="tb" x="14" y="461.0">P2 · SRC</text>
+<text class="tm" x="14" y="476.0">Mua hàng &amp; QC</text>
+<rect class="lane alt" x="0" y="510" width="1324" height="92"/>
+<rect x="0" y="510" width="5" height="92" fill="#7a4fa3"/>
+<text class="tb" x="14" y="553.0">P6 · FIN</text>
+<text class="tm" x="14" y="568.0">Tài chính</text>
+<rect class="lane" x="0" y="602" width="1324" height="92"/>
+<rect x="0" y="602" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="645.0">Đối tác</text>
+<text class="tm" x="14" y="660.0">NCC · kho · hãng</text>
+<line class="sep" x1="252" y1="50" x2="252" y2="694"/>
+<line class="sep" x1="386" y1="50" x2="386" y2="694"/>
+<line class="sep" x1="654" y1="50" x2="654" y2="694"/>
+<line class="sep" x1="788" y1="50" x2="788" y2="694"/>
+<line class="sep" x1="1056" y1="50" x2="1056" y2="694"/>
+<line class="sep" x1="1190" y1="50" x2="1190" y2="694"/>
+<path class="e" d="M185.0,121.0 L185.0,163.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M243.0,188.0 L261.0,188.0" marker-end="url(#ah-b1)"/>
+<path class="e info" d="M319.0,163.0 L319.0,121.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M377.0,96.0 L453.0,96.0 L453.0,159.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M511.0,188.0 L529.0,188.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="508.9" y="174.0" width="22.2" height="12" rx="3"/>
+<text class="lbl" x="520.0" y="183.0" text-anchor="middle">≤50</text>
+<path class="e" d="M453.0,217.0 L453.0,280.0 L529.0,280.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="455.0" y="239.5" width="38.4" height="12" rx="3"/>
+<text class="lbl" x="457.0" y="248.5" text-anchor="start">51–150</text>
+<path class="e" d="M453.0,217.0 L453.0,372.0 L529.0,372.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="455.0" y="285.5" width="27.6" height="12" rx="3"/>
+<text class="lbl" x="457.0" y="294.5" text-anchor="start">&gt;150</text>
+<path class="e" d="M645.0,188.0 L663.0,188.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M645.0,280.0 L654.0,280.0 L654.0,188.0 L663.0,188.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M645.0,372.0 L654.0,372.0 L654.0,188.0 L663.0,188.0" marker-end="url(#ah-b1)"/>
+<path class="e info" d="M721.0,163.0 L721.0,125.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M779.0,96.0 L788.0,96.0 L788.0,188.0 L797.0,188.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="764.3" y="82.0" width="38.4" height="12" rx="3"/>
+<text class="lbl" x="783.5" y="91.0" text-anchor="middle">Đồng ý</text>
+<path class="e" d="M855.0,213.0 L855.0,439.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="857.0" y="317.0" width="33.0" height="12" rx="3"/>
+<text class="lbl" x="859.0" y="326.0" text-anchor="start">R1–R3</text>
+<path class="e" d="M913.0,188.0 L989.0,188.0 L989.0,531.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="942.6" y="174.0" width="16.8" height="12" rx="3"/>
+<text class="lbl" x="951.0" y="183.0" text-anchor="middle">R4</text>
+<path class="e" d="M913.0,464.0 L1065.0,464.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M1123.0,489.0 L1123.0,623.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M1181.0,464.0 L1257.0,464.0 L1257.0,531.0" marker-end="url(#ah-b1)"/>
+<path class="e" d="M913.0,188.0 L1199.0,188.0" marker-end="url(#ah-b1)"/>
+<rect class="lblbg" x="1042.2" y="174.0" width="27.6" height="12" rx="3"/>
+<text class="lbl" x="1056.0" y="183.0" text-anchor="middle">xong</text>
+<path class="e" d="M1257.0,213.0 L1257.0,255.0" marker-end="url(#ah-b1)"/>
+<rect class="n term" stroke="#8e8e93" x="127.0" y="71.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="185.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Báo vấn đề</text>
+<text class="t" x="185.0" y="106.5" text-anchor="middle" font-size="10.5">email · form · chat</text>
+<rect class="n" stroke="#2f6fb0" x="127.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="127.0" y="171.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="185.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">B1 Mở case</text>
+<text class="t" x="185.0" y="192.2" text-anchor="middle" font-size="10.5">gán mã C1–C8</text>
+<text class="t" x="185.0" y="204.8" text-anchor="middle" font-size="10.5">liên kết mã đơn</text>
+<rect class="tag" x="215.0" y="156.0" width="34" height="14" rx="7"/>
+<text class="tagt" x="232.0" y="166.5" text-anchor="middle">OPEN</text>
+<rect class="n" stroke="#2f6fb0" x="261.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="261.0" y="171.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="319.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">B2 Xin bằng chứng</text>
+<text class="t" x="319.0" y="192.2" text-anchor="middle" font-size="10.5">nhãn kiện · ảnh lỗi</text>
+<text class="t" x="319.0" y="204.8" text-anchor="middle" font-size="10.5">ảnh toàn món</text>
+<rect class="n cust" stroke="#8e8e93" x="261.0" y="71.0" width="116" height="50" rx="8"/>
+<text class="t" x="319.0" y="100.2" text-anchor="middle" font-size="10.5" font-weight="600">Gửi ảnh/video</text>
+<path class="n" stroke="#2f6fb0" d="M453.0,159.0 L511.0,188.0 L453.0,217.0 L395.0,188.0 z"/>
+<text class="t" x="453.0" y="186.0" text-anchor="middle" font-size="10">Mức</text>
+<text class="t" x="453.0" y="198.0" text-anchor="middle" font-size="10">đền bù?</text>
+<rect class="n term" stroke="#2f6fb0" x="529.0" y="163.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="587.0" y="186.0" text-anchor="middle" font-size="10.5" font-weight="600">≤ A$50</text>
+<text class="t" x="587.0" y="198.5" text-anchor="middle" font-size="10.5">CX tự duyệt</text>
+<rect class="n term" stroke="#6b5a45" x="529.0" y="255.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="587.0" y="278.0" text-anchor="middle" font-size="10.5" font-weight="600">A$51–150</text>
+<text class="t" x="587.0" y="290.5" text-anchor="middle" font-size="10.5">OPS duyệt</text>
+<rect class="n term" stroke="#1d1d1f" x="529.0" y="347.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="587.0" y="370.0" text-anchor="middle" font-size="10.5" font-weight="600">&gt; A$150 · 100%</text>
+<text class="t" x="587.0" y="382.5" text-anchor="middle" font-size="10.5">CEO duyệt</text>
+<rect class="n" stroke="#2f6fb0" x="663.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="663.0" y="171.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="721.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">B4 Đề xuất</text>
+<text class="t" x="721.0" y="192.2" text-anchor="middle" font-size="10.5">R1 sửa · R2 gửi bù</text>
+<text class="t" x="721.0" y="204.8" text-anchor="middle" font-size="10.5">R3 đổi · R4 hoàn</text>
+<path class="n" stroke="#8e8e93" d="M721.0,67.0 L779.0,96.0 L721.0,125.0 L663.0,96.0 z"/>
+<text class="t" x="721.0" y="100.0" text-anchor="middle" font-size="10">Đồng ý?</text>
+<rect class="n" stroke="#2f6fb0" x="797.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="171.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="855.0" y="186.0" text-anchor="middle" font-size="10.5" font-weight="600">B5 Kích hoạt</text>
+<text class="t" x="855.0" y="198.5" text-anchor="middle" font-size="10.5">thực thi · ghi case</text>
+<rect class="n" stroke="#2e7d4f" x="797.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="447.0" width="3" height="34" fill="#2e7d4f"/>
+<text class="t" x="855.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Gửi bù / đổi mới</text>
+<text class="t" x="855.0" y="468.2" text-anchor="middle" font-size="10.5">hoặc đặt thu hồi</text>
+<text class="t" x="855.0" y="480.8" text-anchor="middle" font-size="10.5">(→ SOP-B2)</text>
+<rect class="n" stroke="#7a4fa3" x="931.0" y="531.0" width="116" height="50" rx="8"/>
+<rect x="931.0" y="539.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="989.0" y="547.8" text-anchor="middle" font-size="10.5" font-weight="600">Hoàn tiền</text>
+<text class="t" x="989.0" y="560.2" text-anchor="middle" font-size="10.5">đúng số đã duyệt</text>
+<text class="t" x="989.0" y="572.8" text-anchor="middle" font-size="10.5">cổng gốc</text>
+<rect class="n" stroke="#2e7d4f" x="1065.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="1065.0" y="447.0" width="3" height="34" fill="#2e7d4f"/>
+<text class="t" x="1123.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">B6 Claim NCC</text>
+<text class="t" x="1123.0" y="468.2" text-anchor="middle" font-size="10.5">/ hãng giao</text>
+<text class="t" x="1123.0" y="480.8" text-anchor="middle" font-size="10.5">/ bảo hiểm</text>
+<rect class="n ext" stroke="#a1a1a6" x="1065.0" y="623.0" width="116" height="50" rx="8"/>
+<text class="t" x="1123.0" y="646.0" text-anchor="middle" font-size="10.5" font-weight="600">Bồi hoàn</text>
+<text class="t" x="1123.0" y="658.5" text-anchor="middle" font-size="10.5">hoặc gửi bù</text>
+<rect class="n term" stroke="#2f6fb0" x="1199.0" y="163.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="1257.0" y="186.0" text-anchor="middle" font-size="10.5" font-weight="600">B7 Đóng case</text>
+<text class="t" x="1257.0" y="198.5" text-anchor="middle" font-size="10.5">mã nguyên nhân gốc</text>
+<rect class="tag" x="1275.0" y="156.0" width="46" height="14" rx="7"/>
+<text class="tagt" x="1298.0" y="166.5" text-anchor="middle">CLOSED</text>
+<rect class="n" stroke="#6b5a45" x="1199.0" y="255.0" width="116" height="50" rx="8"/>
+<rect x="1199.0" y="263.0" width="3" height="34" fill="#6b5a45"/>
+<text class="t" x="1257.0" y="271.8" text-anchor="middle" font-size="10.5" font-weight="600">Review tuần</text>
+<text class="t" x="1257.0" y="284.2" text-anchor="middle" font-size="10.5">lỗi lặp 2 lần/tháng</text>
+<text class="t" x="1257.0" y="296.8" text-anchor="middle" font-size="10.5">→ tắt mã / NCC</text>
+<rect class="n" stroke="#7a4fa3" x="1199.0" y="531.0" width="116" height="50" rx="8"/>
+<rect x="1199.0" y="539.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="1257.0" y="554.0" text-anchor="middle" font-size="10.5" font-weight="600">Sổ ngoại lệ</text>
+<text class="t" x="1257.0" y="566.5" text-anchor="middle" font-size="10.5">chi phí − thu hồi</text>
+<rect class="x" x="661.0" y="42.0" width="120.0" height="14" rx="7"/>
+<text class="xt" x="721.0" y="52.5" text-anchor="middle">Không → OPS gọi điện</text>
+<rect class="x" x="106.5" y="217.0" width="157.1" height="14" rx="7"/>
+<text class="xt" x="185.0" y="227.5" text-anchor="middle">Nhắc chargeback → gọi ≤ 24h</text>
+</svg></div>
+<p class="swim-cap">Kéo ngang để xem hết · <a href="sop/b1.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a></p>
+
+<h2 id="b2">4. Trả hàng, thu hồi, hoàn tiền (B2)</h2>
+<p>Điều kiện: lỗi do brand → brand thu hồi và trả phí, hoàn/đổi không chờ thu hồi. Đổi ý hợp lệ (≤ 14 ngày, chưa lắp, nguyên hộp) → khách tự gửi về điểm nhận tại Úc.</p>
+<details class="diagram"><summary>Mở swimlane B2 · trả hàng, thu hồi, hoàn tiền</summary>
+
+
+<div class="swim" tabindex="0" role="region" aria-label="Swimlane, kéo ngang để xem hết"><svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1064 610" width="1064" height="610" role="img" aria-label="SOP-B2 Trả hàng, thu hồi và hoàn tiền" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmYzNmODVhYi1iNDBiLTRlYWQtODgxOS1jYmI3YjBiMjRjNmYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaJCsqkYXcz415CaYM7EluM4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiODkxNjA3MS0yYWI3LTRkMTQtODcwOC1hNjMxZjE0MTRhMGVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo1fs4+jV7EfGgaB5XT+GM8AAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg3MWlajpTewlKKSTOj+rKUD6BcH19D4VgLd47HQTBqzukZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOYhgXD/dLHDsBNWO3n5aoYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDFUuTdaIOWQFz+1EE6Q3vKm2xb7N8YZH6R0F+Hjz01q2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjqZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZjM2Y4NWFiLWI0MGItNGVhZC04ODE5LWNiYjdiMGIyNGM2Zi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk5NDY4YTAxLWQ0MjktNGIzZi1hYzgyLTc5Nzg1YzEwMDMxOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDcxaVqOlN7CUopJM6P6spQPoFwfX0PhWAt3jsdBMGrO6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggM4QqauAdgF/e0etuPbFBByzvF60d4xugcuKICM1WV26iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggiFQWLlW9vF6LpbGJx9+/QQ1aCZz9fCL9MZ4tjPXU98t0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQLEJVlbFawkGbwPbSX22fSqePd0tFBDuhvFSM7p1P2R2H+xDIeSb4tkMelhnC7Nr0LvsnGABP66Jc/wt7BQwKgk=</c2pa:manifest></metadata>
+<title>SOP-B2 Trả hàng, thu hồi và hoàn tiền</title><style>
+.sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
+.sw .bg{fill:var(--panel,#fff)}
+.sw .lane{fill:var(--panel,#fff);stroke:var(--line,#e5e5e7)}
+.sw .lane.alt{fill:var(--bg,#fbfbfa)}
+.sw .hdr{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .stg{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .sep{stroke:var(--line,#e5e5e7);stroke-dasharray:3 4}
+.sw .t{fill:var(--ink,#1d1d1f);font-size:10.5px}
+.sw .tb{fill:var(--ink,#1d1d1f);font-size:12px;font-weight:650}
+.sw .tm{fill:var(--muted,#6e6e73);font-size:10px}
+.sw .ts{fill:var(--accent,#6b5a45);font-size:10px;font-weight:600}
+.sw .n{fill:var(--panel,#fff);stroke-width:1.4}
+.sw .n.ext{stroke-dasharray:4 3}
+.sw .n.cust{fill:var(--bg,#fbfbfa)}
+.sw .n.term{fill:var(--accent-soft,#f3efe9)}
+.sw .e{fill:none;stroke:var(--ink,#1d1d1f);stroke-width:1.2;opacity:.75}
+.sw .e.info{stroke-dasharray:4 3;opacity:.55}
+.sw .ah{fill:var(--ink,#1d1d1f);opacity:.75}
+.sw .lbl{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:600}
+.sw .lblbg{fill:var(--panel,#fff);opacity:.92}
+.sw .tag{fill:var(--ink,#1d1d1f)}
+.sw .tagt{fill:var(--bg,#fff);font-size:9.5px;font-weight:700}
+.sw .x{fill:#fdecea;stroke:#c0392b;stroke-width:1}
+.sw .xt{fill:#a5281b;font-size:9.5px;font-weight:600}
+.sw .band{fill:none;stroke-width:1.2;stroke-dasharray:6 4;opacity:.8}
+.sw .bandt{font-size:9.5px;font-weight:600}
+@media (prefers-color-scheme:dark){.sw .x{fill:#3a1f1c}.sw .xt{fill:#f5a097}}
+</style>
+<defs><marker id="ah-b2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1064" height="610" rx="12"/>
+<rect class="hdr" x="0" y="0" width="118" height="50"/>
+<text class="tm" x="12" y="22">Vị trí ↓</text><text class="tm" x="12" y="38">Giai đoạn →</text>
+<rect class="stg" x="118" y="0" width="134" height="50"/>
+<text class="tb" x="128" y="21"><tspan class="ts">R1</tspan>  Yêu cầu</text>
+<text class="tm" x="128" y="38">⏱ phản hồi ≤ 24h</text>
+<rect class="stg" x="252" y="0" width="268" height="50"/>
+<text class="tb" x="262" y="21"><tspan class="ts">R2</tspan>  Điều kiện</text>
+<text class="tm" x="262" y="38">⏱ ≤ 24h</text>
+<rect class="stg" x="520" y="0" width="134" height="50"/>
+<text class="tb" x="530" y="21"><tspan class="ts">R3</tspan>  Thu hồi</text>
+<text class="tm" x="530" y="38">⏱ brand trả phí nếu lỗi</text>
+<rect class="stg" x="654" y="0" width="134" height="50"/>
+<text class="tb" x="664" y="21"><tspan class="ts">R4</tspan>  Nhận · kiểm</text>
+<text class="tm" x="664" y="38">⏱ ≤ 2d sau nhận</text>
+<rect class="stg" x="788" y="0" width="134" height="50"/>
+<text class="tb" x="798" y="21"><tspan class="ts">R5</tspan>  Hoàn tiền</text>
+<text class="tm" x="798" y="38">⏱ ≤ 7 ngày LV</text>
+<rect class="stg" x="922" y="0" width="134" height="50"/>
+<text class="tb" x="932" y="21"><tspan class="ts">R6</tspan>  Hàng về</text>
+<text class="tm" x="932" y="38">⏱ ≤ 14 ngày</text>
+<rect class="lane" x="0" y="50" width="1056" height="92"/>
+<rect x="0" y="50" width="5" height="92" fill="#8e8e93"/>
+<text class="tb" x="14" y="93.0">Khách hàng</text>
+<text class="tm" x="14" y="108.0">Customer</text>
+<rect class="lane alt" x="0" y="142" width="1056" height="92"/>
+<rect x="0" y="142" width="5" height="92" fill="#2f6fb0"/>
+<text class="tb" x="14" y="185.0">P4 · CX</text>
+<text class="tm" x="14" y="200.0">Chăm sóc KH</text>
+<rect class="lane" x="0" y="234" width="1056" height="92"/>
+<rect x="0" y="234" width="5" height="92" fill="#6b5a45"/>
+<text class="tb" x="14" y="277.0">P1 · OPS</text>
+<text class="tm" x="14" y="292.0">Điều phối</text>
+<rect class="lane alt" x="0" y="326" width="1056" height="92"/>
+<rect x="0" y="326" width="5" height="92" fill="#0f7c80"/>
+<text class="tb" x="14" y="369.0">P3 · LOG</text>
+<text class="tm" x="14" y="384.0">Logistics &amp; HQ</text>
+<rect class="lane" x="0" y="418" width="1056" height="92"/>
+<rect x="0" y="418" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="461.0">Đối tác</text>
+<text class="tm" x="14" y="476.0">NCC · kho · hãng</text>
+<rect class="lane alt" x="0" y="510" width="1056" height="92"/>
+<rect x="0" y="510" width="5" height="92" fill="#7a4fa3"/>
+<text class="tb" x="14" y="553.0">P6 · FIN</text>
+<text class="tm" x="14" y="568.0">Tài chính</text>
+<line class="sep" x1="252" y1="50" x2="252" y2="602"/>
+<line class="sep" x1="520" y1="50" x2="520" y2="602"/>
+<line class="sep" x1="654" y1="50" x2="654" y2="602"/>
+<line class="sep" x1="788" y1="50" x2="788" y2="602"/>
+<line class="sep" x1="922" y1="50" x2="922" y2="602"/>
+<path class="e" d="M185.0,121.0 L185.0,163.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M243.0,188.0 L261.0,188.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M377.0,188.0 L395.0,188.0" marker-end="url(#ah-b2)"/>
+<rect class="lblbg" x="369.5" y="174.0" width="33.0" height="12" rx="3"/>
+<text class="lbl" x="386.0" y="183.0" text-anchor="middle">Không</text>
+<path class="e" d="M319.0,217.0 L319.0,372.0 L395.0,372.0" marker-end="url(#ah-b2)"/>
+<rect class="lblbg" x="321.0" y="285.5" width="16.8" height="12" rx="3"/>
+<text class="lbl" x="323.0" y="294.5" text-anchor="start">Có</text>
+<path class="e" d="M319.0,217.0 L319.0,556.0 L395.0,556.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M453.0,397.0 L453.0,464.0 L529.0,464.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M511.0,188.0 L520.0,188.0 L520.0,96.0 L529.0,96.0" marker-end="url(#ah-b2)"/>
+<rect class="lblbg" x="496.3" y="174.0" width="38.4" height="12" rx="3"/>
+<text class="lbl" x="515.5" y="183.0" text-anchor="middle">Hợp lệ</text>
+<path class="e" d="M587.0,121.0 L587.0,439.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M645.0,464.0 L721.0,464.0 L721.0,397.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M721.0,397.0 L721.0,556.0 L797.0,556.0" marker-end="url(#ah-b2)"/>
+<path class="e info" d="M855.0,531.0 L855.0,121.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M779.0,372.0 L922.0,372.0 L922.0,280.0 L931.0,280.0" marker-end="url(#ah-b2)"/>
+<path class="e" d="M989.0,309.0 L989.0,347.0" marker-end="url(#ah-b2)"/>
+<rect class="n term" stroke="#8e8e93" x="127.0" y="71.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="185.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Yêu cầu</text>
+<text class="t" x="185.0" y="106.5" text-anchor="middle" font-size="10.5">trả / đổi hàng</text>
+<rect class="n" stroke="#2f6fb0" x="127.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="127.0" y="171.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="185.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">R1 Kiểm case</text>
+<text class="t" x="185.0" y="192.2" text-anchor="middle" font-size="10.5">mã C3–C6</text>
+<text class="t" x="185.0" y="204.8" text-anchor="middle" font-size="10.5">ngày giao</text>
+<path class="n" stroke="#2f6fb0" d="M319.0,159.0 L377.0,188.0 L319.0,217.0 L261.0,188.0 z"/>
+<text class="t" x="319.0" y="186.0" text-anchor="middle" font-size="10">Lỗi do</text>
+<text class="t" x="319.0" y="198.0" text-anchor="middle" font-size="10">brand?</text>
+<path class="n" stroke="#2f6fb0" d="M453.0,159.0 L511.0,188.0 L453.0,217.0 L395.0,188.0 z"/>
+<text class="t" x="453.0" y="186.0" text-anchor="middle" font-size="10">Đổi ý</text>
+<text class="t" x="453.0" y="198.0" text-anchor="middle" font-size="10">hợp lệ?</text>
+<rect class="n" stroke="#0f7c80" x="395.0" y="347.0" width="116" height="50" rx="8"/>
+<rect x="395.0" y="355.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="453.0" y="363.8" text-anchor="middle" font-size="10.5" font-weight="600">Đặt hãng thu hồi</text>
+<text class="t" x="453.0" y="376.2" text-anchor="middle" font-size="10.5">brand trả phí</text>
+<text class="t" x="453.0" y="388.8" text-anchor="middle" font-size="10.5">KHÔNG gửi về TQ</text>
+<rect class="n" stroke="#7a4fa3" x="395.0" y="531.0" width="116" height="50" rx="8"/>
+<rect x="395.0" y="539.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="453.0" y="554.0" text-anchor="middle" font-size="10.5" font-weight="600">Lỗi: hoàn / đổi</text>
+<text class="t" x="453.0" y="566.5" text-anchor="middle" font-size="10.5">KHÔNG chờ thu hồi</text>
+<rect class="n cust" stroke="#8e8e93" x="529.0" y="71.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="87.8" text-anchor="middle" font-size="10.5" font-weight="600">Tự gửi về</text>
+<text class="t" x="587.0" y="100.2" text-anchor="middle" font-size="10.5">điểm nhận AU</text>
+<text class="t" x="587.0" y="112.8" text-anchor="middle" font-size="10.5">(KH trả cước)</text>
+<rect class="n ext" stroke="#a1a1a6" x="529.0" y="439.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Hãng / 3PL AU</text>
+<text class="t" x="587.0" y="468.2" text-anchor="middle" font-size="10.5">lấy hàng</text>
+<text class="t" x="587.0" y="480.8" text-anchor="middle" font-size="10.5">chụp tình trạng</text>
+<rect class="n" stroke="#0f7c80" x="663.0" y="347.0" width="116" height="50" rx="8"/>
+<rect x="663.0" y="355.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="721.0" y="370.0" text-anchor="middle" font-size="10.5" font-weight="600">R4 Kiểm hàng về</text>
+<text class="t" x="721.0" y="382.5" text-anchor="middle" font-size="10.5">đủ kiện · tình trạng</text>
+<rect class="tag" x="757.0" y="340.0" width="28" height="14" rx="7"/>
+<text class="tagt" x="771.0" y="350.5" text-anchor="middle">RTN</text>
+<rect class="n" stroke="#7a4fa3" x="797.0" y="531.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="539.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="855.0" y="547.8" text-anchor="middle" font-size="10.5" font-weight="600">R5 Hoàn tiền</text>
+<text class="t" x="855.0" y="560.2" text-anchor="middle" font-size="10.5">đúng số đã duyệt</text>
+<text class="t" x="855.0" y="572.8" text-anchor="middle" font-size="10.5">phương thức gốc</text>
+<rect class="n cust" stroke="#8e8e93" x="797.0" y="71.0" width="116" height="50" rx="8"/>
+<text class="t" x="855.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Nhận email</text>
+<text class="t" x="855.0" y="106.5" text-anchor="middle" font-size="10.5">hoàn tiền</text>
+<path class="n" stroke="#6b5a45" d="M989.0,251.0 L1047.0,280.0 L989.0,309.0 L931.0,280.0 z"/>
+<text class="t" x="989.0" y="278.0" text-anchor="middle" font-size="10">Bán lại</text>
+<text class="t" x="989.0" y="290.0" text-anchor="middle" font-size="10">được?</text>
+<rect class="n" stroke="#0f7c80" x="931.0" y="347.0" width="116" height="50" rx="8"/>
+<rect x="931.0" y="355.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="989.0" y="363.8" text-anchor="middle" font-size="10.5" font-weight="600">Nhập kho AU</text>
+<text class="t" x="989.0" y="376.2" text-anchor="middle" font-size="10.5">B-grade / outlet</text>
+<text class="t" x="989.0" y="388.8" text-anchor="middle" font-size="10.5">hoặc thanh lý</text>
+<rect class="x" x="369.1" y="134.0" width="167.7" height="14" rx="7"/>
+<text class="xt" x="453.0" y="144.5" text-anchor="middle">≤ 14d · chưa lắp · nguyên hộp</text>
+<rect class="x" x="358.6" y="221.0" width="188.9" height="14" rx="7"/>
+<text class="xt" x="453.0" y="231.5" text-anchor="middle">Không → từ chối, nêu rõ quyền ACL</text>
+<rect class="x" x="634.5" y="322.0" width="173.0" height="14" rx="7"/>
+<text class="xt" x="721.0" y="332.5" text-anchor="middle">Hư do KH → trừ theo chính sách</text>
+</svg></div>
+<p class="swim-cap">Kéo ngang để xem hết · <a href="sop/b2.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a></p>
+
+
+</details>
+
+<h3 id="refund-steps">Hoàn tiền: 5 bước của FIN</h3>
+<ol>
+<li>Đọc số tiền đã duyệt và người duyệt trong case. Không có người duyệt đúng mức thì trả lại CX.</li>
+<li>Hoàn trên Shopify về <strong>phương thức thanh toán gốc</strong> (không chuyển khoản ngoài). Ghi rõ dòng hàng, phí ship.</li>
+<li>Kiểm cổng thanh toán đã nhận lệnh (Shopify Payments, PayPal, Afterpay…).</li>
+<li>CX gửi email xác nhận số tiền và thời gian ngân hàng xử lý.</li>
+<li>Ghi vào tracker: ngày hoàn, số tiền, mã giải pháp. Đơn chuyển <span class="s">95</span> nếu hoàn toàn bộ.</li>
+</ol>
+<h2 id="b3">5. Chargeback (B3)</h2>
+<p>Gọi khách ≤ 24h, đưa lựa chọn đúng bảng bồi thường. Khách không rút và brand không có lỗi → FIN nộp hồ sơ trước hạn cổng −3 ngày. Brand có lỗi → chấp nhận và hoàn.</p>
+<details class="diagram"><summary>Mở swimlane B3 · chargeback</summary>
+
+
+<div class="swim" tabindex="0" role="region" aria-label="Swimlane, kéo ngang để xem hết"><svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1064 518" width="1064" height="518" role="img" aria-label="SOP-B3 Tranh chấp thanh toán (chargeback)" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2MTA1NmZkNS02ZTVjLTQxMmMtYjNjNC02Y2JhNTMzNjQzMzkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHwzO+/DE2+dTcZuDraEwYsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4ZGQ3ZTE1MC05YTEwLTRkMDItOWNhNy03NTFkNTgwNDA1NDRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoPAiPzbs9gjecKFhWSKo5RwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggq07KUqTziJLn1e9zuRkoIX2DSaM9PIzuMImvjiovOAekZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOXr8Qaa3qp4axZGjf7d1H0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCBrLyRnWTryDGlIepObYX49b2lUz/GuR72eM9PRK4ol92RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjoZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjYxMDU2ZmQ1LTZlNWMtNDEyYy1iM2M0LTZjYmE1MzM2NDMzOS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjMxODhkOGNmLTYyZmQtNDU1ZS1hNmY4LTlhYzI4YmQ3N2ExOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCrTspSpPOIkufV73O5GSghfYNJoz08jO4wia+OKi84B6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg3/M1iLH77fixWY3WbY9coVuDL+ZFFUzJYP07/YZndqOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggodXsd3c2JzPKbEtbd/FElF/XCRBBt+zuJq6U00HTGKN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPZFBEE6uol/tHT/XZDwDuzAS0gtgDrQSdHL21U0ny5m9QLIqVMUQdOol5etufrXvOLhel26YfeO0d3wPJwt4Lc=</c2pa:manifest></metadata>
+<title>SOP-B3 Tranh chấp thanh toán (chargeback)</title><style>
+.sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
+.sw .bg{fill:var(--panel,#fff)}
+.sw .lane{fill:var(--panel,#fff);stroke:var(--line,#e5e5e7)}
+.sw .lane.alt{fill:var(--bg,#fbfbfa)}
+.sw .hdr{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .stg{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .sep{stroke:var(--line,#e5e5e7);stroke-dasharray:3 4}
+.sw .t{fill:var(--ink,#1d1d1f);font-size:10.5px}
+.sw .tb{fill:var(--ink,#1d1d1f);font-size:12px;font-weight:650}
+.sw .tm{fill:var(--muted,#6e6e73);font-size:10px}
+.sw .ts{fill:var(--accent,#6b5a45);font-size:10px;font-weight:600}
+.sw .n{fill:var(--panel,#fff);stroke-width:1.4}
+.sw .n.ext{stroke-dasharray:4 3}
+.sw .n.cust{fill:var(--bg,#fbfbfa)}
+.sw .n.term{fill:var(--accent-soft,#f3efe9)}
+.sw .e{fill:none;stroke:var(--ink,#1d1d1f);stroke-width:1.2;opacity:.75}
+.sw .e.info{stroke-dasharray:4 3;opacity:.55}
+.sw .ah{fill:var(--ink,#1d1d1f);opacity:.75}
+.sw .lbl{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:600}
+.sw .lblbg{fill:var(--panel,#fff);opacity:.92}
+.sw .tag{fill:var(--ink,#1d1d1f)}
+.sw .tagt{fill:var(--bg,#fff);font-size:9.5px;font-weight:700}
+.sw .x{fill:#fdecea;stroke:#c0392b;stroke-width:1}
+.sw .xt{fill:#a5281b;font-size:9.5px;font-weight:600}
+.sw .band{fill:none;stroke-width:1.2;stroke-dasharray:6 4;opacity:.8}
+.sw .bandt{font-size:9.5px;font-weight:600}
+@media (prefers-color-scheme:dark){.sw .x{fill:#3a1f1c}.sw .xt{fill:#f5a097}}
+</style>
+<defs><marker id="ah-b3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1064" height="518" rx="12"/>
+<rect class="hdr" x="0" y="0" width="118" height="50"/>
+<text class="tm" x="12" y="22">Vị trí ↓</text><text class="tm" x="12" y="38">Giai đoạn →</text>
+<rect class="stg" x="118" y="0" width="134" height="50"/>
+<text class="tb" x="128" y="21"><tspan class="ts">D1</tspan>  Cảnh báo</text>
+<text class="tm" x="128" y="38">⏱ trong ngày</text>
+<rect class="stg" x="252" y="0" width="134" height="50"/>
+<text class="tb" x="262" y="21"><tspan class="ts">D2</tspan>  Liên hệ</text>
+<text class="tm" x="262" y="38">⏱ gọi ≤ 24h</text>
+<rect class="stg" x="386" y="0" width="268" height="50"/>
+<text class="tb" x="396" y="21"><tspan class="ts">D3</tspan>  Quyết định</text>
+<text class="tm" x="396" y="38">⏱ ≤ 48h</text>
+<rect class="stg" x="654" y="0" width="134" height="50"/>
+<text class="tb" x="664" y="21"><tspan class="ts">D4</tspan>  Hồ sơ</text>
+<text class="tm" x="664" y="38">⏱ trước hạn cổng −3d</text>
+<rect class="stg" x="788" y="0" width="268" height="50"/>
+<text class="tb" x="798" y="21"><tspan class="ts">D5</tspan>  Kết quả · học</text>
+<text class="tm" x="798" y="38">⏱ khi có phán quyết</text>
+<rect class="lane" x="0" y="50" width="1056" height="92"/>
+<rect x="0" y="50" width="5" height="92" fill="#8e8e93"/>
+<text class="tb" x="14" y="93.0">Khách hàng</text>
+<text class="tm" x="14" y="108.0">Customer</text>
+<rect class="lane alt" x="0" y="142" width="1056" height="92"/>
+<rect x="0" y="142" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="185.0">Ngân hàng</text>
+<text class="tm" x="14" y="200.0">Cổng thanh toán</text>
+<rect class="lane" x="0" y="234" width="1056" height="92"/>
+<rect x="0" y="234" width="5" height="92" fill="#2f6fb0"/>
+<text class="tb" x="14" y="277.0">P4 · CX</text>
+<text class="tm" x="14" y="292.0">Chăm sóc KH</text>
+<rect class="lane alt" x="0" y="326" width="1056" height="92"/>
+<rect x="0" y="326" width="5" height="92" fill="#6b5a45"/>
+<text class="tb" x="14" y="369.0">P1 · OPS</text>
+<text class="tm" x="14" y="384.0">Điều phối</text>
+<rect class="lane" x="0" y="418" width="1056" height="92"/>
+<rect x="0" y="418" width="5" height="92" fill="#7a4fa3"/>
+<text class="tb" x="14" y="461.0">P6 · FIN</text>
+<text class="tm" x="14" y="476.0">Tài chính</text>
+<line class="sep" x1="252" y1="50" x2="252" y2="510"/>
+<line class="sep" x1="386" y1="50" x2="386" y2="510"/>
+<line class="sep" x1="654" y1="50" x2="654" y2="510"/>
+<line class="sep" x1="788" y1="50" x2="788" y2="510"/>
+<path class="e" d="M185.0,121.0 L185.0,163.0" marker-end="url(#ah-b3)"/>
+<path class="e" d="M185.0,213.0 L185.0,439.0" marker-end="url(#ah-b3)"/>
+<path class="e" d="M243.0,464.0 L319.0,464.0 L319.0,305.0" marker-end="url(#ah-b3)"/>
+<path class="e" d="M377.0,280.0 L395.0,280.0" marker-end="url(#ah-b3)"/>
+<path class="e" d="M453.0,309.0 L453.0,343.0" marker-end="url(#ah-b3)"/>
+<rect class="lblbg" x="455.0" y="317.0" width="33.0" height="12" rx="3"/>
+<text class="lbl" x="457.0" y="326.0" text-anchor="start">Không</text>
+<path class="e" d="M453.0,401.0 L453.0,439.0" marker-end="url(#ah-b3)"/>
+<rect class="lblbg" x="455.0" y="411.0" width="16.8" height="12" rx="3"/>
+<text class="lbl" x="457.0" y="420.0" text-anchor="start">Có</text>
+<path class="e" d="M511.0,280.0 L587.0,280.0 L587.0,439.0" marker-end="url(#ah-b3)"/>
+<rect class="lblbg" x="540.6" y="266.0" width="16.8" height="12" rx="3"/>
+<text class="lbl" x="549.0" y="275.0" text-anchor="middle">Có</text>
+<path class="e" d="M511.0,372.0 L721.0,372.0 L721.0,439.0" marker-end="url(#ah-b3)"/>
+<rect class="lblbg" x="599.5" y="358.0" width="33.0" height="12" rx="3"/>
+<text class="lbl" x="616.0" y="367.0" text-anchor="middle">Không</text>
+<path class="e" d="M779.0,464.0 L855.0,464.0 L855.0,213.0" marker-end="url(#ah-b3)"/>
+<path class="e" d="M913.0,188.0 L989.0,188.0 L989.0,347.0" marker-end="url(#ah-b3)"/>
+<rect class="n term" stroke="#8e8e93" x="127.0" y="71.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="185.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Mở tranh chấp</text>
+<text class="t" x="185.0" y="106.5" text-anchor="middle" font-size="10.5">với ngân hàng</text>
+<rect class="n ext" stroke="#a1a1a6" x="127.0" y="163.0" width="116" height="50" rx="8"/>
+<text class="t" x="185.0" y="186.0" text-anchor="middle" font-size="10.5" font-weight="600">Cổng TT báo</text>
+<text class="t" x="185.0" y="198.5" text-anchor="middle" font-size="10.5">dispute + hạn nộp</text>
+<rect class="n" stroke="#7a4fa3" x="127.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="127.0" y="447.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="185.0" y="462.0" text-anchor="middle" font-size="10.5" font-weight="600">Ghi dispute</text>
+<text class="t" x="185.0" y="474.5" text-anchor="middle" font-size="10.5">liên kết mã đơn</text>
+<rect class="tag" x="221.0" y="432.0" width="28" height="14" rx="7"/>
+<text class="tagt" x="235.0" y="442.5" text-anchor="middle">DSP</text>
+<rect class="n" stroke="#2f6fb0" x="261.0" y="255.0" width="116" height="50" rx="8"/>
+<rect x="261.0" y="263.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="319.0" y="271.8" text-anchor="middle" font-size="10.5" font-weight="600">Gọi KH ≤ 24h</text>
+<text class="t" x="319.0" y="284.2" text-anchor="middle" font-size="10.5">lựa chọn đúng</text>
+<text class="t" x="319.0" y="296.8" text-anchor="middle" font-size="10.5">bảng bồi thường</text>
+<path class="n" stroke="#2f6fb0" d="M453.0,251.0 L511.0,280.0 L453.0,309.0 L395.0,280.0 z"/>
+<text class="t" x="453.0" y="278.0" text-anchor="middle" font-size="10">KH rút</text>
+<text class="t" x="453.0" y="290.0" text-anchor="middle" font-size="10">tranh chấp?</text>
+<path class="n" stroke="#6b5a45" d="M453.0,343.0 L511.0,372.0 L453.0,401.0 L395.0,372.0 z"/>
+<text class="t" x="453.0" y="370.0" text-anchor="middle" font-size="10">Lỗi thuộc</text>
+<text class="t" x="453.0" y="382.0" text-anchor="middle" font-size="10">brand?</text>
+<rect class="n" stroke="#7a4fa3" x="395.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="395.0" y="447.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="453.0" y="462.0" text-anchor="middle" font-size="10.5" font-weight="600">Chấp nhận dispute</text>
+<text class="t" x="453.0" y="474.5" text-anchor="middle" font-size="10.5">hoàn tiền</text>
+<rect class="n" stroke="#7a4fa3" x="529.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="529.0" y="447.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="587.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Thực hiện</text>
+<text class="t" x="587.0" y="468.2" text-anchor="middle" font-size="10.5">giải pháp</text>
+<text class="t" x="587.0" y="480.8" text-anchor="middle" font-size="10.5">đã thỏa thuận</text>
+<rect class="n" stroke="#7a4fa3" x="663.0" y="439.0" width="116" height="50" rx="8"/>
+<rect x="663.0" y="447.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="721.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Nộp hồ sơ</text>
+<text class="t" x="721.0" y="468.2" text-anchor="middle" font-size="10.5">ETA đã hứa · tracking</text>
+<text class="t" x="721.0" y="480.8" text-anchor="middle" font-size="10.5">POD · trao đổi</text>
+<rect class="n ext" stroke="#a1a1a6" x="797.0" y="163.0" width="116" height="50" rx="8"/>
+<text class="t" x="855.0" y="192.2" text-anchor="middle" font-size="10.5" font-weight="600">Phán quyết</text>
+<rect class="n term" stroke="#6b5a45" x="931.0" y="347.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="989.0" y="370.0" text-anchor="middle" font-size="10.5" font-weight="600">Root cause</text>
+<text class="t" x="989.0" y="382.5" text-anchor="middle" font-size="10.5">→ sửa SOP</text>
+<rect class="x" x="237.8" y="230.0" width="162.4" height="14" rx="7"/>
+<text class="xt" x="319.0" y="240.5" text-anchor="middle">Không gọi được → email + SMS</text>
+</svg></div>
+<p class="swim-cap">Kéo ngang để xem hết · <a href="sop/b3.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a></p>
+
+
+</details>
+
+<p><strong>Hồ sơ nộp cổng thanh toán:</strong> trang sản phẩm lúc mua (ảnh chụp), email xác nhận có khung ETA, tracking và POD, toàn bộ trao đổi với khách, các lựa chọn đã đưa ra. Chỉ nộp khi brand không có lỗi; brand sai thì chấp nhận và hoàn.</p>
+<h2 id="root-cause">6. Đóng case: mã nguyên nhân gốc</h2>
+<p>Mỗi case đóng phải có <strong>một</strong> mã. Thứ Sáu OPS đếm theo mã; cùng mã trên cùng SKU/NCC 2 lần/tháng thì tạm ngừng SKU hoặc NCC đó.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Mã</th>
+<th>Nguyên nhân</th>
+<th>Chủ sửa</th>
+<th>Thu hồi chi phí từ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RC-NCC</td>
+<td>Lỗi sản xuất, sai thông số</td>
+<td><span class="r src">SRC</span></td>
+<td>NCC</td>
+</tr>
+<tr>
+<td>RC-PACK</td>
+<td>Đóng gói không đạt chuẩn</td>
+<td><span class="r src">SRC</span></td>
+<td>NCC</td>
+</tr>
+<tr>
+<td>RC-QC</td>
+<td>QC kho gom bỏ sót</td>
+<td><span class="r src">SRC</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>RC-FWD</td>
+<td>Forwarder, cảng, hải quan</td>
+<td><span class="r log">LOG</span></td>
+<td>forwarder / bảo hiểm</td>
+</tr>
+<tr>
+<td>RC-LAST</td>
+<td>Hãng giao chặng cuối</td>
+<td><span class="r log">LOG</span></td>
+<td>hãng giao</td>
+</tr>
+<tr>
+<td>RC-LIST</td>
+<td>Trang sản phẩm sai, gây hiểu nhầm</td>
+<td><span class="r mkt">MKT</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>RC-CX</td>
+<td>Hứa sai, trả lời chậm, báo trễ muộn</td>
+<td><span class="r cx">CX</span></td>
+<td>–</td>
+</tr>
+<tr>
+<td>RC-CUST</td>
+<td>Khách đổi ý, chọn nhầm</td>
+<td>–</td>
+<td>–</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="response">7. Cam kết phản hồi</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Kênh / tình huống</th>
+<th>Phản hồi đầu</th>
+<th>Giải pháp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Email, form, Messenger, Instagram, WhatsApp</td>
+<td>≤ 24h (mục tiêu ≤ 4h LV)</td>
+<td>≤ 24h sau khi đủ thông tin</td>
+</tr>
+<tr>
+<td>Hàng hỏng, sai hàng</td>
+<td>≤ 4h làm việc</td>
+<td>≤ 24h</td>
+</tr>
+<tr>
+<td>Khách nhắc chargeback / cơ quan nhà nước</td>
+<td><strong>gọi điện ≤ 24h</strong></td>
+<td>ngay trong cuộc gọi</td>
+</tr>
+</tbody>
+</table></div>
+<p>Bot chỉ tra đơn bằng mã đơn; không tra được thì nói rõ khi nào người thật trả lời. Không gửi "đang chuyển nhân viên" khi không có ai trực.</p>
+<h2 id="templates">8. Mẫu tin nhắn (tiếng Anh)</h2>
+<p>Chỉ gửi nội dung khớp trạng thái thật. Thay phần [ngoặc vuông].</p>
+<details id="tpl-confirm"><summary>Xác nhận đơn · trạng thái 20</summary>
+<pre><code>Hi [First name], thank you for your order #[No].
+Your [product] is made and packed by our partner workshop and shipped by sea.
+Estimated delivery: [date A] – [date B]
+1) Workshop prepares and packs your item
+2) Quality check at our consolidation warehouse (we'll send you photos)
+3) Sea freight and customs
+4) Local delivery — the carrier will book a time with you
+You can cancel for a full refund any time before production starts.
+We send tracking as soon as the carrier has scanned your parcel.</code></pre>
+</details>
+
+<details id="tpl-weekly"><summary>Cập nhật mỗi 7 ngày</summary>
+<pre><code>Hi [First name], your weekly update for order #[No]:
+Current stage: [In production / Quality checked / On the ship / In customs / With local carrier]
+What changed this week: [one honest line, or "No change this week"]
+Estimated delivery: still [date A] – [date B]
+Reply here any time — a team member answers within 24 hours.</code></pre>
+</details>
+
+<details id="tpl-delay"><summary>Báo trễ · C2 (gửi trước ≥ 7 ngày)</summary>
+<pre><code>Hi [First name], an honest update on order #[No]:
+[The workshop has moved dispatch to DATE / The ship's departure moved to DATE].
+New estimated delivery: [date A] – [date B]
+Your options:
+1) Keep your order, with a credit of [amount] for the delay
+2) Switch to [alternative item]
+3) Cancel for a full refund, processed within 2 business days
+Just reply 1, 2 or 3.</code></pre>
+</details>
+
+<details id="tpl-shipped"><summary>Đã xuất hàng · trạng thái 60</summary>
+<pre><code>Hi [First name], good news: order #[No] is on its way.
+Tracking: [number] ([link])
+Estimated delivery: [date A] – [date B]
+Sea tracking can stay unchanged for several days while the ship is at sea — that's normal.
+The local carrier will contact you to book a delivery time.
+Please count the boxes ("Box X of Y") before signing.</code></pre>
+</details>
+
+<details id="tpl-damaged"><summary>Nhận hàng hỏng · C3</summary>
+<pre><code>Hi [First name], we're sorry your [item] arrived damaged.
+To fix this quickly, please send:
+- a photo of the box label
+- photos or a short video of the damage
+- one photo of the whole item
+We'll reply with a solution (replacement part, replacement item or refund) within 24 hours.
+This doesn't affect your rights under Australian Consumer Law.</code></pre>
+</details>
+
+<details id="tpl-refunded"><summary>Đã hoàn tiền · R4</summary>
+<pre><code>Hi [First name], we've refunded [amount] for order #[No] to your original payment method today.
+Banks usually take [3–5] business days to show it. Case reference: [Case ID].
+If anything else isn't right, just reply here.</code></pre>
+</details>
+
+<h2 id="faq">9. Câu hỏi hay gặp (dán lên web)</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Câu hỏi</th>
+<th>Trả lời ngắn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How long is delivery?</td>
+<td>Australia 8–12 weeks, Singapore 5–8 weeks. Your window is shown at checkout.</td>
+</tr>
+<tr>
+<td>When do I get tracking?</td>
+<td>As soon as the carrier scans your parcel. Before that, we email you every 7 days.</td>
+</tr>
+<tr>
+<td>Is it solid wood?</td>
+<td>Each product page lists the exact material of each part (solid timber, veneer, MDF…).</td>
+</tr>
+<tr>
+<td>Can I cancel?</td>
+<td>Free before production starts. If we are late, you can cancel for a full refund.</td>
+</tr>
+<tr>
+<td>Can I return it?</td>
+<td>Faulty or not as described: we fix, replace or refund and collect it. Change of mind: within 14 days, unused and in original packaging.</td>
+</tr>
+</tbody>
+</table></div></article>
+<div class="pager"><a class="prev" href="sop-a-don-chuan.html">← Standard Order (SOP-A)</a><a class="next" href="kpi-sla-nhip.html">KPI, SLA &amp; Rhythm →</a></div>
+<footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
+<script>
+function openTarget(){var id=decodeURIComponent(location.hash.slice(1));if(!id)return;var el=document.getElementById(id);if(!el)return;var d=el.closest("details")||(el.tagName==="DETAILS"?el:null);if(d){d.open=true;}}
+window.addEventListener("hashchange",openTarget);openTarget();
+</script>
+</body></html>

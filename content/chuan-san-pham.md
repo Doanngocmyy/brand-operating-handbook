@@ -1,13 +1,15 @@
 ---
 title: Chuẩn hóa sản phẩm
-order: 4
+badges: onboarding
 ---
 
 # Chuẩn hóa sản phẩm
 
 Một mã hàng chỉ được bán khi đạt đủ 7 tiêu chí bên dưới. Mục tiêu: khách nhận đúng món mình thấy, đúng kích thước, đúng màu, lắp được.
 
-## Danh mục: 8 nhóm chính, mã cố định
+{{SOT:sku,listing}}
+
+## Danh mục: 8 nhóm chính, mã cố định {#catalogue}
 
 Mã sản phẩm có dạng `{nhóm chính}-{nhóm con}-{số thứ tự}`, ví dụ `LIV-TVU-0001`. SKU biến thể có dạng `{mã SP}-{mã màu}-{chiều rộng cm}`, ví dụ `LIV-TVU-0001-WAL-180`.
 
@@ -22,7 +24,7 @@ Mã sản phẩm có dạng `{nhóm chính}-{nhóm con}-{số thứ tự}`, ví 
 | Decor & Lighting | DEC | Mirrors (MIR) · Lighting (LGT) · Rugs (RUG) · Wall Decor (WAL) |
 | Outdoor | OUT | Outdoor Furniture (ODF) |
 
-## Phân hạng: hàng chuẩn đi trước
+## Phân hạng: hàng chuẩn đi trước {#grading}
 
 Mỗi mã bắt đầu với 100 điểm và bị trừ điểm theo từng "ngoại lệ".
 
@@ -32,7 +34,7 @@ Mỗi mã bắt đầu với 100 điểm và bị trừ điểm theo từng "ngo
 | **B – Cần xem** | Dưới 80 điểm. Bị trừ vì: dễ vỡ (đá, kính, gương) −25 · lắp tường hoặc cần thợ −15 · option lạ −15 · màu chưa đặt tên −15 · trên 18 biến thể −10 · giá chênh trên 3 lần −10 · không đọc được size −10 · ngoài nhóm ra mắt −10 | Chỉ bán khi đã có giải pháp đóng gói và hướng dẫn lắp |
 | **C – Loại** | Làm theo yêu cầu, size đặc biệt, giường theo chuẩn nệm, sofa nhiều cấu hình hoặc chọn vải, trên 36 biến thể, không có ảnh | Không bán giai đoạn đầu. Sau này có thể chuẩn hóa lại, ví dụ chỉ bán 1 cấu hình |
 
-## Chuẩn màu: một tên duy nhất cho mỗi màu
+## Chuẩn màu: một tên duy nhất cho mỗi màu {#colour}
 
 Mọi tên màu của NCC ("胡桃色", "walnut", "black walnut", "dark wood"…) đều quy về **một** tên chuẩn có mã 3 chữ. Chất liệu và bề mặt (PU Leather, Boucle, Velvet, Sintered Stone, Marble, Glass, Gloss, Matte…) ghi ở cột riêng, không lẫn vào tên màu.
 
@@ -53,7 +55,7 @@ Mọi tên màu của NCC ("胡桃色", "walnut", "black walnut", "dark wood"…
 
 **Core palette của {{BRAND}}** (ưu tiên cho phong cách tối giản): Natural Oak · Walnut · Dark Walnut · Black · White · Cream · Beige · Grey · Light Grey · Dark Grey. Màu ngoài core chỉ thêm khi bán chạy.
 
-## Kích thước và dung sai
+## Kích thước và dung sai {#dimensions}
 
 Mọi kích thước ghi theo **W (rộng) × D (sâu) × H (cao), đơn vị cm**. Nguồn duy nhất là bản vẽ của NCC đã được kiểm bằng hàng mẫu.
 
@@ -67,12 +69,12 @@ Sai số 5–10 cm **không chấp nhận được**. Tiêu chuẩn đồ gỗ T
 
 Cần chặt hơn với: giường (vừa nệm chuẩn Úc, Queen 153 × 203 cm), mặt đá hoặc kính lắp theo lỗ, tủ treo tường. Hàng bọc nệm (sofa, ghế) cho phép ±2 cm và ghi rõ trên web.
 
-## 7 tiêu chí để một mã được đăng bán
+## 7 tiêu chí để một mã được đăng bán {#listing-criteria}
 
 - [ ] Kích thước cố định, tối đa 3 size mỗi mẫu. Không nhận size riêng.
 - [ ] Màu nằm trong bảng chuẩn, có ảnh thật ban ngày hoặc mẫu màu từ NCC.
 - [ ] Chất liệu ghi đúng từng bộ phận (gỗ tự nhiên / veneer / MDF / ván dăm, lớp phủ).
 - [ ] Mỗi trang bán một món. Bán theo bộ thì có mã "Set" riêng, ghi rõ bộ gồm những gì.
 - [ ] Có hướng dẫn lắp tiếng Anh (PDF + danh sách phụ kiện). Lắp trên 45 phút thì ghi rõ trên web.
-- [ ] Đóng gói đạt chuẩn ([mục Đóng gói](06-dong-goi-nhan-chung-tu.html)), biết trước số kiện, kích thước và cân nặng từng kiện.
+- [ ] Đóng gói đạt chuẩn ([mục Đóng gói](dong-goi-chung-tu.html)), biết trước số kiện, kích thước và cân nặng từng kiện.
 - [ ] Tủ áo, kệ sách, buffet cao từ 686 mm và mọi kệ TV có nhãn cảnh báo đổ ngã kèm bộ neo tường.

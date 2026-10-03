@@ -1,13 +1,15 @@
 ---
 title: Nguyên tắc cốt lõi
-order: 1
+badges: onboarding
 ---
 
 # Nguyên tắc cốt lõi
 
 Mọi quyết định của {{BRAND}} được kiểm bằng một câu hỏi: **khách có kiểm chứng được điều mình vừa nói không?**
 
-## 7 nguyên tắc vận hành
+Bối cảnh vì sao có các nguyên tắc này: [Founder note](thu-founder.html).
+
+## 7 nguyên tắc vận hành {#principles}
 
 | # | Nguyên tắc | Nghĩa là gì trong thực tế |
 |---|---|---|
@@ -19,7 +21,7 @@ Mọi quyết định của {{BRAND}} được kiểm bằng một câu hỏi: *
 | 6 | Sửa ở gốc | Lỗi lặp 2 lần trong tháng thì tạm ngừng mã hàng hoặc NCC đó, sửa quy trình |
 | 7 | Dữ liệu khách là của khách | Không chia sẻ, không dùng sai mục đích, không đưa lên công cụ công khai |
 
-## Lằn ranh đỏ (không bao giờ làm)
+## Lằn ranh đỏ (không bao giờ làm) {#red-lines}
 
 - Ghi "solid wood", "hand-made", "premium" khi NCC không chứng minh được.
 - Viết "fast shipping", "no mark-up", "best price", hay đưa số khách hàng, logo báo chí không có thật.
@@ -32,7 +34,7 @@ Mọi quyết định của {{BRAND}} được kiểm bằng một câu hỏi: *
 
 Vi phạm lằn ranh đỏ là lỗi nghiêm trọng, không phải lỗi kỹ năng. Không chắc thì hỏi OPS (P1) trước khi đăng hoặc gửi.
 
-## Giọng thương hiệu
+## Giọng thương hiệu {#voice}
 
 - **Tối giản, điềm tĩnh, chính xác.** Câu ngắn, số cụ thể, không dùng chữ in hoa để gây áp lực.
 - **Tự tin vì minh bạch**, không phải vì phô trương: "Delivered in 8–12 weeks, tracked at every step."

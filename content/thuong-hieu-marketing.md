@@ -1,13 +1,15 @@
 ---
 title: Marketing & mạng xã hội
-order: 10
+badges: internal, onboarding
 ---
 
 # Marketing và mạng xã hội
 
-{{BRAND}} nhắm vào khách Úc mua một món nội thất khoảng A$600–1.500 cho phòng khách. Mô hình cũ đã bán khoảng 1.600 đơn Úc trong 4 tháng ở vùng giá này, chủ yếu qua quảng cáo Meta dẫn về website. {{BRAND}} giữ "máy bán hàng" đó, nhưng thay nội dung hứa hẹn bằng bằng chứng.
+{{BRAND}} nhắm vào khách Úc mua một món nội thất khoảng A$600–1.500 cho phòng khách. Mô hình cũ đã bán khoảng 1.600 đơn Úc trong 4 tháng ở vùng giá này, chủ yếu qua quảng cáo Meta dẫn về website. {{BRAND}} giữ "máy bán hàng" đó, nhưng thay nội dung hứa hẹn bằng bằng chứng. Lằn ranh đỏ: [Operating principles](nguyen-tac.html#red-lines).
 
-## 1. Định vị
+{{SOT:listing,promise}}
+
+## 1. Định vị {#positioning}
 
 > **Quiet, honest furniture.** Một món được cân nhắc kỹ. Kích thước chính xác. Chất liệu nói thật. Thời gian giao nói thật.
 
@@ -19,17 +21,17 @@ order: 10
 | "Free cancellation until production starts." | Giá gạch "Was/Now" không có lịch sử giá thật |
 | "Real people reply within 24 hours." | Số khách hàng, logo báo chí không có thật |
 
-## 2. Dựng tài khoản (tuần 1)
+## 2. Dựng tài khoản (tuần 1) {#accounts}
 
 - [ ] Kiểm tra tên: tên miền `.com.au`/`.com`, handle trùng trên IG/FB/TikTok/Pinterest/YouTube, tra nhãn hiệu tại IP Australia.
 - [ ] **Meta Business Portfolio riêng** cho {{BRAND}}: 2 quản trị viên, xác thực 2 lớp, tài khoản quảng cáo và Pixel/CAPI riêng.
 - [ ] Page Facebook, Instagram Business, TikTok Business, Pinterest Business. Cùng ảnh đại diện, cùng bio, cùng link.
 - [ ] Bio: "Quiet, honest furniture. Made to order, shipped by sea to AU in 8–12 weeks. Real tracking. Real people."
 - [ ] Highlights IG: How it works · Sizes · Materials · Delivery · Assembly · Reviews (chỉ review thật).
-- [ ] Hộp thư: tin tự động theo đúng quy tắc ở [SOP-B · Cam kết phản hồi](08-cskh.html).
+- [ ] Hộp thư: tin tự động theo đúng quy tắc ở [SOP-B · Cam kết phản hồi](sop-b-hau-mai.html).
 - [ ] Không mua follower hay tài khoản có sẵn. Không dùng danh sách khách, email hay pixel của doanh nghiệp khác.
 
-## 3. Bốn trụ nội dung
+## 3. Bốn trụ nội dung {#content-pillars}
 
 | Trụ | Tỉ lệ | Ví dụ | Mục đích |
 |---|---|---|---|
@@ -40,7 +42,7 @@ order: 10
 
 **Quy ước hình ảnh:** màu trung tính theo core palette, tối đa 1 đạo cụ mỗi khung hình, chữ tối thiểu, một font duy nhất, cùng góc máy cho mọi ảnh sản phẩm. Không dùng chữ "SALE" đỏ, không đếm ngược giả.
 
-## 4. Tần suất đăng
+## 4. Tần suất đăng {#cadence}
 
 | Kênh | Tần suất | Định dạng |
 |---|---|---|
@@ -50,15 +52,15 @@ order: 10
 | Pinterest | 10 ghim/tuần | Ảnh không gian, link về trang sản phẩm |
 | YouTube | Từ tháng thứ 3 | Video lắp đầy đủ (QR trong kiện dẫn tới) |
 
-## 5. Sản xuất nội dung
+## 5. Sản xuất nội dung {#production}
 
 1. **Hàng mẫu:** mỗi mã ra mắt chụp 1 buổi, ra 12 ảnh và 4 video ngắn (toàn cảnh, chi tiết, kích thước, lắp ráp).
 2. **Ảnh dựng 3D** từ bản vẽ NCC cho mã chưa có hàng mẫu. Ghi rõ là ảnh dựng.
 3. **Creator Úc:** 3–5 người có 3–30 nghìn follower trong mảng nhà cửa. Hợp đồng ghi quyền dùng video làm quảng cáo, gắn "Paid partnership" hoặc #ad, không đóng vai khách hàng.
 4. **Khách thật:** 14 ngày sau giao, mời mọi khách gửi ảnh và review. Ưu đãi nhỏ như nhau cho mọi review, tốt hay xấu.
-5. **Duyệt trước khi đăng (5 câu):** kích thước và chất liệu đúng master SKU chưa? Thời gian giao đúng chính sách chưa? Có câu nào trong danh sách cấm không? Có ghi #ad khi cần không? Ảnh đã có quyền dùng chưa?
+5. <span class="anchor" id="content-approval"></span>**Duyệt trước khi đăng (5 câu):** kích thước và chất liệu đúng master SKU chưa? Thời gian giao đúng chính sách chưa? Có câu nào trong danh sách cấm không? Có ghi #ad khi cần không? Ảnh đã có quyền dùng chưa?
 
-## 6. Khách mục tiêu
+## 6. Khách mục tiêu {#audience}
 
 | Nhóm | Dấu hiệu | Cách nhắm | Thông điệp |
 |---|---|---|---|
@@ -67,7 +69,7 @@ order: 10
 | Người mua có kế hoạch (chuyển nhà sau 2–3 tháng) | Hay hỏi "cần có trước ngày X" | Quảng cáo ghi rõ ngày giao dự kiến | "Order today for delivery by [month]." |
 | Singapore (giai đoạn 3) | 15% đơn mô hình cũ, cước thấp, giao 5–8 tuần | Mở khi quy trình Úc ổn định | Thêm dịch vụ lắp giá cố định |
 
-## 7. Phễu và chỉ số
+## 7. Phễu và chỉ số {#funnel}
 
 | Giai đoạn | Kênh | Chỉ số mục tiêu |
 |---|---|---|
@@ -78,7 +80,7 @@ order: 10
 
 MER = doanh thu ÷ tổng chi quảng cáo. MER 4 tương ứng quảng cáo bằng 25% doanh thu, gần ngưỡng hòa vốn của mô hình cũ (khoảng 27%).
 
-## 8. Ngân sách test (khoảng 30 triệu VND)
+## 8. Ngân sách test (khoảng 30 triệu VND) {#budget}
 
 | Khoản | Ngân sách | Cấu trúc |
 |---|---|---|

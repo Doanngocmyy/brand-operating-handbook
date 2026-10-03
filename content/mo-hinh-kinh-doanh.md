@@ -1,13 +1,15 @@
 ---
 title: Mô hình kinh doanh
-order: 2
+badges: internal
 ---
 
 # Mô hình kinh doanh
 
 {{BRAND}} bán nội thất cho khách tại Úc (trước), Singapore (sau), New Zealand (khi đủ điều kiện). Team vận hành ở Việt Nam. Hàng đặt từ xưởng ở Trung Quốc, gom về kho, đi biển, giao chặng cuối tại nước khách. Giai đoạn đầu không giữ tồn kho.
 
-## Dòng hàng và dòng tiền
+{{SOT:cost}}
+
+## Dòng hàng và dòng tiền {#flows}
 
 ```text
 Khách đặt trên website Shopify ──tiền──▶ Cổng thanh toán ──rút gộp──▶ Tài khoản công ty
@@ -25,7 +27,7 @@ Kho gom tại TQ: nhận, QC, chụp ảnh   ← điểm trả hàng rẻ nhất
 Giao chặng cuối 3–7 ngày làm việc ──▶ Khách nhận (+ lắp đặt nếu có)
 ```
 
-## Số liệu tham khảo từ mô hình cũ (cùng sản phẩm)
+## Số liệu tham khảo từ mô hình cũ (cùng sản phẩm) {#reference}
 
 Số liệu tổng hợp từ khoảng 1.850 đơn trong 4 tháng (05–09/2026). Đơn vị tiền theo sổ sách cũ (SGD). Chỉ dùng để định hướng, không dùng để quảng cáo.
 
@@ -40,7 +42,7 @@ Số liệu tổng hợp từ khoảng 1.850 đơn trong 4 tháng (05–09/2026)
 | Thời gian giao thực tế, Singapore | trung vị 5,4 tuần, 90% đơn ≤ 7,1 tuần | Công bố **5–8 tuần** |
 | Lãi ròng ước tính | khoảng 6–7% doanh thu | Quảng cáo, hoàn hủy, bồi thường và chargeback ăn mất phần lớn lãi gộp |
 
-## Vì sao mô hình cũ mất lãi và {{BRAND}} làm khác thế nào
+## Vì sao mô hình cũ mất lãi và {{BRAND}} làm khác thế nào {#differences}
 
 | Mô hình cũ | {{BRAND}} |
 |---|---|
@@ -52,7 +54,7 @@ Số liệu tổng hợp từ khoảng 1.850 đơn trong 4 tháng (05–09/2026)
 | Mô tả chất liệu theo tiêu đề shop | Theo bản vẽ và xác nhận của NCC, có hàng mẫu |
 | Hàng ngấm nước, thiếu ốc, không có hướng dẫn tiếng Anh | Tiêu chuẩn đóng gói, túi phụ kiện đánh mã, hướng dẫn PDF tiếng Anh |
 
-## Quy tắc giá
+## Quy tắc giá {#pricing}
 
 - **Lãi ròng mục tiêu ≥ 30% giá bán**, tính sau: giá hàng, cước, phí cổng thanh toán, phí Shopify, quảng cáo, dự phòng hoàn tiền, dự phòng tỉ giá.
 - Với quảng cáo khoảng 20% doanh thu, giá bán phải khoảng **3 lần (giá hàng + cước)** mới đạt 30%. Ba đòn bẩy để hạ hệ số này về 2,0–2,5 lần:
@@ -60,8 +62,8 @@ Số liệu tổng hợp từ khoảng 1.850 đơn trong 4 tháng (05–09/2026)
     2. Giảm hoàn hủy về khoảng 3% nhờ QC ở kho TQ và mô tả đúng.
     3. Đàm phán cước theo lô.
 - Mã hàng không đạt ngưỡng lãi ở giá thị trường thì **không đăng bán**.
-- Giá niêm yết nói rõ đã gồm hay chưa gồm GST và thuế nhập khẩu.
+- Giá niêm yết nói rõ đã gồm hay chưa gồm GST và thuế nhập khẩu. {{BLK:gst}}
 
-## Giai đoạn 2: kho tại Úc
+## Giai đoạn 2: kho tại Úc {#phase-2}
 
 Khi đạt **30–40 đơn Úc/tháng ổn định trong 2 tháng** và có **ít nhất 3 mã bán đều**, chuyển sang mô hình: gom container mỗi tuần → kho 3PL tại Úc → giao 2–7 ngày cho mã bán chạy. Điều kiện đi kèm: có bên nhập khẩu tại Úc, đại lý hải quan, xử lý GST và thuế ở biên giới, hợp đồng 3PL.

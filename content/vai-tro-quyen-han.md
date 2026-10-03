@@ -1,15 +1,15 @@
 ---
 title: Vị trí, RACI & phân quyền
-order: 3
+badges: internal, onboarding
 ---
 
 # Vị trí, trách nhiệm và phân quyền
 
-Mỗi việc có **đúng một vị trí chủ trì**. Vị trí được thiết kế để tách được: giai đoạn đầu 1 người kiêm nhiều mã, khi tuyển thêm thì giao nguyên mã đó cho người mới, kèm đúng phần dữ liệu cần dùng.
+Mỗi việc có **đúng một vị trí chủ trì**. Vị trí được thiết kế để tách được: giai đoạn đầu 1 người kiêm nhiều mã, khi tuyển thêm thì giao nguyên mã đó cho người mới, kèm đúng phần dữ liệu cần dùng. Trang bắt đầu cho từng vị trí: [Find by role](tim-theo-vai-tro.html).
 
 <div class="legend"><span><span class="r ceo">P0 CEO</span></span><span><span class="r ops">P1 OPS</span></span><span><span class="r src">P2 SRC</span></span><span><span class="r log">P3 LOG</span></span><span><span class="r cx">P4 CX</span></span><span><span class="r mkt">P5 MKT</span></span><span><span class="r fin">P6 FIN</span></span></div>
 
-## 1. Bảy vị trí
+## 1. Bảy vị trí {#positions}
 
 <div class="cards">
 <div class="c" style="--rc:#1d1d1f"><span class="k">P0 · CEO</span><h4>Chủ doanh nghiệp</h4><p>Chiến lược, giá, ngân sách, duyệt NCC mới, bồi thường &gt; A$150, pháp lý.</p><p><b>KPI:</b> lãi ròng · chargeback</p></div>
@@ -21,7 +21,7 @@ Mỗi việc có **đúng một vị trí chủ trì**. Vị trí được thi�
 <div class="c" style="--rc:#7a4fa3"><span class="k">P6 · FIN</span><h4>Tài chính</h4><p>Trả NCC, trả cước/thuế, thực hiện hoàn tiền, xử lý dispute, đối soát.</p><p><b>KPI:</b> lãi thực/đơn · hoàn đúng hạn</p></div>
 </div>
 
-## 2. Ai làm gì theo giai đoạn (RACI)
+## 2. Ai làm gì theo giai đoạn (RACI) {#raci}
 
 R = làm · A = chịu trách nhiệm cuối · C = được hỏi · I = được báo. Mỗi dòng chỉ có **một A**.
 
@@ -52,7 +52,7 @@ R = làm · A = chịu trách nhiệm cuối · C = được hỏi · I = đư�
 | Ngân sách quảng cáo tuần | **A** | I | – | – | – | R | C |
 | Sửa SOP, chính sách | **A** | R | C | C | C | C | C |
 
-## 3. Tách quyền: người đề xuất ≠ người duyệt ≠ người chi tiền
+## 3. Tách quyền: người đề xuất ≠ người duyệt ≠ người chi tiền {#separation}
 
 | Dòng tiền | Đề xuất | Duyệt | Chi |
 |---|---|---|---|
@@ -63,7 +63,7 @@ R = làm · A = chịu trách nhiệm cuối · C = được hỏi · I = đư�
 
 Một người kiêm cả ba bước (giai đoạn 1 người) thì ghi lý do vào case và CEO rà lại mỗi thứ Sáu.
 
-## 4. Dữ liệu cần biết (giữ bí mật mô hình)
+## 4. Dữ liệu cần biết (giữ bí mật mô hình) {#data-access}
 
 ● dùng đầy đủ · ◐ chỉ xem phần cần · – không có quyền. **Mã đơn** là khóa nối giữa các vị trí; không ai cần thấy toàn bộ.
 
@@ -86,7 +86,7 @@ Một người kiêm cả ba bước (giai đoạn 1 người) thì ghi lý do v
 - SRC làm việc với NCC bằng **mã đơn + SKU**, không có tên hay địa chỉ khách. Nhãn giao chặng cuối do LOG in tại nước khách.
 - Mỗi người một tài khoản, xác thực 2 lớp, ít nhất 2 quản trị viên cho Shopify và Meta. Nghỉ việc: thu hồi quyền trong ngày.
 
-## 5. Kiêm nhiệm theo quy mô
+## 5. Kiêm nhiệm theo quy mô {#staffing}
 
 | Quy mô | Người 1 | Người 2 | Người 3 | Người 4 |
 |---|---|---|---|---|

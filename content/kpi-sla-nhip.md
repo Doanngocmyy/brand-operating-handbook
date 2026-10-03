@@ -1,15 +1,18 @@
 ---
 title: KPI & tracking
+badges: daily, internal
 order: 11
 ---
 
-# KPI, cờ cảnh báo và nhịp vận hành
+# KPI, cờ cảnh báo và nhịp vận hành {#kpi}
 
 Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Tracker tự tính trạng thái và bật cờ, người chỉ nhập ngày khi có bằng chứng.
 
 **Công cụ:** [SOP-Tracker.xlsx](https://github.com/{{REPO}}/raw/main/templates/SOP-Tracker.xlsx) · 5 tab: Hướng dẫn · Dashboard · DON (đơn) · CASE (hậu mãi) · DS (danh mục). Không có cột dữ liệu cá nhân của khách; mã đơn là khóa nối.
 
-## 1. Cây KPI theo giai đoạn
+{{SOT:order,case,cost}}
+
+## 1. Cây KPI theo giai đoạn {#kpi-tree}
 
 | Giai đoạn | KPI | Cách đo (cột tracker) | Mục tiêu | Chủ |
 |---|---|---|---|---|
@@ -28,7 +31,7 @@ Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Trac
 | Tài chính | Lãi thực/đơn | Landed cost thực (file chi phí riêng) | ≥ 30% | <span class="r fin">FIN</span> |
 | Tăng trưởng | MER | Doanh thu ÷ chi quảng cáo | ≥ 4 | <span class="r mkt">MKT</span> |
 
-## 2. Cờ SLA (tự bật trong tracker)
+## 2. Cờ SLA (tự bật trong tracker) {#flags}
 
 | Cờ | Bật khi | Ai xử lý | Hành động |
 |---|---|---|---|
@@ -41,7 +44,7 @@ Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Trac
 | <span class="flag amber">Case mở &gt;7 ngày</span> | Case chưa đóng sau 7 ngày | <span class="r ops">OPS</span> | Gọi khách, chốt giải pháp |
 | <span class="flag">Duyệt sai cấp</span> | Người duyệt thấp hơn mức cần | <span class="r ops">OPS</span> | Rà lại, ghi lý do |
 
-## 3. Dashboard (tab DASHBOARD)
+## 3. Dashboard (tab DASHBOARD) {#dashboard}
 
 | Khối | Câu hỏi nó trả lời | Dùng ở đâu |
 |---|---|---|
@@ -52,7 +55,7 @@ Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Trac
 | Case theo loại | Khách đang gặp vấn đề gì nhiều nhất? | Báo cáo tuần |
 | Nguyên nhân gốc | Lỗi do ai, sửa quy trình nào, đòi tiền ai? | Báo cáo tuần |
 
-## 4. Nhịp vận hành
+## 4. Nhịp vận hành {#rhythm}
 
 | Nhịp | Khi nào | Ai | Đầu vào → Đầu ra |
 |---|---|---|---|
@@ -60,9 +63,9 @@ Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Trac
 | Báo cáo tuần | Thứ Sáu 16:00 | <span class="r ops">OPS</span> → <span class="r ceo">CEO</span> | Dashboard + case theo nguyên nhân → SKU/NCC tắt, sửa SOP |
 | Đối soát | Thứ Sáu | <span class="r fin">FIN</span> | Chi phí thực từng đơn đã đóng → lãi thực, mã cần tăng giá |
 | Rà khung ETA | Ngày 01 hằng tháng | <span class="r ops">OPS</span> | Lead time thực → nếu 10% đơn chậm nhất vượt khung thì nới khung |
-| Rà lằn ranh đỏ | Ngày 01 hằng tháng | <span class="r ops">OPS</span> + <span class="r mkt">MKT</span> | Web, quảng cáo, email theo [Nguyên tắc](01-nguyen-tac.html) |
+| Rà lằn ranh đỏ | Ngày 01 hằng tháng | <span class="r ops">OPS</span> + <span class="r mkt">MKT</span> | Web, quảng cáo, email theo [Nguyên tắc](nguyen-tac.html) |
 
-## 5. Checklist hằng ngày theo vị trí
+## 5. Checklist hằng ngày theo vị trí {#checklist}
 
 | Giờ (VN) | <span class="r cx">CX</span> | <span class="r src">SRC</span> | <span class="r log">LOG</span> | <span class="r ops">OPS</span> |
 |---|---|---|---|---|
@@ -72,7 +75,12 @@ Mỗi giai đoạn trong SOP có **1 KPI, 1 chủ, 1 cột trong tracker**. Trac
 | Chiều | Cập nhật 7 ngày, case mới | Duyệt ảnh kiện, QC, claim NCC | Hải quan, hãng giao, thu hồi | Kiểm ngẫu nhiên 2 đơn: tin nhắn khớp trạng thái? |
 | Cuối ngày | Không case nào > 24h chưa trả lời | Tracker đủ ngày + bằng chứng | Tracker đủ ngày + bằng chứng | – |
 
-## 6. Mẫu báo cáo tuần
+| Vị trí | Hằng ngày |
+|---|---|
+| <span class="r mkt">MKT</span> | Đọc số quảng cáo hôm qua: CTR, CPC, thêm giỏ, MER · Trả lời bình luận trong ngày (không xóa bình luận tiêu cực có thật) · Đăng bài theo lịch, qua [checklist 5 câu](thuong-hieu-marketing.html#content-approval) |
+| <span class="r fin">FIN</span> | Thanh toán NCC khi có PO · thực hiện hoàn tiền đã duyệt ([5 bước](sop-b-hau-mai.html#refund-steps)) · thứ Sáu đối soát chi phí thực |
+
+## 6. Mẫu báo cáo tuần {#weekly-report}
 
 ```text
 Tuần: __/__ – __/__                       (dán ảnh DASHBOARD)

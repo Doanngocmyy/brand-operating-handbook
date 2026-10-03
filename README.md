@@ -1,49 +1,42 @@
-# Operating Handbook — DTC furniture brand (AU · SG)
+# Operating Handbook - DTC furniture brand (AU → SG)
 
-Sổ tay vận hành cho một brand nội thất bán trực tiếp (DTC) tại Úc và Singapore, team vận hành ở Việt Nam, hàng sản xuất tại Trung Quốc. Viết từ góc nhìn Founder/CEO, dùng để đào tạo và điều hành team.
+Hệ điều hành vận hành cho một brand nội thất bán trực tiếp (DTC) tại Úc và Singapore: team ở Việt Nam, hàng sản xuất tại Trung Quốc. Website mở ở **Operating Map**: chọn theo vị trí, theo việc đang xảy ra, hoặc theo giai đoạn đơn S1–S8.
 
-**Đọc bản web:** GitHub Pages của repo này (thư mục `docs/`).
+**Bản web:** GitHub Pages của repo này (thư mục `docs/`).
 
-## Nội dung
+## Cấu trúc thông tin
 
-| # | Trang | Cho ai |
-|---|---|---|
-| 00 | Thư của Founder | Cả team |
-| 01 | Nguyên tắc cốt lõi & lằn ranh đỏ | Cả team |
-| 02 | Mô hình kinh doanh & quy tắc giá | Quản lý |
-| 03 | Tổ chức, vai trò, quyền duyệt | Cả team |
-| 04 | Chuẩn hóa sản phẩm (danh mục, hạng, màu, dung sai) | Mua hàng, Listing |
-| 05 | Nhà cung cấp: chọn, đối chiếu, chấm điểm | Mua hàng & QC |
-| 06 | Đóng gói, nhãn, chứng từ hải quan | Mua hàng & QC |
-| 07 | Vận hành đơn hàng (trạng thái, SLA) | Vận hành |
-| 08 | Chăm sóc khách hàng, bảng bồi thường, mẫu tin | CSKH |
-| 09 | Chính sách giao hàng, đổi trả (bản tiếng Anh cho web) | CSKH, Quản lý |
-| 10 | Marketing & mạng xã hội | Marketing |
-| 11 | KPI & nhịp vận hành | Cả team |
-| 12 | Lộ trình 90 ngày | Quản lý |
-| 13 | Công cụ & biểu mẫu | Cả team |
+| Nhóm | Trang |
+|---|---|
+| Start here | Operating Map · Find by role · Find by task / event |
+| Run the business | Standard Order (SOP-A) · Exceptions & Cases (SOP-B) · KPI, SLA & Rhythm |
+| Standards | Product & SKU · Supplier & QC · Packaging, Labels & Import Docs · Brand & Marketing Rules · Customer-facing Policy |
+| Management | Roles, Authority & Access · Business Model & Unit Economics · 90-Day Launch Plan · Tools & Templates |
+| About | Operating principles · Founder note |
 
 ## Cấu trúc repo
 
 ```
-content/     Markdown của từng trang (sửa ở đây)
-assets/      CSS
-docs/        Website đã build (GitHub Pages)
-templates/   Biểu mẫu: chứng từ NCC (xlsx), sheet theo dõi đơn (csv)
-tools/       Script Python chuẩn hóa dữ liệu sản phẩm
-site.json    Tên brand, repo — đổi một lần là đổi toàn bộ
-build.py     Tạo lại docs/ từ content/
+content/      Markdown của từng trang (sửa nội dung ở đây)
+site_map.py   Menu, thẻ vị trí/sự kiện, bản đồ S1–S8, control panel SOP, source of truth, launch blockers
+assets/       CSS + swimlane SVG (assets/sop, tạo bởi tools/swimlane.py)
+docs/         Website đã build (GitHub Pages) + trang chuyển hướng từ URL cũ
+templates/    Biểu mẫu: SOP-Tracker.xlsx (Excel), SOT-Google-Sheet.xlsx (bản cho Google Sheets), chứng từ NCC
+tools/        swimlane.py · build_tracker.py · build_sot_sheet.py · check_links.py · script dữ liệu sản phẩm
+site.json     Tên brand, repo, link Google Sheet - đổi một lần là đổi toàn bộ
+build.py      Tạo lại docs/ từ content/ + site_map.py
 ```
 
 ```bash
 pip install markdown
 python build.py
+python tools/check_links.py   # phải báo 0 broken
 ```
 
 ## Quy tắc bảo mật (repo công khai)
 
-- Không commit dữ liệu khách hàng, đơn hàng, thông tin NCC, file Excel gốc, mật khẩu, token.
-- Chỉ đưa lên số liệu đã tổng hợp và quy trình.
+- Không commit dữ liệu khách hàng, đơn hàng, thông tin NCC, chi phí thực, file Excel gốc, mật khẩu, token.
+- Chỉ đưa lên số liệu đã tổng hợp và quy trình. Trang có nhãn **Internal** là logic nội bộ: cân nhắc trước khi chia sẻ link.
 - `.gitignore` chặn `*.xlsx`, `*.csv` ngoài thư mục `templates/`, và các thư mục dữ liệu.
 
 *Các nội dung pháp lý là hướng dẫn vận hành, không phải tư vấn pháp lý.*

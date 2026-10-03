@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tools &amp; Templates · [BRAND] Operating Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body class="" id="top">
+<a class="skip" href="#main">Bỏ qua tới nội dung</a>
+<header class="top"><a class="brand" href="index.html">[BRAND]<span class="sub">Operating System</span></a>
+<nav class="topnav" aria-label="Khu vực"><a href="index.html">Start here</a><a href="sop-a-don-chuan.html">Run the business</a><a href="chuan-san-pham.html">Standards</a><a href="vai-tro-quyen-han.html" aria-current="true" class="on">Management</a></nav>
+<button class="menu" type="button" aria-expanded="false" aria-controls="side" onclick="var o=document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',o)">Menu</button></header>
+<div class="wrap">
+<nav class="side" id="side" aria-label="Mục lục"><div class="nav-group"><p class="nav-h">Start here</p><a href="index.html">Operating Map</a><a href="tim-theo-vai-tro.html">Find by role</a><a href="tim-theo-su-kien.html">Find by task / event</a></div><div class="nav-group"><p class="nav-h">Run the business</p><a href="sop-a-don-chuan.html">Standard Order (SOP-A)</a><a href="sop-b-hau-mai.html">Exceptions &amp; Cases (SOP-B)</a><a href="kpi-sla-nhip.html">KPI, SLA &amp; Rhythm</a></div><div class="nav-group"><p class="nav-h">Standards</p><a href="chuan-san-pham.html">Product &amp; SKU Standard</a><a href="nha-cung-cap-qc.html">Supplier &amp; QC Standard</a><a href="dong-goi-chung-tu.html">Packaging, Labels &amp; Import Docs</a><a href="thuong-hieu-marketing.html">Brand &amp; Marketing Rules</a><a href="chinh-sach-khach-hang.html">Customer-facing Policy</a></div><div class="nav-group"><p class="nav-h">Management</p><a href="vai-tro-quyen-han.html">Roles, Authority &amp; Access</a><a href="mo-hinh-kinh-doanh.html">Business Model &amp; Unit Economics</a><a href="lo-trinh-90-ngay.html">90-Day Launch Plan</a><a href="cong-cu-bieu-mau.html" aria-current="page" class="on">Tools &amp; Templates</a></div><p class="meta">About: <a href="nguyen-tac.html">Operating principles</a> · <a href="thu-founder.html">Founder note</a><br>Cập nhật 04/10/2026 · <a href="https://github.com/Doanngocmyy/brand-operating-handbook">GitHub</a></p></nav>
+<main id="main"><article><p class="crumb">Management</p><h1>Công cụ và biểu mẫu</h1><div class="badges"><span class="badge b-daily">Daily use</span></div>
+<h2 id="templates">Biểu mẫu (tải về dùng ngay)</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>File</th>
+<th>Dùng để</th>
+<th>Ai dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">SOP-Tracker.xlsx</a></td>
+<td>Theo dõi đơn (SOP-A) và case hậu mãi (SOP-B): trạng thái tự tính, cờ SLA, dashboard KPI. Không có dữ liệu cá nhân khách</td>
+<td>Cả team, họp 09:00</td>
+</tr>
+<tr>
+<td>Swimlane: <a href="sop/a.svg">SOP-A</a> · <a href="sop/b1.svg">B1 case</a> · <a href="sop/b2.svg">B2 trả hàng</a> · <a href="sop/b3.svg">B3 chargeback</a></td>
+<td>Bản lớn để in, dán tường, đào tạo người mới</td>
+<td>Cả team</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/Mau_chung_tu_NCC.xlsx">Mau_chung_tu_NCC.xlsx</a></td>
+<td>Commercial invoice, packing list, shipping mark, nhãn sản phẩm, hướng dẫn lắp, QC checklist. Song ngữ Anh–Trung cho NCC</td>
+<td>Mua hàng &amp; QC, NCC</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/templates/order-tracker-template.csv">order-tracker-template.csv</a></td>
+<td>Bản cũ có cột chi phí thực từng đơn. Dùng làm file chi phí riêng của FIN (không chia sẻ cho CX, MKT)</td>
+<td>FIN</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/templates/status-list.csv">status-list.csv</a></td>
+<td>Danh sách trạng thái đơn và điều kiện chuyển</td>
+<td>Cả team</td>
+</tr>
+</tbody>
+</table></div>
+<p>Cách dùng bộ chứng từ NCC:</p>
+<ol>
+<li>Gửi file cho NCC kèm đơn đặt hàng (PO) và mã SKU của [BRAND].</li>
+<li>NCC điền ô vàng, gửi lại kèm ảnh và video đóng kiện <strong>trước khi xuất hàng</strong>.</li>
+<li>Mua hàng &amp; QC duyệt trong 24 giờ. Sau đó NCC mới dán nhãn và giao cho forwarder.</li>
+<li>Lưu toàn bộ theo số container.</li>
+</ol>
+<h2 id="source-of-truth">Source of truth</h2>
+<p>Mỗi loại thông tin có <strong>một</strong> bản ghi gốc. Trang SOP mô tả cách làm; con số và bằng chứng sống nằm ở đây.</p>
+<div class="tbl"><div class="tbl"><table><thead><tr><th>Thông tin</th><th>Bản ghi gốc (source of truth)</th></tr></thead><tbody><tr><td>Trạng thái đơn, cờ SLA, ETA</td><td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">SOP Tracker · tab DON</a></td></tr><tr><td>Case khách và người duyệt</td><td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">SOP Tracker · tab CASE</a></td></tr><tr><td>Thông số, kích thước, màu, chất liệu</td><td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">Master SKU</a></td></tr><tr><td>Bằng chứng NCC, PO, ảnh QC</td><td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/Mau_chung_tu_NCC.xlsx">Thư mục NCC / PO / QC trên Drive</a></td></tr><tr><td>Chứng từ lô hàng</td><td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/Mau_chung_tu_NCC.xlsx">Thư mục lô hàng theo container</a></td></tr><tr><td>Landed cost thực, biên lãi</td><td><a href="cong-cu-bieu-mau.html#source-of-truth">File chi phí FIN · hạn chế quyền</a></td></tr><tr><td>Lời hứa với khách</td><td><a href="chinh-sach-khach-hang.html">Customer-facing Policy + email xác nhận đơn</a></td></tr><tr><td>Nội dung trang sản phẩm</td><td><a href="chuan-san-pham.html#listing-criteria">Listing đã duyệt từ Master SKU</a></td></tr></tbody></table></div>
+
+<p>Bản online: Google Sheet <strong>[BRAND] Source of Truth</strong> (tab SOURCE_OF_TRUTH, DON, CASE, DASHBOARD, MASTER_SKU, LAUNCH_BLOCKERS). File chi phí FIN và danh tính NCC để ở file riêng, hạn chế quyền (<a href="vai-tro-quyen-han.html#data-access">phân quyền dữ liệu</a>).</p>
+<h2 id="data-tools">Công cụ dữ liệu sản phẩm (Python)</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Script</th>
+<th>Làm gì</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/tools/catalog_export.py">tools/catalog_export.py</a></td>
+<td>Xuất toàn bộ sản phẩm, biến thể, ảnh từ một Shopify store <strong>bạn sở hữu hoặc được phép dùng</strong> (dữ liệu công khai <code>/products.json</code>), kiểm tra đủ theo sitemap</td>
+</tr>
+<tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/tools/normalize_catalog.py">tools/normalize_catalog.py</a></td>
+<td>Chuẩn hóa: 8 nhóm chính, hạng A/B/C, màu chuẩn, kích thước W × D × H (cm), mã sản phẩm và SKU mới, thư mục ảnh theo hạng/nhóm/mã/màu</td>
+</tr>
+</tbody>
+</table></div>
+<pre><code class="language-bash">pip install requests openpyxl pandas
+python tools/catalog_export.py --store https://your-store.example --out export_store --images none
+python tools/normalize_catalog.py --raw export_store/raw_products.json --out clean_db --store-url https://your-store.example
+# tải ảnh hạng A, tối đa 8 ảnh mỗi màu:
+python tools/normalize_catalog.py --raw export_store/raw_products.json --out clean_db --download-images A
+</code></pre>
+<p>Kết quả: <code>01_categories.csv</code>, <code>02_products.csv</code>, <code>03_variants.csv</code>, <code>04_colour_map.csv</code>, <code>05_images.csv</code>, <code>clean_catalogue_review.xlsx</code>.</p>
+<p><strong>Quy tắc dữ liệu:</strong></p>
+<ul>
+<li>Dữ liệu sản phẩm, file Excel gốc, dữ liệu đơn và NCC <strong>không commit</strong> lên repo này (repo công khai). <code>.gitignore</code> đã chặn.</li>
+<li>Thông số đăng web lấy từ NCC đã đối chiếu, không lấy nguyên từ store cũ.</li>
+<li>Viết lại tên và mô tả theo giọng [BRAND]. Không dùng giá gạch cũ.</li>
+</ul>
+<h2 id="editing">Sửa sổ tay này</h2>
+<p>Mỗi trang là một file Markdown trong thư mục <code>content/</code>; thứ tự và nhóm menu nằm ở <code>site_map.py</code>. Sửa file rồi chạy <code>python build.py</code> để tạo lại website trong <code>docs/</code>. Tên thương hiệu nằm ở <code>site.json</code>, đổi một lần là đổi toàn bộ.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Muốn sửa</th>
+<th>Sửa ở</th>
+<th>Rồi chạy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Swimlane (ô, mũi tên, SLA)</td>
+<td><code>tools/swimlane.py</code></td>
+<td><code>python tools/swimlane.py</code> → <code>python build.py</code></td>
+</tr>
+<tr>
+<td>Tracker Excel</td>
+<td><code>tools/build_tracker.py</code></td>
+<td><code>python tools/build_tracker.py</code></td>
+</tr>
+<tr>
+<td>Chữ trên trang</td>
+<td><code>content/*.md</code> (<code>{{SVG:a}}</code> = chèn swimlane)</td>
+<td><code>python build.py</code></td>
+</tr>
+<tr>
+<td>Menu, thẻ vị trí, thẻ sự kiện, bản đồ S1–S8, control panel SOP, source of truth, launch blockers</td>
+<td><code>site_map.py</code> (một chỗ duy nhất)</td>
+<td><code>python build.py</code></td>
+</tr>
+<tr>
+<td>Kiểm tra link và anchor sau khi sửa</td>
+<td>–</td>
+<td><code>python tools/check_links.py</code> (phải báo 0 broken)</td>
+</tr>
+</tbody>
+</table></div></article>
+<div class="pager"><a class="prev" href="lo-trinh-90-ngay.html">← 90-Day Launch Plan</a><span></span></div>
+<footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
+<script>
+function openTarget(){var id=decodeURIComponent(location.hash.slice(1));if(!id)return;var el=document.getElementById(id);if(!el)return;var d=el.closest("details")||(el.tagName==="DETAILS"?el:null);if(d){d.open=true;}}
+window.addEventListener("hashchange",openTarget);openTarget();
+</script>
+</body></html>

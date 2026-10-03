@@ -1,13 +1,15 @@
 ---
 title: Nhà cung cấp
-order: 5
+badges: internal, onboarding
 ---
 
 # Nhà cung cấp (NCC)
 
-Thông số, ảnh và chất lượng của {{BRAND}} chỉ tốt bằng NCC. Mỗi mã hàng có **1 NCC chính và 1 NCC dự phòng**, cả hai đều đã qua hàng mẫu.
+Thông số, ảnh và chất lượng của {{BRAND}} chỉ tốt bằng NCC. Mỗi mã hàng có **1 NCC chính và 1 NCC dự phòng**, cả hai đều đã qua hàng mẫu. QC tại kho gom chạy theo [SOP-A · S4](sop-a-don-chuan.html#s4).
 
-## 1. Chọn NCC
+{{SOT:supplier,sku}}
+
+## 1. Chọn NCC {#select}
 
 | Tiêu chí | Đạt khi | Cách kiểm |
 |---|---|---|
@@ -18,7 +20,7 @@ Thông số, ảnh và chất lượng của {{BRAND}} chỉ tốt bằng NCC. M
 | Quyền dùng ảnh | Cho phép bằng văn bản | Ảnh chụp tin nhắn xác nhận |
 | Hàng có sẵn (现货) | Ưu tiên hàng có sẵn hơn hàng làm theo đơn | Hỏi ngày xuất cụ thể |
 
-## 2. Quy trình đối chiếu cho mỗi mã
+## 2. Quy trình đối chiếu cho mỗi mã {#matching}
 
 1. Lọc mã hạng A trong file dữ liệu sản phẩm (nhóm ra mắt: kệ TV, bàn trà, tủ giày, buffet, kệ sách, bàn ăn).
 2. Tìm NCC chính và NCC dự phòng (Taobao, 1688 hoặc xưởng trực tiếp).
@@ -27,7 +29,7 @@ Thông số, ảnh và chất lượng của {{BRAND}} chỉ tốt bằng NCC. M
 5. Đặt **1 hàng mẫu** cho mỗi NCC mới. Đo, chụp, thử lắp, đánh giá đóng gói.
 6. Chốt thông số vào **master SKU**. Từ master SKU mới đăng web, in nhãn, làm chứng từ.
 
-### Checklist hồ sơ gửi NCC
+### Checklist hồ sơ gửi NCC {#doc-checklist}
 
 - [ ] Bản vẽ kích thước W × D × H (mm) từng size
 - [ ] Chất liệu từng bộ phận: khung, mặt, cánh, chân; lớp phủ
@@ -39,7 +41,7 @@ Thông số, ảnh và chất lượng của {{BRAND}} chỉ tốt bằng NCC. M
 - [ ] Có gỗ tự nhiên, tre, mây không (khai báo sinh học tại Úc)
 - [ ] Có thuộc diện cảnh báo đổ ngã không (cao ≥ 686 mm hoặc là kệ TV)
 
-## 3. Mẫu tin nhắn gửi NCC (tiếng Trung)
+## 3. Mẫu tin nhắn gửi NCC (tiếng Trung) {#supplier-message}
 
 Dán ngay sau khi đặt hàng. Thay 【订单号】 bằng mã đơn.
 
@@ -56,7 +58,7 @@ Dán ngay sau khi đặt hàng. Thay 【订单号】 bằng mã đơn.
 谢谢！
 ```
 
-## 4. Điều khoản cần thỏa thuận với NCC
+## 4. Điều khoản cần thỏa thuận với NCC {#terms}
 
 - Kích thước và chất liệu đúng bản vẽ đã duyệt. Sai quá 10 mm hoặc sai chất liệu: NCC chịu chi phí làm lại và gửi bù.
 - Thiếu phụ kiện: NCC gửi bù miễn phí bằng chuyển phát nhanh trong 5 ngày.
@@ -64,7 +66,7 @@ Dán ngay sau khi đặt hàng. Thay 【订单号】 bằng mã đơn.
 - Cho phép {{BRAND}} dùng ảnh và bản vẽ.
 - Trễ quá 7 ngày so với ngày xuất đã hẹn phải báo trước.
 
-## 5. Bảng chấm điểm NCC (OPS (P1) cập nhật mỗi tháng)
+## 5. Bảng chấm điểm NCC (OPS (P1) cập nhật mỗi tháng) {#scorecard}
 
 | Chỉ số | Trọng số | Ngưỡng tạm dừng |
 |---|---|---|
@@ -76,7 +78,7 @@ Dán ngay sau khi đặt hàng. Thay 【订单号】 bằng mã đơn.
 
 NCC bị tạm dừng: chuyển sang NCC dự phòng, ghi lý do vào báo cáo tuần.
 
-## 6. Ảnh sản phẩm
+## 6. Ảnh sản phẩm {#photos}
 
 | Nguồn ảnh | Dùng được không |
 |---|---|

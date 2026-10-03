@@ -1,11 +1,11 @@
 ---
 title: Công cụ & biểu mẫu
-order: 13
+badges: daily
 ---
 
 # Công cụ và biểu mẫu
 
-## Biểu mẫu (tải về dùng ngay)
+## Biểu mẫu (tải về dùng ngay) {#templates}
 
 | File | Dùng để | Ai dùng |
 |---|---|---|
@@ -22,7 +22,15 @@ Cách dùng bộ chứng từ NCC:
 3. Mua hàng & QC duyệt trong 24 giờ. Sau đó NCC mới dán nhãn và giao cho forwarder.
 4. Lưu toàn bộ theo số container.
 
-## Công cụ dữ liệu sản phẩm (Python)
+## Source of truth {#source-of-truth}
+
+Mỗi loại thông tin có **một** bản ghi gốc. Trang SOP mô tả cách làm; con số và bằng chứng sống nằm ở đây.
+
+{{SOT_TABLE}}
+
+Bản online: Google Sheet **[BRAND] Source of Truth** (tab SOURCE_OF_TRUTH, DON, CASE, DASHBOARD, MASTER_SKU, LAUNCH_BLOCKERS). File chi phí FIN và danh tính NCC để ở file riêng, hạn chế quyền ([phân quyền dữ liệu](vai-tro-quyen-han.html#data-access)).
+
+## Công cụ dữ liệu sản phẩm (Python) {#data-tools}
 
 | Script | Làm gì |
 |---|---|
@@ -45,12 +53,14 @@ Kết quả: `01_categories.csv`, `02_products.csv`, `03_variants.csv`, `04_colo
 - Thông số đăng web lấy từ NCC đã đối chiếu, không lấy nguyên từ store cũ.
 - Viết lại tên và mô tả theo giọng {{BRAND}}. Không dùng giá gạch cũ.
 
-## Sửa sổ tay này
+## Sửa sổ tay này {#editing}
 
-Mỗi trang là một file Markdown trong thư mục `content/`. Sửa file rồi chạy `python build.py` để tạo lại website trong `docs/`. Tên thương hiệu nằm ở `site.json`, đổi một lần là đổi toàn bộ.
+Mỗi trang là một file Markdown trong thư mục `content/`; thứ tự và nhóm menu nằm ở `site_map.py`. Sửa file rồi chạy `python build.py` để tạo lại website trong `docs/`. Tên thương hiệu nằm ở `site.json`, đổi một lần là đổi toàn bộ.
 
 | Muốn sửa | Sửa ở | Rồi chạy |
 |---|---|---|
 | Swimlane (ô, mũi tên, SLA) | `tools/swimlane.py` | `python tools/swimlane.py` → `python build.py` |
 | Tracker Excel | `tools/build_tracker.py` | `python tools/build_tracker.py` |
 | Chữ trên trang | `content/*.md` (`{{SVG:a}}` = chèn swimlane) | `python build.py` |
+| Menu, thẻ vị trí, thẻ sự kiện, bản đồ S1–S8, control panel SOP, source of truth, launch blockers | `site_map.py` (một chỗ duy nhất) | `python build.py` |
+| Kiểm tra link và anchor sau khi sửa | – | `python tools/check_links.py` (phải báo 0 broken) |
