@@ -99,7 +99,7 @@ DONF = {
     "X": '=ARRAYFORMULA(IF((J3:J<>"")*(K3:K="")*(R3:R=""),IF(TODAY()-J3:J>2,"⚑",""),""))',
     "Y": '=ARRAYFORMULA(IF((G3:G<>"")*(M3:M="")*(R3:R=""),IF((G3:G-TODAY()<=14)*(G3:G>=TODAY()),"⚑",""),""))',
     "Z": '=ARRAYFORMULA(IF((G3:G<>"")*(P3:P="")*(R3:R=""),IF(TODAY()>G3:G,"⚑",""),""))',
-    "AA": ('=ARRAYFORMULA(IF((E3:E<>"")*(P3:P="")*(R3:R=""),IF(TODAY()-BYROW({E3:E,H3:H,M3:M,S3:S},LAMBDA(r,MAX(r)))>7,"⚑",""),""))'),
+    "AA": ('=ARRAYFORMULA(IF((E3:E<>"")*(P3:P="")*(R3:R=""),IF(TODAY()-IF(S3:S>IF(M3:M<>"",M3:M,IF(H3:H<>"",H3:H,E3:E)),S3:S,IF(M3:M<>"",M3:M,IF(H3:H<>"",H3:H,E3:E)))>7,"⚑",""),""))'),
     "AB": '=ARRAYFORMULA(IF((P3:P="")+(G3:G=""),"",IF(P3:P<=G3:G,"Có","Không")))',
     "AC": '=ARRAYFORMULA(IF((P3:P="")+(E3:E=""),"",P3:P-E3:E))',
     "AD": '=ARRAYFORMULA(IF(A3:A="","",COUNTIF(CASE!B3:B,A3:A)))',
@@ -158,7 +158,7 @@ tiles = [
     ("Đơn đang chạy", '=COUNTA(DON!A3:A)-COUNTIF(DON!T3:T,"99*")-COUNTIF(DON!T3:T,"95*")', "0", ""),
     ("Giao trong khung", '=IFERROR(COUNTIF(DON!AB3:AB,"Có")/(COUNTIF(DON!AB3:AB,"Có")+COUNTIF(DON!AB3:AB,"Không")),"–")', "0%", "≥ 90%"),
     ("Đặt NCC ≤ 24h", '=IFERROR(COUNTIF(DON!AE3:AE,"<=1")/COUNT(DON!AE3:AE),"–")', "0%", "≥ 95%"),
-    ("Cờ đỏ đơn đang mở", '=COUNTIF(DON!W3:AA,"⚑")', "0", "0"),
+    ("Cờ đỏ đơn đang mở", '=COUNTIF(DON!W3:AA1000,"⚑")', "0", "0"),
     ("Case / đơn", '=IFERROR(COUNTA(CASE!A3:A)/COUNTA(DON!A3:A),"–")', "0.0%", "≤ 3%"),
     ("Phản hồi đầu (giờ, trung vị)", '=IFERROR(MEDIAN(CASE!T3:T),"–")', "0.0", "≤ 4"),
     ("Chargeback / đơn", '=IFERROR(COUNTIF(CASE!C3:C,"C7*")/COUNTA(DON!A3:A),"–")', "0.0%", "≤ 0,5%"),
@@ -268,6 +268,15 @@ rows = [("[BRAND] Source of Truth", ""),
 for i, (a, b) in enumerate(rows, start=2):
     hd.cell(row=i, column=2, value=a).font = font(bold=True, size=16 if i == 2 else 10)
     hd.cell(row=i, column=3, value=b).alignment = Alignment(wrap_text=True)
+
+# xlsx has no open-ended ranges (E3:E): bound them so Google's importer parses them
+import re  # noqa: E402
+OPEN = re.compile(r"(?<![A-Z$])([A-Z]{1,2})3:\1(?![0-9$])")
+for ws in wb.worksheets:
+    for row in ws.iter_rows():
+        for c in row:
+            if isinstance(c.value, str) and c.value.startswith("="):
+                c.value = OPEN.sub(lambda m: f"{m.group(1)}3:{m.group(1)}{MAXR}", c.value)
 
 wb._sheets = [wb[n] for n in ("HUONG_DAN", "SOURCE_OF_TRUTH", "DASHBOARD", "DON", "CASE", "MASTER_SKU", "LAUNCH_BLOCKERS", "DS")]
 wb.active = 1
