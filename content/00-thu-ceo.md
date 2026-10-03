@@ -22,9 +22,9 @@ Mỗi người trong team được trao quyền đúng với nguyên tắc này.
 
 | Bạn là | Đọc trước | Dùng hằng ngày |
 |---|---|---|
-| Mới vào team | [Nguyên tắc](01-nguyen-tac.html), [Tổ chức & vai trò](03-to-chuc-vai-tro.html) | [KPI & nhịp vận hành](11-kpi-nhip-van-hanh.html) |
-| Mua hàng & NCC | [Chuẩn sản phẩm](04-san-pham-chuan-hoa.html), [Nhà cung cấp](05-nha-cung-cap.html), [Đóng gói & chứng từ](06-dong-goi-nhan-chung-tu.html) | [Vận hành đơn hàng](07-van-hanh-don-hang.html) |
-| Chăm sóc khách | [Chính sách](09-chinh-sach.html), [CSKH](08-cskh.html) | Mẫu tin nhắn, bảng bồi thường |
+| Mới vào team | [Nguyên tắc](01-nguyen-tac.html), [Vị trí, RACI & phân quyền](03-to-chuc-vai-tro.html) | [KPI & tracking](11-kpi-nhip-van-hanh.html) |
+| Mua hàng & NCC | [Chuẩn sản phẩm](04-san-pham-chuan-hoa.html), [Nhà cung cấp](05-nha-cung-cap.html), [Đóng gói & chứng từ](06-dong-goi-nhan-chung-tu.html) | [SOP-A · Đơn chuẩn](07-van-hanh-don-hang.html) |
+| Chăm sóc khách | [Chính sách](09-chinh-sach.html), [SOP-A](07-van-hanh-don-hang.html) | [SOP-B · Hậu mãi](08-cskh.html): case, mức duyệt, mẫu tin |
 | Marketing | [Marketing](10-marketing.html), [Nguyên tắc](01-nguyen-tac.html) | Checklist duyệt nội dung |
 | Quản lý | [Mô hình kinh doanh](02-mo-hinh-kinh-doanh.html), [Lộ trình 90 ngày](12-lo-trinh-90-ngay.html) | Báo cáo tuần |
 

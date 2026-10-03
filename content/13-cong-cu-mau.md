@@ -9,8 +9,10 @@ order: 13
 
 | File | Dùng để | Ai dùng |
 |---|---|---|
+| [SOP-Tracker.xlsx](https://github.com/{{REPO}}/raw/main/templates/SOP-Tracker.xlsx) | Theo dõi đơn (SOP-A) và case hậu mãi (SOP-B): trạng thái tự tính, cờ SLA, dashboard KPI. Không có dữ liệu cá nhân khách | Cả team, họp 09:00 |
+| Swimlane: [SOP-A](sop/a.svg) · [B1 case](sop/b1.svg) · [B2 trả hàng](sop/b2.svg) · [B3 chargeback](sop/b3.svg) | Bản lớn để in, dán tường, đào tạo người mới | Cả team |
 | [Mau_chung_tu_NCC.xlsx](https://github.com/{{REPO}}/raw/main/templates/Mau_chung_tu_NCC.xlsx) | Commercial invoice, packing list, shipping mark, nhãn sản phẩm, hướng dẫn lắp, QC checklist. Song ngữ Anh–Trung cho NCC | Mua hàng & QC, NCC |
-| [order-tracker-template.csv](https://github.com/{{REPO}}/blob/main/templates/order-tracker-template.csv) | Sheet theo dõi đơn: trạng thái, mốc thời gian, chi phí thực, ca khiếu nại, cảnh báo | Cả team (nhập vào Google Sheet) |
+| [order-tracker-template.csv](https://github.com/{{REPO}}/blob/main/templates/order-tracker-template.csv) | Bản cũ có cột chi phí thực từng đơn. Dùng làm file chi phí riêng của FIN (không chia sẻ cho CX, MKT) | FIN |
 | [status-list.csv](https://github.com/{{REPO}}/blob/main/templates/status-list.csv) | Danh sách trạng thái đơn và điều kiện chuyển | Cả team |
 
 Cách dùng bộ chứng từ NCC:
@@ -46,3 +48,9 @@ Kết quả: `01_categories.csv`, `02_products.csv`, `03_variants.csv`, `04_colo
 ## Sửa sổ tay này
 
 Mỗi trang là một file Markdown trong thư mục `content/`. Sửa file rồi chạy `python build.py` để tạo lại website trong `docs/`. Tên thương hiệu nằm ở `site.json`, đổi một lần là đổi toàn bộ.
+
+| Muốn sửa | Sửa ở | Rồi chạy |
+|---|---|---|
+| Swimlane (ô, mũi tên, SLA) | `tools/swimlane.py` | `python tools/swimlane.py` → `python build.py` |
+| Tracker Excel | `tools/build_tracker.py` | `python tools/build_tracker.py` |
+| Chữ trên trang | `content/*.md` (`{{SVG:a}}` = chèn swimlane) | `python build.py` |

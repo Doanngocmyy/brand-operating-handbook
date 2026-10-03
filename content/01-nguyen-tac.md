@@ -30,7 +30,7 @@ Mọi quyết định của {{BRAND}} được kiểm bằng một câu hỏi: *
 - Ghi "no refunds" ở bất cứ đâu.
 - Mua follower, mua tài khoản mạng xã hội có sẵn, dùng danh sách khách hàng của doanh nghiệp khác.
 
-Vi phạm lằn ranh đỏ là lỗi nghiêm trọng, không phải lỗi kỹ năng. Không chắc thì hỏi Ops Lead trước khi đăng hoặc gửi.
+Vi phạm lằn ranh đỏ là lỗi nghiêm trọng, không phải lỗi kỹ năng. Không chắc thì hỏi OPS (P1) trước khi đăng hoặc gửi.
 
 ## Giọng thương hiệu
 

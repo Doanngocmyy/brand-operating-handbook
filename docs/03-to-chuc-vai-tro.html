@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Tổ chức &amp; vai trò · [BRAND] Operating Handbook</title>
+<title>Vị trí, RACI &amp; phân quyền · [BRAND] Operating Handbook</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"></head>
@@ -8,207 +8,476 @@
 <header class="top"><a class="brand" href="index.html">[BRAND]</a><span class="sub">Operating Handbook</span>
 <button class="menu" onclick="document.body.classList.toggle('nav-open')" aria-label="Menu">Menu</button></header>
 <div class="wrap">
-<nav class="side"><a class="" href="index.html"><span>00</span>Thư của Founder</a><a class="" href="01-nguyen-tac.html"><span>01</span>Nguyên tắc cốt lõi</a><a class="" href="02-mo-hinh-kinh-doanh.html"><span>02</span>Mô hình kinh doanh</a><a class="on" href="03-to-chuc-vai-tro.html"><span>03</span>Tổ chức &amp; vai trò</a><a class="" href="04-san-pham-chuan-hoa.html"><span>04</span>Chuẩn hóa sản phẩm</a><a class="" href="05-nha-cung-cap.html"><span>05</span>Nhà cung cấp</a><a class="" href="06-dong-goi-nhan-chung-tu.html"><span>06</span>Đóng gói, nhãn &amp; chứng từ</a><a class="" href="07-van-hanh-don-hang.html"><span>07</span>Vận hành đơn hàng</a><a class="" href="08-cskh.html"><span>08</span>Chăm sóc khách hàng</a><a class="" href="09-chinh-sach.html"><span>09</span>Chính sách (bản cho website)</a><a class="" href="10-marketing.html"><span>10</span>Marketing &amp; mạng xã hội</a><a class="" href="11-kpi-nhip-van-hanh.html"><span>11</span>KPI &amp; nhịp vận hành</a><a class="" href="12-lo-trinh-90-ngay.html"><span>12</span>Lộ trình 90 ngày</a><a class="" href="13-cong-cu-mau.html"><span>13</span>Công cụ &amp; biểu mẫu</a><p class="meta">Cập nhật 02/10/2026<br><a href="https://github.com/Doanngocmyy/brand-operating-handbook">Mã nguồn trên GitHub</a></p></nav>
-<main><article><h1 id="to-chuc-va-vai-tro">Tổ chức và vai trò</h1>
-<p>Giai đoạn đầu team có 2–4 người tại Việt Nam, một người có thể giữ nhiều vai trò. Vai trò quan trọng hơn chức danh: mỗi việc phải có đúng <strong>một người chịu trách nhiệm cuối</strong>.</p>
-<h2 id="nam-vai-tro">Năm vai trò</h2>
+<nav class="side"><a class="" href="index.html"><span>00</span>Thư của Founder</a><a class="" href="01-nguyen-tac.html"><span>01</span>Nguyên tắc cốt lõi</a><a class="" href="02-mo-hinh-kinh-doanh.html"><span>02</span>Mô hình kinh doanh</a><a class="on" href="03-to-chuc-vai-tro.html"><span>03</span>Vị trí, RACI &amp; phân quyền</a><a class="" href="04-san-pham-chuan-hoa.html"><span>04</span>Chuẩn hóa sản phẩm</a><a class="" href="05-nha-cung-cap.html"><span>05</span>Nhà cung cấp</a><a class="" href="06-dong-goi-nhan-chung-tu.html"><span>06</span>Đóng gói, nhãn &amp; chứng từ</a><a class="" href="07-van-hanh-don-hang.html"><span>07</span>SOP-A · Đơn chuẩn</a><a class="" href="08-cskh.html"><span>08</span>SOP-B · Hậu mãi &amp; hoàn tiền</a><a class="" href="09-chinh-sach.html"><span>09</span>Chính sách (bản cho website)</a><a class="" href="10-marketing.html"><span>10</span>Marketing &amp; mạng xã hội</a><a class="" href="11-kpi-nhip-van-hanh.html"><span>11</span>KPI &amp; tracking</a><a class="" href="12-lo-trinh-90-ngay.html"><span>12</span>Lộ trình 90 ngày</a><a class="" href="13-cong-cu-mau.html"><span>13</span>Công cụ &amp; biểu mẫu</a><p class="meta">Cập nhật 04/10/2026<br><a href="https://github.com/Doanngocmyy/brand-operating-handbook">Mã nguồn trên GitHub</a></p></nav>
+<main><article><h1 id="vi-tri-trach-nhiem-va-phan-quyen">Vị trí, trách nhiệm và phân quyền</h1>
+<p>Mỗi việc có <strong>đúng một vị trí chủ trì</strong>. Vị trí được thiết kế để tách được: giai đoạn đầu 1 người kiêm nhiều mã, khi tuyển thêm thì giao nguyên mã đó cho người mới, kèm đúng phần dữ liệu cần dùng.</p>
+<div class="legend"><span><span class="r ceo">P0 CEO</span></span><span><span class="r ops">P1 OPS</span></span><span><span class="r src">P2 SRC</span></span><span><span class="r log">P3 LOG</span></span><span><span class="r cx">P4 CX</span></span><span><span class="r mkt">P5 MKT</span></span><span><span class="r fin">P6 FIN</span></span></div>
+
+<h2 id="1-bay-vi-tri">1. Bảy vị trí</h2>
+<div class="cards">
+<div class="c" style="--rc:#1d1d1f"><span class="k">P0 · CEO</span><h4>Chủ doanh nghiệp</h4><p>Chiến lược, giá, ngân sách, duyệt NCC mới, bồi thường &gt; A$150, pháp lý.</p><p><b>KPI:</b> lãi ròng · chargeback</p></div>
+<div class="c" style="--rc:#6b5a45"><span class="k">P1 · OPS</span><h4>Điều phối (Control tower)</h4><p>Rà SLA 09:00 hằng ngày, leo thang, duyệt lô, duyệt A$51–150, sửa SOP.</p><p><b>KPI:</b> % giao trong khung</p></div>
+<div class="c" style="--rc:#2e7d4f"><span class="k">P2 · SRC</span><h4>Mua hàng &amp; QC</h4><p>Hỏi tồn, lập PO, theo dõi xưởng, QC kho gom, claim NCC. Tiếng Trung.</p><p><b>KPI:</b> % PO ≤ 24h · % lỗi QC</p></div>
+<div class="c" style="--rc:#0f7c80"><span class="k">P3 · LOG</span><h4>Logistics &amp; Hải quan</h4><p>Cắt lô, chứng từ, forwarder, broker, hãng giao, thu hồi hàng.</p><p><b>KPI:</b> lead time lô · % lô bị giữ</p></div>
+<div class="c" style="--rc:#2f6fb0"><span class="k">P4 · CX</span><h4>Chăm sóc khách</h4><p>Kiểm đơn, xác nhận, cập nhật 7 ngày, mở và đóng case, đề xuất bồi thường.</p><p><b>KPI:</b> phản hồi đầu · % case đóng ≤ 7d</p></div>
+<div class="c" style="--rc:#b5562b"><span class="k">P5 · MKT</span><h4>Marketing &amp; Listing</h4><p>Trang sản phẩm từ spec đã duyệt, quảng cáo, nội dung, review thật.</p><p><b>KPI:</b> MER · CTR</p></div>
+<div class="c" style="--rc:#7a4fa3"><span class="k">P6 · FIN</span><h4>Tài chính</h4><p>Trả NCC, trả cước/thuế, thực hiện hoàn tiền, xử lý dispute, đối soát.</p><p><b>KPI:</b> lãi thực/đơn · hoàn đúng hạn</p></div>
+</div>
+
+<h2 id="2-ai-lam-gi-theo-giai-oan-raci">2. Ai làm gì theo giai đoạn (RACI)</h2>
+<p>R = làm · A = chịu trách nhiệm cuối · C = được hỏi · I = được báo. Mỗi dòng chỉ có <strong>một A</strong>.</p>
 <div class="tbl"><table>
 <thead>
 <tr>
-<th>Vai trò</th>
-<th>Chịu trách nhiệm</th>
-<th>Ngôn ngữ cần</th>
-<th>Chỉ số chính</th>
+<th>Giai đoạn</th>
+<th>P0 CEO</th>
+<th>P1 OPS</th>
+<th>P2 SRC</th>
+<th>P3 LOG</th>
+<th>P4 CX</th>
+<th>P5 MKT</th>
+<th>P6 FIN</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Founder / CEO</strong></td>
-<td>Chiến lược, giá, ngân sách, duyệt NCC mới, bồi thường lớn, pháp lý</td>
-<td>Việt, Anh</td>
-<td>Lãi ròng, MER, chargeback</td>
+<td><strong>SOP-A · Đơn chuẩn</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td><strong>Ops Lead</strong></td>
-<td>Nhịp vận hành hằng ngày, báo cáo tuần, duyệt bồi thường vừa, sửa sổ tay</td>
-<td>Việt, Anh</td>
-<td>% đơn giao trong khung đã hứa</td>
+<td>S1 Nhận &amp; xác nhận đơn</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>–</td>
 </tr>
 <tr>
-<td><strong>Mua hàng &amp; QC (A)</strong></td>
-<td>Đặt hàng xưởng, theo dõi gửi hàng, QC tại kho gom, chứng từ, nhãn</td>
-<td>Việt, Trung</td>
-<td>% đơn đặt trong 24 giờ, tỉ lệ hỏng/thiếu</td>
-</tr>
-<tr>
-<td><strong>CSKH &amp; Listing (B)</strong></td>
-<td>Hộp thư, xác nhận đơn, cập nhật khách, xử lý khiếu nại, đăng sản phẩm</td>
-<td>Việt, Anh</td>
-<td>Thời gian phản hồi, tỉ lệ hủy</td>
-</tr>
-<tr>
-<td><strong>Marketing</strong></td>
-<td>Nội dung, quảng cáo, creator, review thật</td>
-<td>Việt, Anh</td>
-<td>CTR, MER, review có ảnh</td>
-</tr>
-</tbody>
-</table></div>
-<h2 id="ai-lam-gi-r-lam-a-duyetchiu-trach-nhiem-cuoi-c-uoc-hoi-y-kien-i-uoc-bao">Ai làm gì (R = làm, A = duyệt/chịu trách nhiệm cuối, C = được hỏi ý kiến, I = được báo)</h2>
-<div class="tbl"><table>
-<thead>
-<tr>
-<th>Việc</th>
-<th>CEO</th>
-<th>Ops Lead</th>
-<th>Mua hàng &amp; QC</th>
-<th>CSKH &amp; Listing</th>
-<th>Marketing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Chọn mã hàng mới</td>
-<td>A</td>
-<td>C</td>
+<td>S2 Đặt NCC + thanh toán NCC</td>
+<td>–</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
 <td>R</td>
+</tr>
+<tr>
+<td>S3 Theo dõi xưởng gửi</td>
+<td>–</td>
 <td>C</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>S4 Kho gom · QC</td>
+<td>–</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>S5 Cắt lô · chứng từ · trả cước</td>
+<td>–</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>–</td>
+<td>R</td>
+</tr>
+<tr>
+<td>S6 Thông quan</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>I</td>
+<td>–</td>
 <td>C</td>
 </tr>
 <tr>
-<td>Duyệt NCC mới</td>
-<td>A</td>
+<td>S7 Giao chặng cuối</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>C</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>S8 Sau giao · đóng đơn</td>
+<td>–</td>
+<td><strong>A</strong></td>
+<td>–</td>
 <td>R</td>
 <td>R</td>
 <td>I</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Cập nhật 7 ngày cho khách</td>
+<td>–</td>
 <td>I</td>
+<td>C</td>
+<td>C</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td><strong>SOP-B · Hậu mãi</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B1–B2 Mở case, thu bằng chứng</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>B3 Duyệt ≤ A$50</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+<td>I</td>
+</tr>
+<tr>
+<td>B3 Duyệt A$51–150</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>–</td>
+<td>I</td>
+</tr>
+<tr>
+<td>B3 Duyệt &gt; A$150 · hoàn 100%</td>
+<td><strong>A</strong></td>
+<td>R</td>
+<td>C</td>
+<td>C</td>
+<td>R</td>
+<td>–</td>
+<td>I</td>
+</tr>
+<tr>
+<td>B5 Gửi bù · đổi mới · thu hồi</td>
+<td>–</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+<td>R</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>B5 Thực hiện hoàn tiền</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+<td>I</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+</tr>
+<tr>
+<td>B6 Claim NCC / hãng giao</td>
+<td>–</td>
+<td>I</td>
+<td><strong>A/R</strong></td>
+<td>R</td>
+<td>–</td>
+<td>–</td>
+<td>I</td>
+</tr>
+<tr>
+<td>D Chargeback</td>
+<td>I</td>
+<td><strong>A</strong></td>
+<td>–</td>
+<td>C</td>
+<td>R</td>
+<td>–</td>
+<td>R</td>
+</tr>
+<tr>
+<td><strong>Nền tảng</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Chọn mã hàng, duyệt NCC mới</td>
+<td><strong>A</strong></td>
+<td>C</td>
+<td>R</td>
+<td>C</td>
+<td>–</td>
+<td>C</td>
+<td>–</td>
 </tr>
 <tr>
 <td>Đăng / sửa trang sản phẩm</td>
 <td>I</td>
-<td>A</td>
 <td>C</td>
+<td>C</td>
+<td>–</td>
+<td>–</td>
+<td><strong>A/R</strong></td>
+<td>–</td>
+</tr>
+<tr>
+<td>Ngân sách quảng cáo tuần</td>
+<td><strong>A</strong></td>
+<td>I</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
 <td>R</td>
 <td>C</td>
 </tr>
 <tr>
-<td>Đặt hàng xưởng</td>
-<td>I</td>
-<td>A</td>
-<td>R</td>
-<td>I</td>
-<td>–</td>
-</tr>
-<tr>
-<td>QC và chứng từ lô hàng</td>
-<td>I</td>
-<td>A</td>
-<td>R</td>
-<td>I</td>
-<td>–</td>
-</tr>
-<tr>
-<td>Gửi tracking, cập nhật khách</td>
-<td>–</td>
-<td>A</td>
-<td>C</td>
-<td>R</td>
-<td>–</td>
-</tr>
-<tr>
-<td>Bồi thường ≤ A$50</td>
-<td>I</td>
-<td>I</td>
-<td>C</td>
-<td>R/A</td>
-<td>–</td>
-</tr>
-<tr>
-<td>Bồi thường A$51–150</td>
-<td>I</td>
-<td>A</td>
-<td>C</td>
-<td>R</td>
-<td>–</td>
-</tr>
-<tr>
-<td>Bồi thường &gt; A$150 hoặc hoàn 100%</td>
-<td>A</td>
-<td>R</td>
-<td>C</td>
-<td>R</td>
-<td>–</td>
-</tr>
-<tr>
-<td>Chạy quảng cáo, ngân sách tuần</td>
-<td>A</td>
-<td>I</td>
-<td>–</td>
-<td>C</td>
-<td>R</td>
-</tr>
-<tr>
-<td>Đăng nội dung mạng xã hội</td>
-<td>I</td>
-<td>C</td>
-<td>–</td>
-<td>C</td>
-<td>R/A</td>
-</tr>
-<tr>
-<td>Sửa chính sách trên web</td>
-<td>A</td>
+<td>Sửa SOP, chính sách</td>
+<td><strong>A</strong></td>
 <td>R</td>
 <td>C</td>
 <td>C</td>
-<td>I</td>
+<td>C</td>
+<td>C</td>
+<td>C</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="nhip-lam-viec">Nhịp làm việc</h2>
+<h2 id="3-tach-quyen-nguoi-e-xuat-nguoi-duyet-nguoi-chi-tien">3. Tách quyền: người đề xuất ≠ người duyệt ≠ người chi tiền</h2>
 <div class="tbl"><table>
 <thead>
 <tr>
-<th>Nhịp</th>
-<th>Khi nào</th>
-<th>Ai</th>
-<th>Nội dung</th>
+<th>Dòng tiền</th>
+<th>Đề xuất</th>
+<th>Duyệt</th>
+<th>Chi</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Họp đứng</td>
-<td>09:00 hằng ngày, 15 phút</td>
-<td>Cả team</td>
-<td>Đơn kẹt, khách chờ quá 24 giờ, việc cần duyệt</td>
+<td>Trả NCC</td>
+<td><span class="r src">SRC</span></td>
+<td><span class="r ops">OPS</span> (đơn thường) · <span class="r ceo">CEO</span> (NCC mới)</td>
+<td><span class="r fin">FIN</span></td>
 </tr>
 <tr>
-<td>Báo cáo tuần</td>
-<td>Thứ Sáu 16:00</td>
-<td>Ops Lead → CEO</td>
-<td>KPI, lỗi lặp lại, mã/NCC cần tắt, đề xuất sửa sổ tay</td>
+<td>Bồi thường, hoàn tiền</td>
+<td><span class="r cx">CX</span></td>
+<td>theo mức: <span class="r cx">CX</span> ≤ 50 · <span class="r ops">OPS</span> 51–150 · <span class="r ceo">CEO</span> &gt; 150</td>
+<td><span class="r fin">FIN</span></td>
 </tr>
 <tr>
-<td>Họp tháng</td>
-<td>Thứ Hai đầu tháng</td>
-<td>Cả team</td>
-<td>Lãi lỗ theo chi phí thực, kế hoạch tháng sau</td>
+<td>Cước, thuế lô</td>
+<td><span class="r log">LOG</span></td>
+<td><span class="r ops">OPS</span></td>
+<td><span class="r fin">FIN</span></td>
 </tr>
 <tr>
-<td>Rà lằn ranh đỏ</td>
-<td>Mỗi tháng</td>
-<td>Ops Lead + Marketing</td>
-<td>Kiểm web, quảng cáo, email theo <a href="01-nguyen-tac.html">Nguyên tắc</a></td>
+<td>Quảng cáo</td>
+<td><span class="r mkt">MKT</span></td>
+<td><span class="r ceo">CEO</span></td>
+<td>thẻ công ty</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="tai-khoan-va-bao-mat">Tài khoản và bảo mật</h2>
+<p>Một người kiêm cả ba bước (giai đoạn 1 người) thì ghi lý do vào case và CEO rà lại mỗi thứ Sáu.</p>
+<h2 id="4-du-lieu-can-biet-giu-bi-mat-mo-hinh">4. Dữ liệu cần biết (giữ bí mật mô hình)</h2>
+<p>● dùng đầy đủ · ◐ chỉ xem phần cần · – không có quyền. <strong>Mã đơn</strong> là khóa nối giữa các vị trí; không ai cần thấy toàn bộ.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Dữ liệu</th>
+<th>CEO</th>
+<th>OPS</th>
+<th>SRC</th>
+<th>LOG</th>
+<th>CX</th>
+<th>MKT</th>
+<th>FIN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tên, email, SĐT khách</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>–</td>
+<td>●</td>
+<td>–</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>Địa chỉ giao</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>◐ chặng cuối</td>
+<td>●</td>
+<td>–</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Danh tính NCC, link, chat NCC</td>
+<td>●</td>
+<td>◐</td>
+<td>●</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>◐</td>
+</tr>
+<tr>
+<td>Giá mua NCC</td>
+<td>●</td>
+<td>◐</td>
+<td>●</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Forwarder, broker, giá cước</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>●</td>
+<td>–</td>
+<td>–</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Landed cost, biên lãi</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Trạng thái đơn, ETA</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+<td>◐ tổng</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Chi quảng cáo, ROAS</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>–</td>
+<td>–</td>
+<td>●</td>
+<td>●</td>
+</tr>
+<tr>
+<td>Hoàn tiền, cổng thanh toán</td>
+<td>●</td>
+<td>◐</td>
+<td>–</td>
+<td>–</td>
+<td>◐ trạng thái</td>
+<td>–</td>
+<td>●</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Cách thực hiện:</strong></p>
 <ul>
-<li>Mỗi người một tài khoản riêng (Shopify, Meta Business, email chung). Không dùng chung mật khẩu.</li>
-<li>Bật xác thực 2 lớp cho mọi tài khoản. Ít nhất 2 quản trị viên cho Meta Business và Shopify.</li>
-<li>Dữ liệu khách chỉ nằm trong Shopify và hộp thư công ty. Không chép sang sheet cá nhân, không gửi qua ứng dụng cá nhân.</li>
-<li>Người nghỉ việc: thu hồi quyền trong ngày.</li>
-</ul></article>
+<li>Shopify: tài khoản nhân viên theo vị trí, chỉ bật quyền cần (CX: Orders, Customers; MKT: Products; không ai ngoài CEO/FIN vào Payments).</li>
+<li>Tracker: mỗi vị trí một tab hoặc một bản xem lọc. Tab NCC và tab chi phí không chia sẻ cho CX, MKT.</li>
+<li>SRC làm việc với NCC bằng <strong>mã đơn + SKU</strong>, không có tên hay địa chỉ khách. Nhãn giao chặng cuối do LOG in tại nước khách.</li>
+<li>Mỗi người một tài khoản, xác thực 2 lớp, ít nhất 2 quản trị viên cho Shopify và Meta. Nghỉ việc: thu hồi quyền trong ngày.</li>
+</ul>
+<h2 id="5-kiem-nhiem-theo-quy-mo">5. Kiêm nhiệm theo quy mô</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Quy mô</th>
+<th>Người 1</th>
+<th>Người 2</th>
+<th>Người 3</th>
+<th>Người 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Khởi đầu (1 người)</td>
+<td>P0 · P1 · P2 · P3 · P4 · P5 · P6</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>~ 5 đơn/ngày (2 người)</td>
+<td>P0 · P1 · P5 · P6</td>
+<td><strong>P4 CX</strong> + P3</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>~ 15 đơn/ngày (3 người)</td>
+<td>P0 · P5 · P6</td>
+<td>P1 OPS + P3 LOG</td>
+<td><strong>P2 SRC</strong> (tiếng Trung)</td>
+<td></td>
+</tr>
+<tr>
+<td>~ 30 đơn/ngày (4+ người)</td>
+<td>P0 · P5</td>
+<td>P1 OPS</td>
+<td>P2 SRC</td>
+<td>P4 CX · P3 tách khi cần · P6 kế toán thuê ngoài</td>
+</tr>
+</tbody>
+</table></div>
+<p>Thứ tự tuyển: <strong>CX trước</strong> (tốn giờ nhất, rủi ro chargeback cao nhất), sau đó SRC. Người mới nhận đúng trang SOP và đúng tab dữ liệu của vị trí mình.</p></article>
 <div class="pager"><a class="prev" href="02-mo-hinh-kinh-doanh.html">← Mô hình kinh doanh</a><a class="next" href="04-san-pham-chuan-hoa.html">Chuẩn hóa sản phẩm →</a></div>
 <footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
 </body></html>

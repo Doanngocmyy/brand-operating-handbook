@@ -24,7 +24,17 @@ def parse(path):
             meta[k.strip()] = v.strip()
         raw = raw[m.end():]
     raw = raw.replace("{{BRAND}}", CFG["brand"]).replace("{{REPO}}", CFG["repo"])
+    raw = re.sub(r"^\{\{SVG:([\w-]+)\}\}$", svg_block, raw, flags=re.M)
     return meta, raw
+
+
+def svg_block(m):
+    """{{SVG:name}} on its own line -> inline swimlane from assets/sop/name.svg (built by tools/swimlane.py)."""
+    name = m.group(1)
+    svg = (ROOT / "assets" / "sop" / f"{name}.svg").read_text(encoding="utf-8")
+    svg = svg.replace("\n\n", "\n")
+    return (f'<div class="swim">{svg}</div>\n'
+            f'<p class="swim-cap">Kéo ngang để xem hết · <a href="sop/{name}.svg" target="_blank">Mở bản lớn / in ↗</a></p>')
 
 
 def render_md(text):
@@ -48,6 +58,9 @@ pages.sort(key=lambda x: x["order"])
 CSS = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
 (OUT / "style.css").write_text(CSS, encoding="utf-8")
 (OUT / ".nojekyll").write_text("", encoding="utf-8")
+(OUT / "sop").mkdir(exist_ok=True)
+for f in (ROOT / "assets" / "sop").glob("*.svg"):
+    (OUT / "sop" / f.name).write_text(f.read_text(encoding="utf-8"), encoding="utf-8")
 
 TEMPLATE = """<!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">

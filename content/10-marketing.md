@@ -26,7 +26,7 @@ order: 10
 - [ ] Page Facebook, Instagram Business, TikTok Business, Pinterest Business. Cùng ảnh đại diện, cùng bio, cùng link.
 - [ ] Bio: "Quiet, honest furniture. Made to order, shipped by sea to AU in 8–12 weeks. Real tracking. Real people."
 - [ ] Highlights IG: How it works · Sizes · Materials · Delivery · Assembly · Reviews (chỉ review thật).
-- [ ] Hộp thư: tin tự động theo đúng quy tắc ở [CSKH](08-cskh.html).
+- [ ] Hộp thư: tin tự động theo đúng quy tắc ở [SOP-B · Cam kết phản hồi](08-cskh.html).
 - [ ] Không mua follower hay tài khoản có sẵn. Không dùng danh sách khách, email hay pixel của doanh nghiệp khác.
 
 ## 3. Bốn trụ nội dung

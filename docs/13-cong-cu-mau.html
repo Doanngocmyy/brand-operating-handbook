@@ -8,7 +8,7 @@
 <header class="top"><a class="brand" href="index.html">[BRAND]</a><span class="sub">Operating Handbook</span>
 <button class="menu" onclick="document.body.classList.toggle('nav-open')" aria-label="Menu">Menu</button></header>
 <div class="wrap">
-<nav class="side"><a class="" href="index.html"><span>00</span>Thư của Founder</a><a class="" href="01-nguyen-tac.html"><span>01</span>Nguyên tắc cốt lõi</a><a class="" href="02-mo-hinh-kinh-doanh.html"><span>02</span>Mô hình kinh doanh</a><a class="" href="03-to-chuc-vai-tro.html"><span>03</span>Tổ chức &amp; vai trò</a><a class="" href="04-san-pham-chuan-hoa.html"><span>04</span>Chuẩn hóa sản phẩm</a><a class="" href="05-nha-cung-cap.html"><span>05</span>Nhà cung cấp</a><a class="" href="06-dong-goi-nhan-chung-tu.html"><span>06</span>Đóng gói, nhãn &amp; chứng từ</a><a class="" href="07-van-hanh-don-hang.html"><span>07</span>Vận hành đơn hàng</a><a class="" href="08-cskh.html"><span>08</span>Chăm sóc khách hàng</a><a class="" href="09-chinh-sach.html"><span>09</span>Chính sách (bản cho website)</a><a class="" href="10-marketing.html"><span>10</span>Marketing &amp; mạng xã hội</a><a class="" href="11-kpi-nhip-van-hanh.html"><span>11</span>KPI &amp; nhịp vận hành</a><a class="" href="12-lo-trinh-90-ngay.html"><span>12</span>Lộ trình 90 ngày</a><a class="on" href="13-cong-cu-mau.html"><span>13</span>Công cụ &amp; biểu mẫu</a><p class="meta">Cập nhật 02/10/2026<br><a href="https://github.com/Doanngocmyy/brand-operating-handbook">Mã nguồn trên GitHub</a></p></nav>
+<nav class="side"><a class="" href="index.html"><span>00</span>Thư của Founder</a><a class="" href="01-nguyen-tac.html"><span>01</span>Nguyên tắc cốt lõi</a><a class="" href="02-mo-hinh-kinh-doanh.html"><span>02</span>Mô hình kinh doanh</a><a class="" href="03-to-chuc-vai-tro.html"><span>03</span>Vị trí, RACI &amp; phân quyền</a><a class="" href="04-san-pham-chuan-hoa.html"><span>04</span>Chuẩn hóa sản phẩm</a><a class="" href="05-nha-cung-cap.html"><span>05</span>Nhà cung cấp</a><a class="" href="06-dong-goi-nhan-chung-tu.html"><span>06</span>Đóng gói, nhãn &amp; chứng từ</a><a class="" href="07-van-hanh-don-hang.html"><span>07</span>SOP-A · Đơn chuẩn</a><a class="" href="08-cskh.html"><span>08</span>SOP-B · Hậu mãi &amp; hoàn tiền</a><a class="" href="09-chinh-sach.html"><span>09</span>Chính sách (bản cho website)</a><a class="" href="10-marketing.html"><span>10</span>Marketing &amp; mạng xã hội</a><a class="" href="11-kpi-nhip-van-hanh.html"><span>11</span>KPI &amp; tracking</a><a class="" href="12-lo-trinh-90-ngay.html"><span>12</span>Lộ trình 90 ngày</a><a class="on" href="13-cong-cu-mau.html"><span>13</span>Công cụ &amp; biểu mẫu</a><p class="meta">Cập nhật 04/10/2026<br><a href="https://github.com/Doanngocmyy/brand-operating-handbook">Mã nguồn trên GitHub</a></p></nav>
 <main><article><h1 id="cong-cu-va-bieu-mau">Công cụ và biểu mẫu</h1>
 <h2 id="bieu-mau-tai-ve-dung-ngay">Biểu mẫu (tải về dùng ngay)</h2>
 <div class="tbl"><table>
@@ -21,14 +21,24 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/SOP-Tracker.xlsx">SOP-Tracker.xlsx</a></td>
+<td>Theo dõi đơn (SOP-A) và case hậu mãi (SOP-B): trạng thái tự tính, cờ SLA, dashboard KPI. Không có dữ liệu cá nhân khách</td>
+<td>Cả team, họp 09:00</td>
+</tr>
+<tr>
+<td>Swimlane: <a href="sop/a.svg">SOP-A</a> · <a href="sop/b1.svg">B1 case</a> · <a href="sop/b2.svg">B2 trả hàng</a> · <a href="sop/b3.svg">B3 chargeback</a></td>
+<td>Bản lớn để in, dán tường, đào tạo người mới</td>
+<td>Cả team</td>
+</tr>
+<tr>
 <td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/raw/main/templates/Mau_chung_tu_NCC.xlsx">Mau_chung_tu_NCC.xlsx</a></td>
 <td>Commercial invoice, packing list, shipping mark, nhãn sản phẩm, hướng dẫn lắp, QC checklist. Song ngữ Anh–Trung cho NCC</td>
 <td>Mua hàng &amp; QC, NCC</td>
 </tr>
 <tr>
 <td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/templates/order-tracker-template.csv">order-tracker-template.csv</a></td>
-<td>Sheet theo dõi đơn: trạng thái, mốc thời gian, chi phí thực, ca khiếu nại, cảnh báo</td>
-<td>Cả team (nhập vào Google Sheet)</td>
+<td>Bản cũ có cột chi phí thực từng đơn. Dùng làm file chi phí riêng của FIN (không chia sẻ cho CX, MKT)</td>
+<td>FIN</td>
 </tr>
 <tr>
 <td><a href="https://github.com/Doanngocmyy/brand-operating-handbook/blob/main/templates/status-list.csv">status-list.csv</a></td>
@@ -77,7 +87,33 @@ python tools/normalize_catalog.py --raw export_store/raw_products.json --out cle
 <li>Viết lại tên và mô tả theo giọng [BRAND]. Không dùng giá gạch cũ.</li>
 </ul>
 <h2 id="sua-so-tay-nay">Sửa sổ tay này</h2>
-<p>Mỗi trang là một file Markdown trong thư mục <code>content/</code>. Sửa file rồi chạy <code>python build.py</code> để tạo lại website trong <code>docs/</code>. Tên thương hiệu nằm ở <code>site.json</code>, đổi một lần là đổi toàn bộ.</p></article>
+<p>Mỗi trang là một file Markdown trong thư mục <code>content/</code>. Sửa file rồi chạy <code>python build.py</code> để tạo lại website trong <code>docs/</code>. Tên thương hiệu nằm ở <code>site.json</code>, đổi một lần là đổi toàn bộ.</p>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Muốn sửa</th>
+<th>Sửa ở</th>
+<th>Rồi chạy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Swimlane (ô, mũi tên, SLA)</td>
+<td><code>tools/swimlane.py</code></td>
+<td><code>python tools/swimlane.py</code> → <code>python build.py</code></td>
+</tr>
+<tr>
+<td>Tracker Excel</td>
+<td><code>tools/build_tracker.py</code></td>
+<td><code>python tools/build_tracker.py</code></td>
+</tr>
+<tr>
+<td>Chữ trên trang</td>
+<td><code>content/*.md</code> (<code>{{SVG:a}}</code> = chèn swimlane)</td>
+<td><code>python build.py</code></td>
+</tr>
+</tbody>
+</table></div></article>
 <div class="pager"><a class="prev" href="12-lo-trinh-90-ngay.html">← Lộ trình 90 ngày</a><span></span></div>
 <footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
 </body></html>

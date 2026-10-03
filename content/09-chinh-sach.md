@@ -60,5 +60,5 @@ A real person replies within 24 hours on email, our website form, Messenger, Ins
 
 ## Ghi chú nội bộ
 
-- Thay đổi chính sách: CEO duyệt, Ops Lead sửa ở đây trước rồi mới sửa web.
+- Thay đổi chính sách: CEO duyệt, OPS (P1) sửa ở đây trước rồi mới sửa web.
 - Các con số trong chính sách (8–12 tuần, 5–8 tuần, 7 ngày, 14 ngày, 5 ngày) được rà lại mỗi tháng theo dữ liệu thật. Nếu 10% đơn chậm nhất vượt khung, mở rộng khung chứ không giữ lời hứa sai.

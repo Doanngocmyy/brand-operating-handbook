@@ -64,7 +64,7 @@ Dán ngay sau khi đặt hàng. Thay 【订单号】 bằng mã đơn.
 - Cho phép {{BRAND}} dùng ảnh và bản vẽ.
 - Trễ quá 7 ngày so với ngày xuất đã hẹn phải báo trước.
 
-## 5. Bảng chấm điểm NCC (Ops Lead cập nhật mỗi tháng)
+## 5. Bảng chấm điểm NCC (OPS (P1) cập nhật mỗi tháng)
 
 | Chỉ số | Trọng số | Ngưỡng tạm dừng |
 |---|---|---|

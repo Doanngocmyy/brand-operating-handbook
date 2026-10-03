@@ -1,11 +1,12 @@
-﻿Trạng thái,Shopify,Điều kiện vào
-CHỜ MUA,Unfulfilled,Đã qua 1.1 & 1.2
-ĐÃ MUA,Unfulfilled,Có 淘宝订单号
-SELLER ĐÃ GỬI,Unfulfilled,Có vận đơn nội địa
-TẠI KHO GOM,Unfulfilled,"Kho báo 入库, đủ kiện"
-ĐÃ XUẤT QT,Fulfilled + tracking,Có vận đơn quốc tế tra được
-THÔNG QUAN,Fulfilled,Tracking báo đến cảng/HQ
-ĐANG GIAO,Fulfilled,Giao cho courier nội địa
-ĐÃ GIAO,Fulfilled,Courier xác nhận/ảnh giao
-ĐÓNG,Archived,"Hết case, đủ chi phí"
-HỦY / HOÀN,Refunded,Đã hoàn tiền
+﻿Mã,Trạng thái,Shopify,Chủ trì,Bằng chứng để vào
+10,Mới,Unfulfilled,CX,Đã thanh toán
+20,Đã xác nhận,Unfulfilled,SRC,Email xác nhận + khung ETA
+30,Đã đặt NCC,Unfulfilled,SRC,Mã PO + ngày hẹn xuất + đã thanh toán qua sàn
+40,NCC đã gửi,Unfulfilled,SRC,Ảnh kiện đã duyệt + vận đơn nội địa
+50,QC đạt,Unfulfilled,LOG,Ảnh QC kho gom + checklist đạt
+60,Đã xuất,Fulfilled + tracking,LOG,Lượt quét thật của hãng vận chuyển
+70,Thông quan,Fulfilled,LOG,Tracking báo tới cảng/hải quan
+80,Đang giao,Fulfilled,LOG,Hãng giao nội địa nhận hàng
+90,Đã giao,Fulfilled,CX,POD / ảnh giao
+95,Hủy/hoàn,Refunded,–,Đã hoàn tiền
+99,Đóng,Archived,–,D+14 không case + chi phí đủ

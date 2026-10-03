@@ -1,94 +1,80 @@
 ---
-title: Vận hành đơn hàng
+title: SOP-A · Đơn chuẩn
 order: 7
 ---
 
-# Vận hành đơn hàng
+# SOP-A · Đơn chuẩn (normal case)
 
-Mỗi đơn đi qua 10 trạng thái. Trạng thái trên Shopify và trong sheet theo dõi phải **luôn khớp với thực tế**. Đây là quy tắc quan trọng nhất của bộ phận vận hành.
+Một đơn đi qua **8 giai đoạn, 10 trạng thái**. Đơn chuẩn không cần CEO. Mọi lệch chuẩn thoát sang [SOP-B](08-cskh.html) bằng mã case.
 
-## 1. Trạng thái đơn
+<div class="flow">
+<div class="st"><b>S1 · ≤ 4h LV</b><span class="n">Nhận đơn</span><span class="r cx">CX</span><small>→ <span class="s">20</span> đã xác nhận</small></div>
+<div class="st"><b>S2 · ≤ 24h</b><span class="n">Đặt NCC</span><span class="r src">SRC</span> <span class="r fin">FIN</span><small>→ <span class="s">30</span> đã đặt</small></div>
+<div class="st"><b>S3 · ≤ hẹn +2d</b><span class="n">SX &amp; gửi</span><span class="r src">SRC</span><small>→ <span class="s">40</span> NCC đã gửi</small></div>
+<div class="st"><b>S4 · ≤ 2d</b><span class="n">Kho gom · QC</span><span class="r src">SRC</span><small>→ <span class="s">50</span> QC đạt</small></div>
+<div class="st"><b>S5 · 1 ngày/tuần</b><span class="n">Xuất lô</span><span class="r log">LOG</span> <span class="r ops">OPS</span><small>→ <span class="s">60</span> đã xuất</small></div>
+<div class="st"><b>S6 · báo ≤ 24h</b><span class="n">Thông quan</span><span class="r log">LOG</span><small>→ <span class="s">70</span> thông quan</small></div>
+<div class="st"><b>S7 · hãng hẹn</b><span class="n">Giao cuối</span><span class="r log">LOG</span><small>→ <span class="s">80</span> → <span class="s">90</span></small></div>
+<div class="st"><b>S8 · D+3 · D+14</b><span class="n">Sau giao · đóng</span><span class="r cx">CX</span> <span class="r fin">FIN</span><small>→ <span class="s">99</span> đóng</small></div>
+</div>
 
-| Trạng thái | Trên Shopify | Điều kiện để chuyển sang | Báo khách |
+## 1. Swimlane
+
+<div class="legend"><span>▭ việc nội bộ</span><span>◇ quyết định</span><span>⬭ bắt đầu / kết thúc</span><span>┄▭ đối tác ngoài</span><span>── luồng việc</span><span>┄┄ thông báo</span><span><span class="s">30</span> trạng thái đặt ra</span><span><span class="flag">đỏ</span> lối thoát ngoại lệ</span></div>
+
+{{SVG:a}}
+
+## 2. Cổng qua từng giai đoạn
+
+Chỉ chuyển trạng thái khi **có bằng chứng** ở cột cuối. Không có bằng chứng = chưa xong.
+
+| Giai đoạn | Chủ trì | Việc chính | SLA | Cổng qua (bằng chứng) | → |
+|---|---|---|---|---|---|
+| S1 Nhận đơn | <span class="r cx">CX</span> | Kiểm địa chỉ giao được, SĐT, dấu hiệu gian lận. Email xác nhận với khung ETA thật | ≤ 4h làm việc | Email xác nhận đã gửi · dòng tracker có ETA min/max | <span class="s">20</span> |
+| S2 Đặt NCC | <span class="r src">SRC</span> | Hỏi tồn + ngày xuất. PO đúng mã màu/size, 1 NCC/đơn. Gửi yêu cầu đóng gói | ≤ 24h sau thanh toán | Mã PO + ngày hẹn xuất · FIN đã thanh toán qua sàn | <span class="s">30</span> |
+| S3 SX & gửi | <span class="r src">SRC</span> | Nhận ảnh/video đóng kiện X/Y, duyệt, nhận vận đơn nội địa | ≤ ngày hẹn +2d | Ảnh kiện đã duyệt · vận đơn nội địa | <span class="s">40</span> |
+| S4 Kho gom · QC | <span class="r src">SRC</span> | Đếm kiện, QC màu, kích thước (±5 mm), phụ kiện, ISPM-15. Lỗi: trả NCC tại TQ | ≤ 2d sau nhập kho | Ảnh QC của đơn · checklist QC đạt | <span class="s">50</span> |
+| S5 Xuất lô | <span class="r log">LOG</span> | Cắt lô 1 ngày cố định/tuần. CI, PL, ISPM, ChAFTA, BMSB. OPS duyệt chứng từ khớp hàng | theo lịch tuần | **Lượt quét thật** của hãng vận chuyển | <span class="s">60</span> |
+| S6 Thông quan | <span class="r log">LOG</span> | Theo dõi cảng, broker khai báo, nộp thuế/GST. Bị giữ: báo khách ≤ 24h | báo ≤ 24h | Tracking báo tới cảng/hải quan | <span class="s">70</span> |
+| S7 Giao cuối | <span class="r log">LOG</span> | Bàn giao hãng nội địa, hãng hẹn ngày, giao đủ kiện X/Y | theo hẹn | Hãng nhận hàng → POD/ảnh giao | <span class="s">80</span>→<span class="s">90</span> |
+| S8 Sau giao | <span class="r cx">CX</span> <span class="r fin">FIN</span> | D+3 hướng dẫn lắp + mời review (mọi khách). FIN đối soát landed cost | D+3 · D+14 | D+14 không case · chi phí đủ | <span class="s">99</span> |
+
+## 3. Trạng thái đơn
+
+| Mã | Trạng thái | Shopify | Khách được báo |
 |---|---|---|---|
-| CHỜ MUA | Unfulfilled | Đã kiểm đơn và xác nhận với khách | Email xác nhận + khung thời gian giao |
-| ĐÃ MUA | Unfulfilled | Có mã đơn đặt xưởng | – |
-| XƯỞNG ĐÃ GỬI | Unfulfilled | Có vận đơn nội địa TQ | – |
-| TẠI KHO GOM | Unfulfilled | Kho xác nhận nhập đủ kiện, QC đạt | "Đơn của bạn đã qua kiểm tra" + ảnh QC |
-| ĐÃ XUẤT | Fulfilled + tracking | Có vận đơn quốc tế **và lượt quét đầu tiên** | Email tracking |
-| THÔNG QUAN | Fulfilled | Tracking báo tới cảng hoặc hải quan | Cập nhật |
-| ĐANG GIAO | Fulfilled | Đã giao cho hãng giao nội địa | Hãng giao hẹn ngày |
-| ĐÃ GIAO | Fulfilled | Hãng giao xác nhận hoặc có ảnh giao | Hướng dẫn lắp + mời review sau 3 ngày |
-| ĐÓNG | Archived | Không còn vấn đề, đủ chi phí | – |
-| HỦY / HOÀN | Refunded | Đã hoàn tiền | Email hoàn tiền |
+| <span class="s">10</span> | Mới (đã thanh toán) | Unfulfilled | – |
+| <span class="s">20</span> | Đã xác nhận | Unfulfilled | Email xác nhận + khung ETA |
+| <span class="s">30</span> | Đã đặt NCC | Unfulfilled | Cập nhật 7 ngày: "đang sản xuất" |
+| <span class="s">40</span> | NCC đã gửi | Unfulfilled | Cập nhật 7 ngày |
+| <span class="s">50</span> | QC đạt | Unfulfilled | Ảnh QC của chính đơn |
+| <span class="s">60</span> | Đã xuất | **Fulfilled + tracking** | Email tracking |
+| <span class="s">70</span> | Thông quan | Fulfilled | Cập nhật 7 ngày |
+| <span class="s">80</span> | Đang giao | Fulfilled | Hãng giao hẹn ngày |
+| <span class="s">90</span> | Đã giao | Fulfilled | Hướng dẫn lắp (D+3) |
+| <span class="s">99</span> | Đóng | Archived | – |
+| <span class="s">95</span> | Hủy / hoàn | Refunded | Email hoàn tiền |
 
-**Không bao giờ** bấm Fulfilled hay gửi tracking khi hàng chưa có lượt quét thật của hãng vận chuyển.
+> **Không bấm Fulfilled, không gửi tracking khi chưa có lượt quét thật.** Trạng thái trên Shopify, trong tracker và trong tin nhắn khách phải giống nhau.
 
-## 2. Các bước và thời hạn (SLA)
+## 4. Lối thoát ngoại lệ
 
-### B0. Trước khi bán: chuẩn listing
+| Điểm | Tình huống | Ai phát hiện | Xử lý | Sang |
+|---|---|---|---|---|
+| S1 | Địa chỉ không giao được, nghi gian lận | <span class="r cx">CX</span> | Hỏi lại trong 24h, không trả lời thì hủy | C1 |
+| S2 | Cả 2 NCC hết hàng | <span class="r src">SRC</span> | Báo khách ≤ 24h: đổi mã hoặc hủy hoàn 100% | C1 · C2 |
+| S3 | NCC trễ hẹn | <span class="r src">SRC</span> → <span class="r ops">OPS</span> | +2d nhắc · +5d báo OPS, báo khách · +7d đổi NCC | C2 nếu chạm ETA |
+| S4 | QC trượt | <span class="r src">SRC</span> | Trả NCC tại TQ, làm lại; báo khách nếu lùi ETA | C2 |
+| S6 | Bị giữ hải quan, kiểm dịch | <span class="r log">LOG</span> | Báo khách ≤ 24h, lý do thật, ngày mới | C2 |
+| Mọi lúc | Còn 14 ngày tới ETA max mà chưa <span class="s">60</span> | Tracker | CX báo trước ≥ 7 ngày, đưa 3 lựa chọn | C2 |
+| S8 | Khách báo vấn đề | <span class="r cx">CX</span> | Mở case | C3–C8 |
 
-Mã hàng phải đạt 7 tiêu chí ở trang [Chuẩn hóa sản phẩm](04-san-pham-chuan-hoa.html), có 2 NCC, đạt ngưỡng lãi trong bảng tính giá, và khung thời gian giao đúng theo thị trường.
+## 5. Ba việc chạy liên tục
 
-### B1. Nhận đơn — trong 4 giờ làm việc (CSKH & Listing)
-
-1. Kiểm địa chỉ có giao được không (vùng xa, đảo), số điện thoại đủ chưa. Đơn giá trị cao bất thường hoặc tên/địa chỉ không khớp: hỏi lại trước khi mua.
-2. Gửi email xác nhận: sản phẩm, khung thời gian giao thật, điều kiện hủy miễn phí.
-3. Tạo dòng trong sheet theo dõi, trạng thái CHỜ MUA.
-
-### B2. Đặt hàng xưởng — trong 24 giờ sau khi khách thanh toán (Mua hàng & QC)
-
-1. Hỏi lại tồn kho và **ngày xuất cụ thể**. Không có hàng thì chuyển NCC dự phòng. Không có cả hai thì báo khách trong 24 giờ.
-2. Đúng mã màu NCC, size, chất liệu. Không trộn 2 NCC trong một đơn (lệch màu).
-3. Gửi ngay mẫu tin nhắn NCC ([trang Nhà cung cấp](05-nha-cung-cap.html)): đóng gói xuất khẩu, nhãn kiện X/Y, túi phụ kiện, ảnh trước khi gửi.
-4. Thanh toán qua sàn để có bảo vệ người mua. NCC ngoài sàn chỉ khi có thỏa thuận rõ.
-5. Ghi mã đơn xưởng, giá, NCC vào sheet. Trạng thái ĐÃ MUA.
-
-### B3. Theo dõi xưởng gửi hàng — có vận đơn nội địa trong 72 giờ sau ngày hẹn
-
-- Quá 2 ngày: nhắc NCC. Quá 5 ngày: báo Ops Lead, cân nhắc chuyển NCC dự phòng và báo khách. Quá 7 ngày: đổi NCC.
-
-### B4. Nhận tại kho gom và QC — QC trong 2 ngày sau khi nhập kho
-
-1. Kho xác nhận nhập kho và chụp ảnh, quay video: đủ số kiện, bao bì nguyên, nhãn X/Y, bao bì gỗ có dấu ISPM-15 (nếu có).
-2. Hàng giá trị cao hoặc dễ hỏng: mở kiểm màu, kích thước, bề mặt.
-3. Lỗi hoặc sai: **trả lại NCC ngay tại TQ**, trong thời hạn trả hàng của kho. Đây là điểm trả hàng rẻ nhất và cuối cùng.
-4. Đủ kiện: trạng thái TẠI KHO GOM. Gửi khách ảnh QC.
-
-### B5. Cắt lô và gửi quốc tế — 1 ngày cố định mỗi tuần
-
-- Chứng từ đủ theo [trang Đóng gói & chứng từ](06-dong-goi-nhan-chung-tu.html). Mô tả hàng đúng, giá trị đúng.
-- Có tracking quốc tế **và lượt quét đầu tiên** thì mới chuyển ĐÃ XUẤT và gửi tracking cho khách.
-
-### B6. Thông quan và giao chặng cuối
-
-- Bị giữ ở hải quan hoặc kiểm dịch: báo khách trong 24 giờ, nói lý do thật và ngày dự kiến mới.
-- Hãng giao hẹn ngày với khách. Đơn nhiều kiện phải giao đủ số kiện.
-
-### B7. Sau giao
-
-- Sau 3 ngày: email hướng dẫn lắp và mời review. Mời mọi khách như nhau, không trả tiền đổi review tốt, không lọc review xấu.
-- Có vấn đề: chuyển sang quy trình [CSKH](08-cskh.html).
-
-## 3. Cập nhật chủ động cho khách
-
-| Mốc | Nội dung | Kênh |
+| Việc | Ai | Nhịp |
 |---|---|---|
-| Xác nhận đơn | Sản phẩm, khung thời gian, điều kiện hủy | Email |
-| Mỗi 7 ngày khi chưa giao | Trạng thái thật hiện tại, kể cả khi chưa có gì mới | Email hoặc SMS |
-| QC đạt | Ảnh QC của chính đơn đó | Email |
-| Đã xuất | Tracking + giải thích tracking đường biển có thể đứng yên vài ngày | Email |
-| Sắp trễ | Báo trước ít nhất 7 ngày: lý do thật, ngày mới, lựa chọn chờ, đổi hoặc hủy | Email + tin nhắn |
-| Đã giao | Hướng dẫn lắp, cách liên hệ hỗ trợ | Email |
+| Control tower: rà mọi cờ SLA trong tracker | <span class="r ops">OPS</span> | 09:00 hằng ngày |
+| Cập nhật chủ động cho khách, kể cả "tuần này chưa có gì mới" | <span class="r cx">CX</span> | mỗi 7 ngày/đơn, tới khi giao |
+| Ghi bằng chứng vào tracker (mã PO, ảnh, vận đơn, POD) | Chủ trì từng giai đoạn | ngay khi có |
 
-## 4. Cảnh báo tự động trong sheet theo dõi
-
-| Cảnh báo | Điều kiện | Ai xử lý |
-|---|---|---|
-| Chưa đặt hàng | > 48 giờ sau thanh toán vẫn CHỜ MUA | Mua hàng & QC |
-| Xưởng quá hẹn | Quá ngày hẹn gửi 2 ngày | Mua hàng & QC |
-| Sắp vượt khung | Còn 14 ngày tới hạn cuối mà chưa ĐÃ XUẤT | Ops Lead + CSKH |
-| Vượt khung | Quá hạn cuối đã hứa | CSKH chủ động đề nghị chờ có bồi thường hoặc hủy hoàn 100% |
-| Khách chờ trả lời | Tin nhắn > 24 giờ chưa có người trả lời | CSKH |
-
-Mẫu sheet theo dõi: [templates/order-tracker-template.csv](https://github.com/{{REPO}}/blob/main/templates/order-tracker-template.csv).
+Tracker, cờ cảnh báo và KPI: [KPI & tracking](11-kpi-nhip-van-hanh.html).
