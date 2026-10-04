@@ -1,0 +1,156 @@
+<svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1332 794" width="1332" height="794" role="img" aria-label="E3 Kho Úc → giao chặng cuối → sau giao → đóng đơn (S7–S8)">
+<title>E3 Kho Úc → giao chặng cuối → sau giao → đóng đơn (S7–S8)</title><style>
+.sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
+.sw .bg{fill:var(--panel,#fff)}
+.sw .lane{fill:var(--panel,#fff);stroke:var(--line,#e5e5e7)}
+.sw .lane.alt{fill:var(--bg,#fbfbfa)}
+.sw .hdr{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .stg{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .sep{stroke:var(--line,#e5e5e7);stroke-dasharray:3 4}
+.sw .t{fill:var(--ink,#1d1d1f);font-size:10.5px}
+.sw .tb{fill:var(--ink,#1d1d1f);font-size:12px;font-weight:650}
+.sw .tm{fill:var(--muted,#6e6e73);font-size:10px}
+.sw .ts{fill:var(--accent,#6b5a45);font-size:10px;font-weight:600}
+.sw .n{fill:var(--panel,#fff);stroke-width:1.4}
+.sw .n.ext{stroke-dasharray:4 3}
+.sw .n.cust{fill:var(--bg,#fbfbfa)}
+.sw .n.term{fill:var(--accent-soft,#f3efe9)}
+.sw .e{fill:none;stroke:var(--ink,#1d1d1f);stroke-width:1.2;opacity:.75}
+.sw .e.info{stroke-dasharray:4 3;opacity:.55}
+.sw .ah{fill:var(--ink,#1d1d1f);opacity:.75}
+.sw .lbl{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:600}
+.sw .lblbg{fill:var(--panel,#fff);opacity:.92}
+.sw .tag{fill:var(--ink,#1d1d1f)}
+.sw .tagt{fill:var(--bg,#fff);font-size:9.5px;font-weight:700}
+.sw .x{fill:#fdecea;stroke:#c0392b;stroke-width:1}
+.sw .xt{fill:#a5281b;font-size:9.5px;font-weight:600}
+.sw .band{fill:none;stroke-width:1.2;stroke-dasharray:6 4;opacity:.8}
+.sw .bandt{font-size:9.5px;font-weight:600}
+@media (prefers-color-scheme:dark){.sw .x{fill:#3a1f1c}.sw .xt{fill:#f5a097}}
+</style>
+<defs><marker id="ah-e3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1332" height="794" rx="12"/>
+<rect class="hdr" x="0" y="0" width="118" height="50"/>
+<text class="tm" x="12" y="22">Vị trí ↓</text><text class="tm" x="12" y="38">Giai đoạn →</text>
+<rect class="stg" x="118" y="0" width="268" height="50"/>
+<text class="tb" x="128" y="21"><tspan class="ts">S7</tspan>  Dỡ hàng · phân bổ</text>
+<text class="tm" x="128" y="38">⏱ ≤ 2d sau giải phóng</text>
+<rect class="stg" x="386" y="0" width="402" height="50"/>
+<text class="tb" x="396" y="21"><tspan class="ts">S7</tspan>  Giao chặng cuối</text>
+<text class="tm" x="396" y="38">⏱ hãng hẹn ngày</text>
+<rect class="stg" x="788" y="0" width="268" height="50"/>
+<text class="tb" x="798" y="21"><tspan class="ts">S8</tspan>  Sau giao</text>
+<text class="tm" x="798" y="38">⏱ D+3</text>
+<rect class="stg" x="1056" y="0" width="268" height="50"/>
+<text class="tb" x="1066" y="21"><tspan class="ts">S8</tspan>  Đóng đơn</text>
+<text class="tm" x="1066" y="38">⏱ D+14</text>
+<rect class="lane" x="0" y="50" width="1324" height="92"/>
+<rect x="0" y="50" width="5" height="92" fill="#8e8e93"/>
+<text class="tb" x="14" y="93.0">Khách hàng</text>
+<text class="tm" x="14" y="108.0">Customer</text>
+<rect class="lane alt" x="0" y="142" width="1324" height="92"/>
+<rect x="0" y="142" width="5" height="92" fill="#8e8e93"/>
+<text class="tb" x="14" y="185.0">Shopify · cổng TT</text>
+<text class="tm" x="14" y="200.0">Hệ thống bán hàng</text>
+<rect class="lane" x="0" y="234" width="1324" height="92"/>
+<rect x="0" y="234" width="5" height="92" fill="#2f6fb0"/>
+<text class="tb" x="14" y="277.0">P4 · CX</text>
+<text class="tm" x="14" y="292.0">Chăm sóc KH</text>
+<rect class="lane alt" x="0" y="326" width="1324" height="92"/>
+<rect x="0" y="326" width="5" height="92" fill="#0f7c80"/>
+<text class="tb" x="14" y="369.0">P3 · LOG</text>
+<text class="tm" x="14" y="384.0">Logistics &amp; HQ</text>
+<rect class="lane" x="0" y="418" width="1324" height="92"/>
+<rect x="0" y="418" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="461.0">Kho CFS / 3PL Úc</text>
+<text class="tm" x="14" y="476.0">Dỡ hàng · lưu tạm</text>
+<rect class="lane alt" x="0" y="510" width="1324" height="92"/>
+<rect x="0" y="510" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="553.0">Hãng giao Úc</text>
+<text class="tm" x="14" y="568.0">Giao 2 người · lắp</text>
+<rect class="lane" x="0" y="602" width="1324" height="92"/>
+<rect x="0" y="602" width="5" height="92" fill="#7a4fa3"/>
+<text class="tb" x="14" y="645.0">P6 · FIN</text>
+<text class="tm" x="14" y="660.0">Tài chính</text>
+<rect class="lane alt" x="0" y="694" width="1324" height="92"/>
+<rect x="0" y="694" width="5" height="92" fill="#6b5a45"/>
+<text class="tb" x="14" y="737.0">P1 · OPS</text>
+<text class="tm" x="14" y="752.0">Điều phối</text>
+<line class="sep" x1="386" y1="50" x2="386" y2="786"/>
+<line class="sep" x1="788" y1="50" x2="788" y2="786"/>
+<line class="sep" x1="1056" y1="50" x2="1056" y2="786"/>
+<line class="band" stroke="#2f6fb0" x1="124" y1="318.0" x2="782" y2="318.0"/>
+<text class="bandt" fill="#2f6fb0" x="128" y="314.0">↻ Khách nhận tracking chỉ sau lượt quét thật của hãng giao</text>
+<path class="e" d="M243.0,464.0 L319.0,464.0 L319.0,397.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M377.0,372.0 L453.0,372.0 L453.0,531.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M511.0,556.0 L453.0,556.0 L453.0,213.0" marker-end="url(#ah-e3)"/>
+<rect class="lblbg" x="454.7" y="542.0" width="54.6" height="12" rx="3"/>
+<text class="lbl" x="482.0" y="551.0" text-anchor="middle">quét thật</text>
+<path class="e info" d="M453.0,163.0 L453.0,121.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M511.0,556.0 L529.0,556.0" marker-end="url(#ah-e3)"/>
+<path class="e info" d="M645.0,556.0 L587.0,556.0 L587.0,121.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M645.0,556.0 L721.0,556.0 L721.0,397.0" marker-end="url(#ah-e3)"/>
+<rect class="lblbg" x="671.9" y="542.0" width="22.2" height="12" rx="3"/>
+<text class="lbl" x="683.0" y="551.0" text-anchor="middle">POD</text>
+<path class="e" d="M779.0,372.0 L855.0,372.0 L855.0,305.0" marker-end="url(#ah-e3)"/>
+<path class="e info" d="M913.0,280.0 L855.0,280.0 L855.0,125.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M779.0,372.0 L1123.0,372.0 L1123.0,623.0" marker-end="url(#ah-e3)"/>
+<path class="e" d="M1181.0,648.0 L1190.0,648.0 L1190.0,740.0 L1199.0,740.0" marker-end="url(#ah-e3)"/>
+<rect class="n term" stroke="#a1a1a6" x="127.0" y="439.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="185.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Dỡ container</text>
+<text class="t" x="185.0" y="468.2" text-anchor="middle" font-size="10.5">đếm kiện theo PL</text>
+<text class="t" x="185.0" y="480.8" text-anchor="middle" font-size="10.5">chụp hư hỏng</text>
+<rect class="n" stroke="#0f7c80" x="261.0" y="347.0" width="116" height="50" rx="8"/>
+<rect x="261.0" y="355.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="319.0" y="363.8" text-anchor="middle" font-size="10.5" font-weight="600">Phân bổ đơn</text>
+<text class="t" x="319.0" y="376.2" text-anchor="middle" font-size="10.5">cho hãng giao</text>
+<text class="t" x="319.0" y="388.8" text-anchor="middle" font-size="10.5">theo khu vực</text>
+<rect class="n ext" stroke="#a1a1a6" x="395.0" y="531.0" width="116" height="50" rx="8"/>
+<text class="t" x="453.0" y="547.8" text-anchor="middle" font-size="10.5" font-weight="600">Nhận hàng</text>
+<text class="t" x="453.0" y="560.2" text-anchor="middle" font-size="10.5">quét lần đầu</text>
+<text class="t" x="453.0" y="572.8" text-anchor="middle" font-size="10.5">hẹn ngày với KH</text>
+<rect class="n ext" stroke="#8e8e93" x="395.0" y="163.0" width="116" height="50" rx="8"/>
+<text class="t" x="453.0" y="186.0" text-anchor="middle" font-size="10.5" font-weight="600">Fulfilled</text>
+<text class="t" x="453.0" y="198.5" text-anchor="middle" font-size="10.5">+ email tracking</text>
+<rect class="tag" x="495.0" y="156.0" width="22" height="14" rx="7"/>
+<text class="tagt" x="506.0" y="166.5" text-anchor="middle">80</text>
+<rect class="n cust" stroke="#8e8e93" x="395.0" y="71.0" width="116" height="50" rx="8"/>
+<text class="t" x="453.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Chọn ngày</text>
+<text class="t" x="453.0" y="106.5" text-anchor="middle" font-size="10.5">nhận hàng</text>
+<rect class="n ext" stroke="#a1a1a6" x="529.0" y="531.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="547.8" text-anchor="middle" font-size="10.5" font-weight="600">Giao 2 người</text>
+<text class="t" x="587.0" y="560.2" text-anchor="middle" font-size="10.5">đủ kiện X/Y</text>
+<text class="t" x="587.0" y="572.8" text-anchor="middle" font-size="10.5">lắp (nếu mua)</text>
+<rect class="n cust" stroke="#8e8e93" x="529.0" y="71.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="94.0" text-anchor="middle" font-size="10.5" font-weight="600">Kiểm kiện</text>
+<text class="t" x="587.0" y="106.5" text-anchor="middle" font-size="10.5">ký POD</text>
+<rect class="n" stroke="#0f7c80" x="663.0" y="347.0" width="116" height="50" rx="8"/>
+<rect x="663.0" y="355.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="721.0" y="370.0" text-anchor="middle" font-size="10.5" font-weight="600">Xác nhận POD</text>
+<text class="t" x="721.0" y="382.5" text-anchor="middle" font-size="10.5">ảnh giao hàng</text>
+<rect class="tag" x="763.0" y="340.0" width="22" height="14" rx="7"/>
+<text class="tagt" x="774.0" y="350.5" text-anchor="middle">90</text>
+<rect class="n" stroke="#2f6fb0" x="797.0" y="255.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="263.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="855.0" y="271.8" text-anchor="middle" font-size="10.5" font-weight="600">D+3 hướng dẫn</text>
+<text class="t" x="855.0" y="284.2" text-anchor="middle" font-size="10.5">lắp + mời review</text>
+<text class="t" x="855.0" y="296.8" text-anchor="middle" font-size="10.5">(mọi khách)</text>
+<path class="n" stroke="#8e8e93" d="M855.0,67.0 L913.0,96.0 L855.0,125.0 L797.0,96.0 z"/>
+<text class="t" x="855.0" y="100.0" text-anchor="middle" font-size="10">Có vấn đề?</text>
+<rect class="n" stroke="#7a4fa3" x="1065.0" y="623.0" width="116" height="50" rx="8"/>
+<rect x="1065.0" y="631.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="1123.0" y="639.8" text-anchor="middle" font-size="10.5" font-weight="600">Đối soát landed</text>
+<text class="t" x="1123.0" y="652.2" text-anchor="middle" font-size="10.5">cost thực từng</text>
+<text class="t" x="1123.0" y="664.8" text-anchor="middle" font-size="10.5">đơn vs giá sàn</text>
+<rect class="n term" stroke="#6b5a45" x="1199.0" y="715.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="1257.0" y="738.0" text-anchor="middle" font-size="10.5" font-weight="600">D+14 không case</text>
+<text class="t" x="1257.0" y="750.5" text-anchor="middle" font-size="10.5">ĐÓNG ĐƠN</text>
+<rect class="tag" x="1299.0" y="708.0" width="22" height="14" rx="7"/>
+<text class="tagt" x="1310.0" y="718.5" text-anchor="middle">99</text>
+<rect class="x" x="95.9" y="493.0" width="178.3" height="14" rx="7"/>
+<text class="xt" x="185.0" y="503.5" text-anchor="middle">Kiện hỏng → chụp, claim, gửi bù</text>
+<rect class="x" x="513.8" y="585.0" width="146.5" height="14" rx="7"/>
+<text class="xt" x="587.0" y="595.5" text-anchor="middle">Thiếu kiện / hỏng → SOP-B</text>
+<rect class="x" x="800.3" y="129.0" width="109.4" height="14" rx="7"/>
+<text class="xt" x="855.0" y="139.5" text-anchor="middle">Có → SOP-B (C3–C8)</text>
+</svg>

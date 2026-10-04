@@ -1,0 +1,164 @@
+<svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1332 794" width="1332" height="794" role="img" aria-label="E2 Xuất khẩu TQ → vận tải biển → thông quan Úc (S5–S6)">
+<title>E2 Xuất khẩu TQ → vận tải biển → thông quan Úc (S5–S6)</title><style>
+.sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
+.sw .bg{fill:var(--panel,#fff)}
+.sw .lane{fill:var(--panel,#fff);stroke:var(--line,#e5e5e7)}
+.sw .lane.alt{fill:var(--bg,#fbfbfa)}
+.sw .hdr{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .stg{fill:var(--accent-soft,#f3efe9);stroke:var(--line,#e5e5e7)}
+.sw .sep{stroke:var(--line,#e5e5e7);stroke-dasharray:3 4}
+.sw .t{fill:var(--ink,#1d1d1f);font-size:10.5px}
+.sw .tb{fill:var(--ink,#1d1d1f);font-size:12px;font-weight:650}
+.sw .tm{fill:var(--muted,#6e6e73);font-size:10px}
+.sw .ts{fill:var(--accent,#6b5a45);font-size:10px;font-weight:600}
+.sw .n{fill:var(--panel,#fff);stroke-width:1.4}
+.sw .n.ext{stroke-dasharray:4 3}
+.sw .n.cust{fill:var(--bg,#fbfbfa)}
+.sw .n.term{fill:var(--accent-soft,#f3efe9)}
+.sw .e{fill:none;stroke:var(--ink,#1d1d1f);stroke-width:1.2;opacity:.75}
+.sw .e.info{stroke-dasharray:4 3;opacity:.55}
+.sw .ah{fill:var(--ink,#1d1d1f);opacity:.75}
+.sw .lbl{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:600}
+.sw .lblbg{fill:var(--panel,#fff);opacity:.92}
+.sw .tag{fill:var(--ink,#1d1d1f)}
+.sw .tagt{fill:var(--bg,#fff);font-size:9.5px;font-weight:700}
+.sw .x{fill:#fdecea;stroke:#c0392b;stroke-width:1}
+.sw .xt{fill:#a5281b;font-size:9.5px;font-weight:600}
+.sw .band{fill:none;stroke-width:1.2;stroke-dasharray:6 4;opacity:.8}
+.sw .bandt{font-size:9.5px;font-weight:600}
+@media (prefers-color-scheme:dark){.sw .x{fill:#3a1f1c}.sw .xt{fill:#f5a097}}
+</style>
+<defs><marker id="ah-e2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bg" x="0" y="0" width="1332" height="794" rx="12"/>
+<rect class="hdr" x="0" y="0" width="118" height="50"/>
+<text class="tm" x="12" y="22">Vị trí ↓</text><text class="tm" x="12" y="38">Giai đoạn →</text>
+<rect class="stg" x="118" y="0" width="402" height="50"/>
+<text class="tb" x="128" y="21"><tspan class="ts">S5</tspan>  Cắt lô · chứng từ</text>
+<text class="tm" x="128" y="38">⏱ 1 ngày cố định/tuần</text>
+<rect class="stg" x="520" y="0" width="268" height="50"/>
+<text class="tb" x="530" y="21"><tspan class="ts">S5</tspan>  Xuất khẩu TQ</text>
+<text class="tm" x="530" y="38">⏱ theo lịch tàu</text>
+<rect class="stg" x="788" y="0" width="134" height="50"/>
+<text class="tb" x="798" y="21"><tspan class="ts">S6</tspan>  Trên biển</text>
+<text class="tm" x="798" y="38">⏱ theo B/L</text>
+<rect class="stg" x="922" y="0" width="402" height="50"/>
+<text class="tb" x="932" y="21"><tspan class="ts">S6</tspan>  Thông quan Úc</text>
+<text class="tm" x="932" y="38">⏱ báo giữ ≤ 24h</text>
+<rect class="lane" x="0" y="50" width="1324" height="92"/>
+<rect x="0" y="50" width="5" height="92" fill="#6b5a45"/>
+<text class="tb" x="14" y="93.0">P1 · OPS</text>
+<text class="tm" x="14" y="108.0">Điều phối</text>
+<rect class="lane alt" x="0" y="142" width="1324" height="92"/>
+<rect x="0" y="142" width="5" height="92" fill="#0f7c80"/>
+<text class="tb" x="14" y="185.0">P3 · LOG</text>
+<text class="tm" x="14" y="200.0">Logistics &amp; HQ</text>
+<rect class="lane" x="0" y="234" width="1324" height="92"/>
+<rect x="0" y="234" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="277.0">Forwarder</text>
+<text class="tm" x="14" y="292.0">Hãng tàu · HQ xuất TQ</text>
+<rect class="lane alt" x="0" y="326" width="1324" height="92"/>
+<rect x="0" y="326" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="369.0">Kho gom TQ</text>
+<text class="tm" x="14" y="384.0">Consolidation WH</text>
+<rect class="lane" x="0" y="418" width="1324" height="92"/>
+<rect x="0" y="418" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="461.0">Đại lý HQ Úc</text>
+<text class="tm" x="14" y="476.0">Customs broker</text>
+<rect class="lane alt" x="0" y="510" width="1324" height="92"/>
+<rect x="0" y="510" width="5" height="92" fill="#a1a1a6"/>
+<text class="tb" x="14" y="553.0">ABF · DAFF</text>
+<text class="tm" x="14" y="568.0">Hải quan · kiểm dịch Úc</text>
+<rect class="lane" x="0" y="602" width="1324" height="92"/>
+<rect x="0" y="602" width="5" height="92" fill="#7a4fa3"/>
+<text class="tb" x="14" y="645.0">P6 · FIN</text>
+<text class="tm" x="14" y="660.0">Tài chính</text>
+<rect class="lane alt" x="0" y="694" width="1324" height="92"/>
+<rect x="0" y="694" width="5" height="92" fill="#2f6fb0"/>
+<text class="tb" x="14" y="737.0">P4 · CX</text>
+<text class="tm" x="14" y="752.0">Chăm sóc KH</text>
+<line class="sep" x1="520" y1="50" x2="520" y2="786"/>
+<line class="sep" x1="788" y1="50" x2="788" y2="786"/>
+<line class="sep" x1="922" y1="50" x2="922" y2="786"/>
+<line class="band" stroke="#0f7c80" x1="794" y1="226.0" x2="1318" y2="226.0"/>
+<text class="bandt" fill="#0f7c80" x="798" y="222.0">↻ Theo dõi tàu · cảng; mọi thay đổi ETA ghi tracker trong ngày</text>
+<path class="e" d="M243.0,188.0 L261.0,188.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M377.0,188.0 L453.0,188.0 L453.0,125.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M511.0,96.0 L587.0,96.0 L587.0,255.0" marker-end="url(#ah-e2)"/>
+<rect class="lblbg" x="532.5" y="82.0" width="33.0" height="12" rx="3"/>
+<text class="lbl" x="549.0" y="91.0" text-anchor="middle">Duyệt</text>
+<path class="e" d="M587.0,305.0 L587.0,347.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M645.0,280.0 L663.0,280.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M779.0,280.0 L855.0,280.0 L855.0,213.0" marker-end="url(#ah-e2)"/>
+<path class="e info" d="M855.0,213.0 L855.0,715.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M913.0,188.0 L989.0,188.0 L989.0,439.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M1047.0,464.0 L1123.0,464.0 L1123.0,531.0" marker-end="url(#ah-e2)"/>
+<path class="e info" d="M1047.0,464.0 L1123.0,464.0 L1123.0,623.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M1181.0,556.0 L1199.0,556.0" marker-end="url(#ah-e2)"/>
+<path class="e" d="M1315.0,556.0 L1257.0,556.0 L1257.0,213.0" marker-end="url(#ah-e2)"/>
+<rect class="lblbg" x="1277.6" y="542.0" width="16.8" height="12" rx="3"/>
+<text class="lbl" x="1286.0" y="551.0" text-anchor="middle">Có</text>
+<rect class="n term" stroke="#0f7c80" x="127.0" y="163.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="185.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">Cắt lô tuần</text>
+<text class="t" x="185.0" y="192.2" text-anchor="middle" font-size="10.5">đơn QC đạt</text>
+<text class="t" x="185.0" y="204.8" text-anchor="middle" font-size="10.5">tính CBM · kg</text>
+<rect class="n" stroke="#0f7c80" x="261.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="261.0" y="171.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="319.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">Lập CI · PL</text>
+<text class="t" x="319.0" y="192.2" text-anchor="middle" font-size="10.5">packing declaration</text>
+<text class="t" x="319.0" y="204.8" text-anchor="middle" font-size="10.5">ISPM-15 · C/O ChAFTA</text>
+<path class="n" stroke="#6b5a45" d="M453.0,67.0 L511.0,96.0 L453.0,125.0 L395.0,96.0 z"/>
+<text class="t" x="453.0" y="88.0" text-anchor="middle" font-size="10">Duyệt lô</text>
+<text class="t" x="453.0" y="100.0" text-anchor="middle" font-size="10">chứng từ khớp</text>
+<text class="t" x="453.0" y="112.0" text-anchor="middle" font-size="10">hàng thật</text>
+<rect class="n ext" stroke="#a1a1a6" x="529.0" y="255.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="271.8" text-anchor="middle" font-size="10.5" font-weight="600">Booking</text>
+<text class="t" x="587.0" y="284.2" text-anchor="middle" font-size="10.5">lấy hàng</text>
+<text class="t" x="587.0" y="296.8" text-anchor="middle" font-size="10.5">tại kho gom</text>
+<rect class="n ext" stroke="#a1a1a6" x="529.0" y="347.0" width="116" height="50" rx="8"/>
+<text class="t" x="587.0" y="363.8" text-anchor="middle" font-size="10.5" font-weight="600">Bàn giao</text>
+<text class="t" x="587.0" y="376.2" text-anchor="middle" font-size="10.5">đủ kiện</text>
+<text class="t" x="587.0" y="388.8" text-anchor="middle" font-size="10.5">theo PL</text>
+<rect class="n ext" stroke="#a1a1a6" x="663.0" y="255.0" width="116" height="50" rx="8"/>
+<text class="t" x="721.0" y="271.8" text-anchor="middle" font-size="10.5" font-weight="600">Khai HQ xuất TQ</text>
+<text class="t" x="721.0" y="284.2" text-anchor="middle" font-size="10.5">đóng container</text>
+<text class="t" x="721.0" y="296.8" text-anchor="middle" font-size="10.5">phát hành B/L</text>
+<rect class="tag" x="763.0" y="248.0" width="22" height="14" rx="7"/>
+<text class="tagt" x="774.0" y="258.5" text-anchor="middle">60</text>
+<rect class="n" stroke="#0f7c80" x="797.0" y="163.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="171.0" width="3" height="34" fill="#0f7c80"/>
+<text class="t" x="855.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">Cập nhật ETA lô</text>
+<text class="t" x="855.0" y="192.2" text-anchor="middle" font-size="10.5">vào tracker</text>
+<text class="t" x="855.0" y="204.8" text-anchor="middle" font-size="10.5">gửi bộ chứng từ</text>
+<rect class="n" stroke="#2f6fb0" x="797.0" y="715.0" width="116" height="50" rx="8"/>
+<rect x="797.0" y="723.0" width="3" height="34" fill="#2f6fb0"/>
+<text class="t" x="855.0" y="731.8" text-anchor="middle" font-size="10.5" font-weight="600">Báo khách: đã</text>
+<text class="t" x="855.0" y="744.2" text-anchor="middle" font-size="10.5">xuất + tracking</text>
+<text class="t" x="855.0" y="756.8" text-anchor="middle" font-size="10.5">(chỉ khi có quét thật)</text>
+<rect class="n ext" stroke="#a1a1a6" x="931.0" y="439.0" width="116" height="50" rx="8"/>
+<text class="t" x="989.0" y="455.8" text-anchor="middle" font-size="10.5" font-weight="600">Khai báo nhập</text>
+<text class="t" x="989.0" y="468.2" text-anchor="middle" font-size="10.5">khẩu (FID) trước</text>
+<text class="t" x="989.0" y="480.8" text-anchor="middle" font-size="10.5">khi tàu cập cảng</text>
+<rect class="n ext" stroke="#a1a1a6" x="1065.0" y="531.0" width="116" height="50" rx="8"/>
+<text class="t" x="1123.0" y="547.8" text-anchor="middle" font-size="10.5" font-weight="600">Đánh giá hồ sơ</text>
+<text class="t" x="1123.0" y="560.2" text-anchor="middle" font-size="10.5">kiểm dịch gỗ</text>
+<text class="t" x="1123.0" y="572.8" text-anchor="middle" font-size="10.5">bao bì · kiểm hóa?</text>
+<rect class="n" stroke="#7a4fa3" x="1065.0" y="623.0" width="116" height="50" rx="8"/>
+<rect x="1065.0" y="631.0" width="3" height="34" fill="#7a4fa3"/>
+<text class="t" x="1123.0" y="639.8" text-anchor="middle" font-size="10.5" font-weight="600">Nộp thuế · GST</text>
+<text class="t" x="1123.0" y="652.2" text-anchor="middle" font-size="10.5">phí cảng · phí</text>
+<text class="t" x="1123.0" y="664.8" text-anchor="middle" font-size="10.5">kiểm dịch</text>
+<path class="n" stroke="#a1a1a6" d="M1257.0,527.0 L1315.0,556.0 L1257.0,585.0 L1199.0,556.0 z"/>
+<text class="t" x="1257.0" y="560.0" text-anchor="middle" font-size="10">Thông quan?</text>
+<rect class="tag" x="1299.0" y="520.0" width="22" height="14" rx="7"/>
+<text class="tagt" x="1310.0" y="530.5" text-anchor="middle">70</text>
+<rect class="n term" stroke="#0f7c80" x="1199.0" y="163.0" width="116" height="50" rx="25.0"/>
+<text class="t" x="1257.0" y="179.8" text-anchor="middle" font-size="10.5" font-weight="600">Nhận lệnh giải</text>
+<text class="t" x="1257.0" y="192.2" text-anchor="middle" font-size="10.5">phóng · đặt kho</text>
+<text class="t" x="1257.0" y="204.8" text-anchor="middle" font-size="10.5">CFS dỡ hàng</text>
+<rect class="x" x="379.8" y="129.0" width="146.5" height="14" rx="7"/>
+<text class="xt" x="453.0" y="139.5" text-anchor="middle">Không khớp → sửa chứng từ</text>
+<rect class="x" x="1194.3" y="589.0" width="125.3" height="14" rx="7"/>
+<text class="xt" x="1257.0" y="599.5" text-anchor="middle">Bị giữ → báo KH ≤ 24h</text>
+<rect class="x" x="639.8" y="309.0" width="162.4" height="14" rx="7"/>
+<text class="xt" x="721.0" y="319.5" text-anchor="middle">Chậm tàu → cập nhật ETA ngay</text>
+</svg>

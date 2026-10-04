@@ -23,7 +23,18 @@ ROLE = {  # code: (label, sublabel, colour)
     "CEO": ("P0 · CEO", "Duyệt cấp cao", "#1d1d1f"),
     "EXT": ("Đối tác", "NCC · kho · hãng", "#a1a1a6"),
     "BANK": ("Ngân hàng", "Cổng thanh toán", "#a1a1a6"),
+    # end-to-end supply chain: internal + every external stakeholder on its own lane
+    "MKT": ("P5 · MKT", "Marketing & listing", "#b5562b"),
+    "WEB": ("Shopify · cổng TT", "Hệ thống bán hàng", "#8e8e93"),
+    "SUP": ("NCC / xưởng TQ", "Taobao · 1688", "#a1a1a6"),
+    "WH":  ("Kho gom TQ", "Consolidation WH", "#a1a1a6"),
+    "FWD": ("Forwarder", "Hãng tàu · HQ xuất TQ", "#a1a1a6"),
+    "BRK": ("Đại lý HQ Úc", "Customs broker", "#a1a1a6"),
+    "GOV": ("ABF · DAFF", "Hải quan · kiểm dịch Úc", "#a1a1a6"),
+    "TPL": ("Kho CFS / 3PL Úc", "Dỡ hàng · lưu tạm", "#a1a1a6"),
+    "LMC": ("Hãng giao Úc", "Giao 2 người · lắp", "#a1a1a6"),
 }
+EXTERNAL = {"KH", "EXT", "BANK", "WEB", "SUP", "WH", "FWD", "BRK", "GOV", "TPL", "LMC"}
 
 CSS = """
 .sw{font-family:Inter,-apple-system,"Segoe UI",sans-serif}
@@ -393,10 +404,247 @@ def sop_b3():
     return d
 
 
+
+# ================================================================= END-TO-END SUPPLY CHAIN (E0–E3)
+def e0():
+    d = Diagram("e0", "E0 Chuẩn bị sản phẩm: từ chọn mẫu tới mở bán",
+                ["CEO", "MKT", "SRC", "SUP", "LOG", "FWD", "BRK", "FIN"],
+                [("P1", "Chọn mẫu", "theo Top 100", 1), ("P2", "Đối chiếu NCC", "5 mẫu/ngày", 2),
+                 ("P3", "Mẫu thật", "HERO: 7–14 ngày", 2), ("P4", "Giá về tới Úc", "trước khi đăng", 2),
+                 ("P5", "Đăng bán", "DRAFT → ACTIVE", 2)])
+    N, E = d.node, d.edge
+    N("c0", "CEO", 0, "Duyệt danh sách\nmẫu mở bán\n(HERO / CORE)", "start")
+    N("m0", "MKT", 0, "Đề xuất mẫu\ntừ Top 100\n+ nhu cầu thật")
+    N("s1", "SRC", 1, "Tìm 2 NCC/mẫu\nbằng ảnh\nưu tiên NCC đã chấm")
+    N("u1", "SUP", 1, "Báo bản vẽ W×D×H\nvật liệu · số kiện\nthời gian SX", "ext")
+    N("s2", "SRC", 2, "Khớp ±2 cm?\nmàu đúng mã?", "dec")
+    N("s3", "SRC", 3, "Đặt mẫu thật\n(HERO)\n+ yêu cầu đóng gói")
+    N("u3", "SUP", 3, "Gửi mẫu\nảnh/video\nđóng kiện", "ext")
+    N("s4", "SRC", 4, "Đo · chụp màu\ngolden sample\nghi Master SKU", tag="VERIFIED")
+    N("l5", "LOG", 5, "Xin báo giá\ncước theo CBM\n+ phí kho gom")
+    N("w5", "FWD", 5, "Báo giá LCL\nlịch tàu\nthời gian chạy", "ext")
+    N("b5", "BRK", 5, "Xác nhận mã HS\nthuế · GST · kiểm dịch\ngỗ / bao bì", "ext")
+    N("f6", "FIN", 6, "Tính landed cost\ngiá bán AUD\nbiên ròng ≥ 30%")
+    N("c6", "CEO", 6, "Duyệt giá?", "dec")
+    N("m7", "MKT", 7, "Viết listing EN\ntừ Master SKU\nảnh được phép dùng")
+    N("m8", "MKT", 8, "Duyệt 5 câu\n+ bật bán", "end", tag="ACTIVE")
+    E("m0", "c0", info=True, route="v"); E("c0", "s1", route="hv", sb="t")
+    E("s1", "u1", "hỏi spec"); E("u1", "s2", route="hv", sb="b"); E("s1", "s2")
+    E("s2", "s3", "Khớp"); E("s3", "u3"); E("u3", "s4", route="hv", sb="b"); E("s3", "s4")
+    E("s4", "l5", route="hv", sb="t"); E("l5", "w5"); E("w5", "b5", info=True, route="v")
+    E("b5", "f6", route="hv", sb="t")
+    E("f6", "c6", route="v"); E("c6", "m7", "Duyệt", route="hv", sb="t"); E("m7", "m8")
+    d.exit("s2", "Lệch > 2 cm → mẫu khác / NCC khác")
+    d.exit("s4", "Mẫu trượt → đổi NCC", "above")
+    d.exit("c6", "Biên < 30% → bỏ mẫu / đổi NCC")
+    d.band("SRC", 5, 8, "Master SKU là nguồn duy nhất cho listing, nhãn, chứng từ", dy=38)
+    return d
+
+
+def e1():
+    d = Diagram("e1", "E1 Đơn hàng → đặt NCC → sản xuất → kho gom QC (S1–S4)",
+                ["KH", "WEB", "CX", "SRC", "FIN", "SUP", "WH", "OPS"],
+                [("S1", "Nhận đơn", "≤ 4h làm việc", 3), ("S2", "Đặt NCC", "≤ 24h sau thanh toán", 3),
+                 ("S3", "SX & gửi", "≤ ngày hẹn +2d", 2), ("S4", "Kho gom · QC", "≤ 2d sau nhập", 3)])
+    N, E = d.node, d.edge
+    N("k0", "KH", 0, "Đặt hàng\n& thanh toán", "start")
+    N("w0", "WEB", 0, "Thu tiền\ntạo đơn · chống\ngian lận tự động", "ext", tag="10")
+    N("c1", "CX", 1, "Kiểm đơn: địa chỉ\nđường vào · SĐT\nmã · rủi ro")
+    N("c2", "CX", 2, "Hợp lệ?", "dec", tag="20")
+    N("k2", "KH", 2, "Email xác nhận\n+ khung ETA thật", "cust")
+    N("s3", "SRC", 3, "Hỏi tồn + ngày\nxuất: NCC chính\n→ dự phòng")
+    N("s4", "SRC", 4, "Lập PO: đúng mã\n+ shipping mark\n+ file nhãn")
+    N("f4", "FIN", 4, "Thanh toán NCC\nqua sàn")
+    N("u5", "SUP", 5, "Xác nhận PO\nngày xuất cụ thể", "ext", tag="30")
+    N("u6", "SUP", 6, "Sản xuất\nđóng kiện X/Y\ndán nhãn brand", "ext")
+    N("s6", "SRC", 6, "Duyệt ảnh kiện\n+ vận đơn\nnội địa", tag="40")
+    N("u7", "SUP", 7, "Gửi chuyển phát\nnội địa\ntới kho gom", "ext")
+    N("h8", "WH", 8, "Nhận hàng\nđếm kiện · cân\nchụp ngoại quan", "ext")
+    N("s8", "SRC", 8, "QC: kích thước\nmàu · phụ kiện\nđóng gói · ISPM")
+    N("s9", "SRC", 9, "QC đạt?", "dec", tag="50")
+    N("h10", "WH", 10, "Gia cố · dán\nshipping mark\nđóng pallet ISPM-15", "ext")
+    N("c10", "CX", 10, "Gửi ảnh QC\ncủa chính đơn")
+    N("k10", "KH", 10, "Nhận ảnh QC", "cust")
+    E("k0", "w0", route="v"); E("w0", "c1", route="hv", sb="b"); E("c1", "c2"); E("c2", "k2", "Đạt", info=True, route="v")
+    E("c2", "s3", "Đạt", route="hv", sb="t"); E("s3", "s4"); E("s4", "f4", route="v"); E("f4", "u5", route="hv", sb="t")
+    E("u5", "u6"); E("u6", "s6", "ảnh", info=True, route="v"); E("u6", "u7"); E("u7", "h8", route="hv", sb="t")
+    E("h8", "s8", "báo nhập", route="v"); E("s8", "s9"); E("s9", "h10", "Đạt", route="hv", sb="t")
+    E("s9", "c10", info=True, route="hv", sb="b"); E("c10", "k10", info=True, route="v")
+    d.exit("c2", "Không → C1 hủy / hỏi lại")
+    d.exit("s3", "Hết hàng cả 2 NCC → C2", "above")
+    d.exit("s6", "Trễ: +2d nhắc · +5d OPS · +7d đổi NCC")
+    d.exit("s9", "Trượt → NCC làm lại / đổi", "above")
+    d.band("OPS", 0, 10, "Control tower 09:00: rà cờ SLA (chưa đặt NCC > 24h, NCC quá hẹn > 2d, QC tồn > 2d)", dy=0)
+    d.band("CX", 3, 9, "Cập nhật khách mỗi 7 ngày bằng trạng thái thật", dy=38)
+    return d
+
+
+def e2():
+    d = Diagram("e2", "E2 Xuất khẩu TQ → vận tải biển → thông quan Úc (S5–S6)",
+                ["OPS", "LOG", "FWD", "WH", "BRK", "GOV", "FIN", "CX"],
+                [("S5", "Cắt lô · chứng từ", "1 ngày cố định/tuần", 3), ("S5", "Xuất khẩu TQ", "theo lịch tàu", 2),
+                 ("S6", "Trên biển", "theo B/L", 1), ("S6", "Thông quan Úc", "báo giữ ≤ 24h", 3)])
+    N, E = d.node, d.edge
+    N("l0", "LOG", 0, "Cắt lô tuần\nđơn QC đạt\ntính CBM · kg", "start")
+    N("l1", "LOG", 1, "Lập CI · PL\npacking declaration\nISPM-15 · C/O ChAFTA")
+    N("o2", "OPS", 2, "Duyệt lô\nchứng từ khớp\nhàng thật", "dec")
+    N("w3", "FWD", 3, "Booking\nlấy hàng\ntại kho gom", "ext")
+    N("h3", "WH", 3, "Bàn giao\nđủ kiện\ntheo PL", "ext")
+    N("w4", "FWD", 4, "Khai HQ xuất TQ\nđóng container\nphát hành B/L", "ext", tag="60")
+    N("l5", "LOG", 5, "Cập nhật ETA lô\nvào tracker\ngửi bộ chứng từ")
+    N("c5", "CX", 5, "Báo khách: đã\nxuất + tracking\n(chỉ khi có quét thật)")
+    N("b6", "BRK", 6, "Khai báo nhập\nkhẩu (FID) trước\nkhi tàu cập cảng", "ext")
+    N("g7", "GOV", 7, "Đánh giá hồ sơ\nkiểm dịch gỗ\nbao bì · kiểm hóa?", "ext")
+    N("f7", "FIN", 7, "Nộp thuế · GST\nphí cảng · phí\nkiểm dịch")
+    N("g8", "GOV", 8, "Thông quan?", "dec", tag="70")
+    N("l8", "LOG", 8, "Nhận lệnh giải\nphóng · đặt kho\nCFS dỡ hàng", "end")
+    E("l0", "l1"); E("l1", "o2", route="hv", sb="b"); E("o2", "w3", "Duyệt", route="hv", sb="t")
+    E("w3", "h3", route="v"); E("w3", "w4"); E("w4", "l5", route="hv", sb="b"); E("l5", "c5", info=True, route="v")
+    E("l5", "b6", route="hv", sb="t"); E("b6", "g7", route="hv", sb="t"); E("b6", "f7", route="hv", sb="t", info=True)
+    E("g7", "g8"); E("g8", "l8", "Có", route="hv", sb="b")
+    d.exit("o2", "Không khớp → sửa chứng từ")
+    d.exit("g8", "Bị giữ → báo KH ≤ 24h")
+    d.exit("w4", "Chậm tàu → cập nhật ETA ngay")
+    d.band("LOG", 5, 8, "Theo dõi tàu · cảng; mọi thay đổi ETA ghi tracker trong ngày", dy=38)
+    return d
+
+
+def e3():
+    d = Diagram("e3", "E3 Kho Úc → giao chặng cuối → sau giao → đóng đơn (S7–S8)",
+                ["KH", "WEB", "CX", "LOG", "TPL", "LMC", "FIN", "OPS"],
+                [("S7", "Dỡ hàng · phân bổ", "≤ 2d sau giải phóng", 2), ("S7", "Giao chặng cuối", "hãng hẹn ngày", 3),
+                 ("S8", "Sau giao", "D+3", 2), ("S8", "Đóng đơn", "D+14", 2)])
+    N, E = d.node, d.edge
+    N("t0", "TPL", 0, "Dỡ container\nđếm kiện theo PL\nchụp hư hỏng", "start")
+    N("l1", "LOG", 1, "Phân bổ đơn\ncho hãng giao\ntheo khu vực")
+    N("m2", "LMC", 2, "Nhận hàng\nquét lần đầu\nhẹn ngày với KH", "ext")
+    N("w2", "WEB", 2, "Fulfilled\n+ email tracking", "ext", tag="80")
+    N("k2", "KH", 2, "Chọn ngày\nnhận hàng", "cust")
+    N("m3", "LMC", 3, "Giao 2 người\nđủ kiện X/Y\nlắp (nếu mua)", "ext")
+    N("k3", "KH", 3, "Kiểm kiện\nký POD", "cust")
+    N("l4", "LOG", 4, "Xác nhận POD\nảnh giao hàng", tag="90")
+    N("c5", "CX", 5, "D+3 hướng dẫn\nlắp + mời review\n(mọi khách)")
+    N("k5", "KH", 5, "Có vấn đề?", "dec")
+    N("f7", "FIN", 7, "Đối soát landed\ncost thực từng\nđơn vs giá sàn")
+    N("o8", "OPS", 8, "D+14 không case\nĐÓNG ĐƠN", "end", tag="99")
+    E("t0", "l1", route="hv", sb="b"); E("l1", "m2", route="hv", sb="t"); E("m2", "w2", "quét thật", route="hv", sb="b")
+    E("w2", "k2", info=True, route="v"); E("m2", "m3"); E("m3", "k3", info=True, route="hv", sb="b")
+    E("m3", "l4", "POD", route="hv", sb="b"); E("l4", "c5", route="hv", sb="b"); E("c5", "k5", info=True, route="hv", sb="b")
+    E("l4", "f7", route="hv", sb="t"); E("f7", "o8")
+    d.exit("t0", "Kiện hỏng → chụp, claim, gửi bù")
+    d.exit("m3", "Thiếu kiện / hỏng → SOP-B")
+    d.exit("k5", "Có → SOP-B (C3–C8)")
+    d.band("CX", 0, 4, "Khách nhận tracking chỉ sau lượt quét thật của hãng giao", dy=38)
+    return d
+
+
+# ================================================================= OPERATING MAP (macro swimlane)
+MAP_LANES = ["KH", "WEB", "CEO", "MKT", "CX", "OPS", "SRC", "LOG", "FIN",
+             "SUP", "WH", "FWD", "BRK", "GOV", "TPL", "LMC"]
+MAP_STAGES = [  # code, title, phase
+    ("P1", "Chọn mẫu", "Chuẩn bị"), ("P2", "NCC & mẫu", "Chuẩn bị"), ("P3", "Giá & đăng bán", "Chuẩn bị"),
+    ("S1", "Nhận đơn", "Bán"), ("S2", "Đặt NCC", "Mua"), ("S3", "SX & gửi", "Mua"), ("S4", "Kho gom · QC", "Mua"),
+    ("S5", "Xuất lô", "Vận chuyển"), ("S6", "Biển · thông quan", "Vận chuyển"), ("S7", "Giao cuối", "Giao"),
+    ("S8", "Sau giao · đóng", "Giao"), ("B", "Hậu mãi", "Hậu mãi")]
+# (lane, stage index, text, kind) kind: R = làm chính (responsible), A = duyệt (accountable), C = tham gia/được hỏi, I = được báo
+MAP_CELLS = [
+    ("MKT", 0, "Đề xuất mẫu", "R"), ("CEO", 0, "Duyệt danh sách", "A"),
+    ("SRC", 1, "Tìm 2 NCC · đặt mẫu", "R"), ("SUP", 1, "Báo spec · gửi mẫu", "C"),
+    ("LOG", 2, "Báo giá cước · HS", "C"), ("FWD", 2, "Báo giá LCL", "C"), ("BRK", 2, "Mã HS · thuế", "C"),
+    ("FIN", 2, "Landed cost · giá", "R"), ("CEO", 2, "Duyệt giá", "A"), ("MKT", 2, "Listing · bật bán", "R"),
+    ("KH", 3, "Đặt & trả tiền", "C"), ("WEB", 3, "Thu tiền · tạo đơn", "C"), ("CX", 3, "Kiểm & xác nhận", "R"),
+    ("SRC", 4, "Lập PO", "R"), ("FIN", 4, "Trả NCC qua sàn", "R"), ("SUP", 4, "Xác nhận ngày xuất", "C"),
+    ("SUP", 5, "SX · đóng kiện", "C"), ("SRC", 5, "Duyệt ảnh kiện", "R"),
+    ("WH", 6, "Nhận · đếm kiện", "C"), ("SRC", 6, "QC đạt/trượt", "R"), ("CX", 6, "Gửi ảnh QC", "I"),
+    ("LOG", 7, "Cắt lô · chứng từ", "R"), ("OPS", 7, "Duyệt lô", "A"), ("WH", 7, "Gia cố · pallet", "C"),
+    ("FWD", 7, "Booking · HQ xuất", "C"),
+    ("BRK", 8, "Khai nhập khẩu", "C"), ("GOV", 8, "Kiểm dịch · thông quan", "C"), ("FIN", 8, "Thuế · GST", "R"),
+    ("LOG", 8, "Theo dõi · ETA", "R"),
+    ("TPL", 9, "Dỡ hàng · kiểm kiện", "C"), ("LMC", 9, "Hẹn · giao · POD", "C"), ("LOG", 9, "Phân bổ · POD", "R"),
+    ("KH", 9, "Nhận · ký POD", "C"),
+    ("CX", 10, "D+3 hướng dẫn · review", "R"), ("FIN", 10, "Đối soát chi phí", "R"), ("OPS", 10, "D+14 đóng đơn", "A"),
+    ("CX", 11, "Mở · đóng case", "R"), ("OPS", 11, "Duyệt A$51–150", "A"), ("CEO", 11, "> A$150 · 100%", "A"),
+    ("FIN", 11, "Hoàn tiền", "R"), ("SRC", 11, "Claim NCC", "R"),
+]
+MAP_FLOW = [("CEO", 0), ("SRC", 1), ("FIN", 2), ("MKT", 2), ("CX", 3), ("SRC", 4), ("SRC", 5), ("SRC", 6),
+            ("LOG", 7), ("LOG", 8), ("LOG", 9), ("CX", 10)]
+
+
+def operating_map():
+    HW, SH, CW, LH = 150, 60, 132, 46
+    W, H = HW + CW * len(MAP_STAGES) + 8, SH + LH * len(MAP_LANES) + 8
+    cell = {(l, s): (t, k) for l, s, t, k in MAP_CELLS}
+    cx = lambda s: HW + s * CW + CW / 2
+    cy = lambda l: SH + MAP_LANES.index(l) * LH + LH / 2
+    o = [f'<svg class="sw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
+         f'aria-label="Operating map: chuỗi cung ứng end-to-end">',
+         f'<title>Operating map: ai làm gì ở từng giai đoạn chuỗi cung ứng</title><style>{CSS}'
+         '.sw .mc{fill:var(--panel,#fff);stroke-width:1.3}.sw .mc.A{fill:var(--accent-soft,#f3efe9)}'
+         '.sw .mc.C{stroke-dasharray:4 3}.sw .mc.I{stroke-dasharray:1 3}.sw .mt{fill:var(--ink,#1d1d1f);font-size:10px}'
+         '.sw .mk{font-size:9px;font-weight:700}.sw .ph{fill:var(--muted,#6e6e73);font-size:9.5px;font-weight:700;letter-spacing:.06em}'
+         '.sw .grp{fill:var(--muted,#6e6e73);font-size:9px;font-weight:700;letter-spacing:.08em}</style>',
+         '<defs><marker id="ah-map" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
+         '<path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>',
+         f'<rect class="bg" x="0" y="0" width="{W}" height="{H}" rx="12"/>',
+         f'<rect class="hdr" x="0" y="0" width="{HW}" height="{SH}"/>',
+         f'<text class="tm" x="12" y="26">Bên liên quan ↓</text><text class="tm" x="12" y="42">Giai đoạn →</text>']
+    for i, (code, title, phase) in enumerate(MAP_STAGES):
+        x = HW + i * CW
+        o.append(f'<rect class="stg" x="{x}" y="0" width="{CW}" height="{SH}"/>')
+        o.append(f'<text class="ph" x="{x + 8}" y="16">{escape(phase.upper())}</text>')
+        o.append(f'<text class="tb" x="{x + 8}" y="36"><tspan class="ts">{escape(code)}</tspan>  {escape(title)}</text>')
+    for j, ln in enumerate(MAP_LANES):
+        y = SH + j * LH
+        lab, sub, col = ROLE[ln]
+        o.append(f'<rect class="lane{" alt" if j % 2 else ""}" x="0" y="{y}" width="{W - 8}" height="{LH}"/>')
+        o.append(f'<rect x="0" y="{y}" width="5" height="{LH}" fill="{col}"/>')
+        o.append(f'<text class="tb" x="14" y="{y + LH / 2 - 2}" font-size="11">{escape(lab)}</text>')
+        o.append(f'<text class="tm" x="14" y="{y + LH / 2 + 11}">{escape(sub)}</text>')
+    # group labels: internal vs external
+    first_ext = MAP_LANES.index("SUP")
+    y = SH + first_ext * LH
+    o.append(f'<line x1="0" y1="{y}" x2="{W - 8}" y2="{y}" stroke="currentColor" stroke-width="1.6" opacity=".35"/>')
+    for i in range(1, len(MAP_STAGES)):
+        x = HW + i * CW
+        o.append(f'<line class="sep" x1="{x}" y1="{SH}" x2="{x}" y2="{H - 8}"/>')
+    # flow arrows between responsible boxes
+    pts = [(cx(s), cy(l)) for l, s in MAP_FLOW]
+    for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        if abs(x1 - x2) < 1:
+            a, b = (x1, y1 + (16 if y2 > y1 else -16)), (x2, y2 + (-16 if y2 > y1 else 16))
+            d = f"M{a[0]:.1f},{a[1]:.1f} L{b[0]:.1f},{b[1]:.1f}"
+        else:
+            sx, ex = x1 + 58, x2 - 58
+            mx = (sx + ex) / 2
+            d = f"M{sx:.1f},{y1:.1f} L{mx:.1f},{y1:.1f} L{mx:.1f},{y2:.1f} L{ex:.1f},{y2:.1f}"
+        o.append(f'<path class="e" d="{d}" marker-end="url(#ah-map)" opacity=".5"/>')
+    for (l, s), (t, k) in cell.items():
+        col = ROLE[l][2]
+        x, y = cx(s), cy(l)
+        o.append(f'<rect class="mc {k}" stroke="{col}" x="{x - 58}" y="{y - 16}" width="116" height="32" rx="7"/>')
+        o.append(f'<text class="mk" x="{x - 52}" y="{y - 4}" fill="{col}">{k}</text>')
+        words, lines, cur = t.split(), [], ""
+        for wd in words:
+            if len(cur) + len(wd) + 1 > 19 and cur:
+                lines.append(cur); cur = wd
+            else:
+                cur = (cur + " " + wd).strip()
+        lines.append(cur)
+        y0 = y - (len(lines) - 1) * 6 + 3.5
+        for n, ln in enumerate(lines[:2]):
+            o.append(f'<text class="mt" x="{x + 5}" y="{y0 + n * 12:.1f}" text-anchor="middle">{escape(ln)}</text>')
+    o.append("</svg>")
+
+    class _M:  # mimic Diagram interface for the writer below
+        name, title = "map", "Operating map"
+    m = _M(); m.W, m.H = W, H; m.render = lambda: "\n".join(o)
+    return m
+
+
 if __name__ == "__main__":
     out = Path(__file__).resolve().parent.parent / "assets" / "sop"
     out.mkdir(parents=True, exist_ok=True)
-    for fn in (sop_a, sop_b1, sop_b2, sop_b3):
+    for fn in (sop_a, sop_b1, sop_b2, sop_b3, e0, e1, e2, e3, operating_map):
         dg = fn()
         (out / f"{dg.name}.svg").write_text(dg.render(), encoding="utf-8")
         print("wrote", dg.name, f"{dg.W:.0f}x{dg.H:.0f}")

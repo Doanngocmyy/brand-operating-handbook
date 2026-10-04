@@ -15,6 +15,12 @@ badges: daily
 
 {{BLOCKER_STRIP}}
 
+## Bản đồ chuỗi cung ứng: ai làm gì ở từng giai đoạn {#supply-chain-map}
+
+Từ chọn mẫu tới hậu mãi, 12 giai đoạn, 16 bên liên quan. **R** làm chính · **A** duyệt · **C** tham gia · **I** được báo. Swimlane chi tiết từng bước, từng bên: [SOP chuỗi cung ứng end-to-end](chuoi-cung-ung.html) (E0 chuẩn bị sản phẩm · E1 đơn → kho gom · E2 xuất khẩu → thông quan · E3 giao → đóng đơn).
+
+{{SVG:map}}
+
 ## Tôi đang làm vị trí… {#by-role}
 
 {{ROLE_CARDS}}

@@ -19,6 +19,7 @@ PAGES = [
     ("index",                   "start", "Operating Map",                        "index.md",                  None),
     ("tim-theo-vai-tro",        "start", "Find by role",                         "tim-theo-vai-tro.md",       None),
     ("tim-theo-su-kien",        "start", "Find by task / event",                 "tim-theo-su-kien.md",       None),
+    ("chuoi-cung-ung",          "run",   "Supply Chain SOP (end-to-end)",        "chuoi-cung-ung.md",         None),
     ("sop-a-don-chuan",         "run",   "Standard Order (SOP-A)",               "sop-a-don-chuan.md",        "07-van-hanh-don-hang"),
     ("sop-b-hau-mai",           "run",   "Exceptions & Cases (SOP-B)",           "sop-b-hau-mai.md",          "08-cskh"),
     ("kpi-sla-nhip",            "run",   "KPI, SLA & Rhythm",                    "kpi-sla-nhip.md",           "11-kpi-nhip-van-hanh"),
