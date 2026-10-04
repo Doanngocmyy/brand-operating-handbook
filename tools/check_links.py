@@ -18,8 +18,9 @@ class P(HTMLParser):
 pages = {}
 for f in DOCS.glob("*.html"):
     p = P(); p.feed(f.read_text(encoding="utf-8")); pages[f.name] = p
-for f in (DOCS / "sop").glob("*.svg"):
-    pages["sop/" + f.name] = P()
+for sub in ("sop", "plan"):
+    for f in (DOCS / sub).glob("*.svg"):
+        pages[f"{sub}/" + f.name] = P()
 bad = 0
 for name, p in sorted(pages.items()):
     for h in p.links:

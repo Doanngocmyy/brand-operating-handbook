@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216 1040" width="1216" height="1040" font-family="Inter,system-ui,sans-serif" font-size="12" role="img" aria-label="Gantt roadmap Q4/2026 – 2027">
+<rect x="0" y="0" width="1216" height="1040" style="fill:var(--panel,#ffffff)"/>
+<line x1="300.0" y1="28" x2="300.0" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="330.5" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<text x="303.0" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q4/2026</text>
+<line x1="361.1" y1="28" x2="361.1" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="390.6" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<line x1="420.1" y1="28" x2="420.1" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="450.7" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<rect x="481.2" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="481.2" y1="28" x2="481.2" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="511.7" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T1</text>
+<text x="484.2" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q1/2027</text>
+<rect x="542.2" y="28" width="55.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="542.2" y1="28" x2="542.2" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="569.8" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T2</text>
+<rect x="597.4" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="597.4" y1="28" x2="597.4" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="627.9" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T3</text>
+<line x1="658.4" y1="28" x2="658.4" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="688.0" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T4</text>
+<text x="661.4" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q2/2027</text>
+<line x1="717.5" y1="28" x2="717.5" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="748.0" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T5</text>
+<line x1="778.6" y1="28" x2="778.6" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="808.1" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T6</text>
+<rect x="837.6" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="837.6" y1="28" x2="837.6" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="868.2" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T7</text>
+<text x="840.6" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q3/2027</text>
+<rect x="898.7" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="898.7" y1="28" x2="898.7" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="929.2" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T8</text>
+<rect x="959.7" y="28" width="59.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="959.7" y1="28" x2="959.7" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="989.3" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T9</text>
+<line x1="1018.8" y1="28" x2="1018.8" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1049.3" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<text x="1021.8" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q4/2027</text>
+<line x1="1079.9" y1="28" x2="1079.9" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1109.4" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<line x1="1138.9" y1="28" x2="1138.9" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1169.5" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<rect x="8" y="52" width="10" height="10" rx="2" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"/>
+<text x="24" y="61" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Nền tảng</text>
+<line x1="8" y1="69" x2="1208" y2="69" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="85" style="fill:var(--ink,#1d1d1f)"><title>Tên miền, handle 4 kênh, email hỗ trợ (CEO, 05/10/2026 – 18/10/2026, Đang làm)</title>F1 · Tên miền, handle 4 kênh, email hỗ …</text>
+<text x="292" y="85" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="307.9" y="75" width="27.6" height="14" rx="4" style="fill:var(--accent,#6b5a45);stroke:var(--accent,#6b5a45)"><title>Tên miền, handle 4 kênh, email hỗ trợ · 05/10 – 18/10/2026 · Đang làm</title></rect>
+<text x="24" y="109" style="fill:var(--ink,#1d1d1f)"><title>Shopify, Pixel/CAPI, TikTok pixel (MKT, 05/10/2026 – 25/10/2026, Kế hoạch)</title>F2 · Shopify, Pixel/CAPI, TikTok pixel</text>
+<text x="292" y="109" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="307.9" y="99" width="41.4" height="14" rx="4" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>Shopify, Pixel/CAPI, TikTok pixel · 05/10 – 25/10/2026 · Kế hoạch</title></rect>
+<text x="24" y="133" style="fill:var(--ink,#1d1d1f)"><title>Tracker / Source of truth chạy thật (OPS, 05/10/2026 – 18/10/2026, Đang làm)</title>F3 · Tracker / Source of truth chạy thật</text>
+<text x="292" y="133" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="307.9" y="123" width="27.6" height="14" rx="4" style="fill:var(--accent,#6b5a45);stroke:var(--accent,#6b5a45)"><title>Tracker / Source of truth chạy thật · 05/10 – 18/10/2026 · Đang làm</title></rect>
+<text x="24" y="157" style="fill:var(--ink,#1d1d1f)"><title>Chốt bên bán hàng + GST (blocker) (CEO, 12/10/2026 – 15/11/2026, Kế hoạch)</title>F4 · Chốt bên bán hàng + GST (blocker)</text>
+<text x="292" y="157" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="321.7" y="147" width="68.9" height="14" rx="4" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>Chốt bên bán hàng + GST (blocker) · 12/10 – 15/11/2026 · Kế hoạch</title></rect>
+<rect x="8" y="172" width="10" height="10" rx="2" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"/>
+<text x="24" y="181" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Sản phẩm &amp; NCC</text>
+<line x1="8" y1="189" x2="1208" y2="189" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="205" style="fill:var(--ink,#1d1d1f)"><title>Đối chiếu 60 mã hạng A (SRC, 19/10/2026 – 08/11/2026, Kế hoạch)</title>P1 · Đối chiếu 60 mã hạng A</text>
+<text x="292" y="205" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="335.4" y="195" width="41.4" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Đối chiếu 60 mã hạng A · 19/10 – 08/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="229" style="fill:var(--ink,#1d1d1f)"><title>Hàng mẫu: đo, chụp, thử lắp (SRC, 26/10/2026 – 15/11/2026, Kế hoạch)</title>P2 · Hàng mẫu: đo, chụp, thử lắp</text>
+<text x="292" y="229" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="349.2" y="219" width="41.4" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Hàng mẫu: đo, chụp, thử lắp · 26/10 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="253" style="fill:var(--ink,#1d1d1f)"><title>NCC ký bộ chứng từ (SRC, 02/11/2026 – 15/11/2026, Kế hoạch)</title>P3 · NCC ký bộ chứng từ</text>
+<text x="292" y="253" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="363.0" y="243" width="27.6" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>NCC ký bộ chứng từ · 02/11 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="277" style="fill:var(--ink,#1d1d1f)"><title>Chốt forwarder + đại lý hải quan Úc (LOG, 19/10/2026 – 15/11/2026, Kế hoạch)</title>P4 · Chốt forwarder + đại lý hải quan Úc</text>
+<text x="292" y="277" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="335.4" y="267" width="55.1" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Chốt forwarder + đại lý hải quan Úc · 19/10 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="301" style="fill:var(--ink,#1d1d1f)"><title>Cổng: ≥ 20 mã đạt 7 tiêu chí (SRC, 15/11/2026 – 15/11/2026, Kế hoạch)</title>G2 · Cổng: ≥ 20 mã đạt 7 tiêu chí</text>
+<text x="292" y="301" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<path d="M388.6 291.0 L395.6 298.0 L388.6 305.0 L381.6 298.0 Z" style="fill:var(--green,#1e6b3a)"><title>Cổng: ≥ 20 mã đạt 7 tiêu chí · 15/11/2026</title></path>
+<rect x="8" y="316" width="10" height="10" rx="2" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"/>
+<text x="24" y="325" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Web &amp; nội dung</text>
+<line x1="8" y1="333" x2="1208" y2="333" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="349" style="fill:var(--ink,#1d1d1f)"><title>Đăng 20–30 mã chuẩn lên web (MKT, 16/11/2026 – 06/12/2026, Kế hoạch)</title>W1 · Đăng 20–30 mã chuẩn lên web</text>
+<text x="292" y="349" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="390.6" y="339" width="41.4" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Đăng 20–30 mã chuẩn lên web · 16/11 – 06/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="373" style="fill:var(--ink,#1d1d1f)"><title>Luật sư Úc rà chính sách (CEO, 16/11/2026 – 13/12/2026, Kế hoạch)</title>W2 · Luật sư Úc rà chính sách</text>
+<text x="292" y="373" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="390.6" y="363" width="55.1" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Luật sư Úc rà chính sách · 16/11 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="397" style="fill:var(--ink,#1d1d1f)"><title>Kho nội dung 4 trụ + lịch TikTok/FB (MKT, 19/10/2026 – 13/12/2026, Kế hoạch)</title>W3 · Kho nội dung 4 trụ + lịch TikTok/FB</text>
+<text x="292" y="397" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="335.4" y="387" width="110.3" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Kho nội dung 4 trụ + lịch TikTok/FB · 19/10 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="421" style="fill:var(--ink,#1d1d1f)"><title>Ký 3–5 creator Úc (MKT, 23/11/2026 – 13/12/2026, Kế hoạch)</title>W4 · Ký 3–5 creator Úc</text>
+<text x="292" y="421" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="404.4" y="411" width="41.4" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Ký 3–5 creator Úc · 23/11 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="445" style="fill:var(--ink,#1d1d1f)"><title>Cổng: web + chính sách đã duyệt (CEO, 13/12/2026 – 13/12/2026, Kế hoạch)</title>G3 · Cổng: web + chính sách đã duyệt</text>
+<text x="292" y="445" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M443.8 435.0 L450.8 442.0 L443.8 449.0 L436.8 442.0 Z" style="fill:var(--violet,#5f3b86)"><title>Cổng: web + chính sách đã duyệt · 13/12/2026</title></path>
+<rect x="8" y="460" width="10" height="10" rx="2" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"/>
+<text x="24" y="469" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Bán &amp; tăng trưởng</text>
+<line x1="8" y1="477" x2="1208" y2="477" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="493" style="fill:var(--ink,#1d1d1f)"><title>Bán thử: TikTok → Meta, đo MER (MKT, 14/12/2026 – 03/01/2027, Kế hoạch)</title>D1 · Bán thử: TikTok → Meta, đo MER</text>
+<text x="292" y="493" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="445.7" y="483" width="41.4" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Bán thử: TikTok → Meta, đo MER · 14/12 – 03/01/2027 · Kế hoạch</title></rect>
+<text x="24" y="517" style="fill:var(--ink,#1d1d1f)"><title>Cổng: MER ≥ 4 trong 2 tuần (CEO, 03/01/2027 – 03/01/2027, Kế hoạch)</title>G4 · Cổng: MER ≥ 4 trong 2 tuần</text>
+<text x="292" y="517" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M485.1 507.0 L492.1 514.0 L485.1 521.0 L478.1 514.0 Z" style="fill:var(--amber,#8a5a00)"><title>Cổng: MER ≥ 4 trong 2 tuần · 03/01/2027</title></path>
+<text x="24" y="541" style="fill:var(--ink,#1d1d1f)"><title>Mở rộng quảng cáo theo MER (MKT, 04/01/2027 – 31/03/2027, Kế hoạch)</title>D2 · Mở rộng quảng cáo theo MER</text>
+<text x="292" y="541" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="487.1" y="531" width="171.3" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Mở rộng quảng cáo theo MER · 04/01 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="565" style="fill:var(--ink,#1d1d1f)"><title>Tìm mã thắng + creator/UGC luân phiên (MKT, 01/04/2027 – 30/06/2027, Kế hoạch)</title>D3 · Tìm mã thắng + creator/UGC luân ph…</text>
+<text x="292" y="565" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="658.4" y="555" width="179.2" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Tìm mã thắng + creator/UGC luân phiên · 01/04 – 30/06/2027 · Kế hoạch</title></rect>
+<text x="24" y="589" style="fill:var(--ink,#1d1d1f)"><title>Bán &quot;giao nhanh từ kho Úc&quot; trên Shopify (MKT, 16/08/2027 – 30/09/2027, Kế hoạch)</title>D4 · Bán &quot;giao nhanh từ kho Úc&quot; trên Sh…</text>
+<text x="292" y="589" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="928.2" y="579" width="90.6" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Bán &quot;giao nhanh từ kho Úc&quot; trên Shopify · 16/08 – 30/09/2027 · Kế hoạch</title></rect>
+<text x="24" y="613" style="fill:var(--ink,#1d1d1f)"><title>Cao điểm Black Friday / Giáng sinh (MKT, 01/11/2027 – 31/12/2027, Kế hoạch)</title>D5 · Cao điểm Black Friday / Giáng sinh</text>
+<text x="292" y="613" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="1079.9" y="603" width="120.1" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Cao điểm Black Friday / Giáng sinh · 01/11 – 31/12/2027 · Kế hoạch</title></rect>
+<rect x="8" y="628" width="10" height="10" rx="2" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"/>
+<text x="24" y="637" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Logistics &amp; kho</text>
+<line x1="8" y1="645" x2="1208" y2="645" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="661" style="fill:var(--ink,#1d1d1f)"><title>Lô LCL đầu tiên (gom tuần) (LOG, 21/12/2026 – 24/01/2027, Kế hoạch)</title>L1 · Lô LCL đầu tiên (gom tuần)</text>
+<text x="292" y="661" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="459.5" y="651" width="68.9" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Lô LCL đầu tiên (gom tuần) · 21/12 – 24/01/2027 · Kế hoạch</title></rect>
+<text x="24" y="685" style="fill:var(--ink,#1d1d1f)"><title>Giao đơn đầu tiên tới khách Úc (LOG, 01/02/2027 – 31/03/2027, Kế hoạch)</title>L2 · Giao đơn đầu tiên tới khách Úc</text>
+<text x="292" y="685" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="542.2" y="675" width="116.2" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Giao đơn đầu tiên tới khách Úc · 01/02 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="709" style="fill:var(--ink,#1d1d1f)"><title>Chọn 3PL Úc, báo giá, hợp đồng (LOG, 01/05/2027 – 30/06/2027, Kế hoạch)</title>L3 · Chọn 3PL Úc, báo giá, hợp đồng</text>
+<text x="292" y="709" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="717.5" y="699" width="120.1" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Chọn 3PL Úc, báo giá, hợp đồng · 01/05 – 30/06/2027 · Kế hoạch</title></rect>
+<text x="24" y="733" style="fill:var(--ink,#1d1d1f)"><title>Cổng kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng (CEO, 30/06/2027 – 30/06/2027, Kế hoạch)</title>G5 · Cổng kho Úc: 30–40 đơn/tháng × 2 t…</text>
+<text x="292" y="733" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M835.7 723.0 L842.7 730.0 L835.7 737.0 L828.7 730.0 Z" style="fill:var(--blue,#1f5a94)"><title>Cổng kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng · 30/06/2027</title></path>
+<text x="24" y="757" style="fill:var(--ink,#1d1d1f)"><title>Nhập lô đầu vào 3PL (5–10 mã thắng) (LOG, 01/07/2027 – 15/08/2027, Kế hoạch)</title>L4 · Nhập lô đầu vào 3PL (5–10 mã thắng)</text>
+<text x="292" y="757" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="837.6" y="747" width="90.6" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Nhập lô đầu vào 3PL (5–10 mã thắng) · 01/07 – 15/08/2027 · Kế hoạch</title></rect>
+<rect x="8" y="772" width="10" height="10" rx="2" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"/>
+<text x="24" y="781" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Quản trị &amp; dữ liệu</text>
+<line x1="8" y1="789" x2="1208" y2="789" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="805" style="fill:var(--ink,#1d1d1f)"><title>Rà khung ETA theo dữ liệu thật (OPS, 01/03/2027 – 15/03/2027, Kế hoạch)</title>O1 · Rà khung ETA theo dữ liệu thật</text>
+<text x="292" y="805" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="597.4" y="795" width="29.5" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Rà khung ETA theo dữ liệu thật · 01/03 – 15/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="829" style="fill:var(--ink,#1d1d1f)"><title>Thêm / loại mã theo lãi thực (FIN, 01/03/2027 – 31/03/2027, Kế hoạch)</title>O2 · Thêm / loại mã theo lãi thực</text>
+<text x="292" y="829" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">FIN</text>
+<rect x="597.4" y="819" width="61.1" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Thêm / loại mã theo lãi thực · 01/03 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="853" style="fill:var(--ink,#1d1d1f)"><title>Theo dõi tồn: sell-through, vòng quay (FIN, 16/08/2027 – 31/12/2027, Kế hoạch)</title>O3 · Theo dõi tồn: sell-through, vòng q…</text>
+<text x="292" y="853" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">FIN</text>
+<rect x="928.2" y="843" width="271.8" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Theo dõi tồn: sell-through, vòng quay · 16/08 – 31/12/2027 · Kế hoạch</title></rect>
+<text x="24" y="877" style="fill:var(--ink,#1d1d1f)"><title>Kế hoạch 2028 (CEO, 01/12/2027 – 20/12/2027, Kế hoạch)</title>O4 · Kế hoạch 2028</text>
+<text x="292" y="877" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="1138.9" y="867" width="39.4" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Kế hoạch 2028 · 01/12 – 20/12/2027 · Kế hoạch</title></rect>
+<rect x="8" y="892" width="10" height="10" rx="2" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"/>
+<text x="24" y="901" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Mở rộng</text>
+<line x1="8" y1="909" x2="1208" y2="909" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="925" style="fill:var(--ink,#1d1d1f)"><title>Cổng nhãn hiệu: quyết nộp đơn IP Australia (CEO, 30/06/2027 – 30/06/2027, Kế hoạch)</title>S1 · Cổng nhãn hiệu: quyết nộp đơn IP A…</text>
+<text x="292" y="925" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M835.7 915.0 L842.7 922.0 L835.7 929.0 L828.7 922.0 Z" style="fill:var(--red,#b42318)"><title>Cổng nhãn hiệu: quyết nộp đơn IP Australia · 30/06/2027</title></path>
+<text x="24" y="949" style="fill:var(--ink,#1d1d1f)"><title>Nộp nhãn hiệu (nhóm 20 + 35) (CEO, 01/07/2027 – 31/07/2027, Kế hoạch)</title>S2 · Nộp nhãn hiệu (nhóm 20 + 35)</text>
+<text x="292" y="949" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="837.6" y="939" width="61.1" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Nộp nhãn hiệu (nhóm 20 + 35) · 01/07 – 31/07/2027 · Kế hoạch</title></rect>
+<text x="24" y="973" style="fill:var(--ink,#1d1d1f)"><title>Amazon AU (FBM từ 3PL) – chỉ mã có tồn (OPS, 01/10/2027 – 15/11/2027, Kế hoạch)</title>S3 · Amazon AU (FBM từ 3PL) – chỉ mã có…</text>
+<text x="292" y="973" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="1018.8" y="963" width="90.6" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Amazon AU (FBM từ 3PL) – chỉ mã có tồn · 01/10 – 15/11/2027 · Kế hoạch</title></rect>
+<text x="24" y="997" style="fill:var(--ink,#1d1d1f)"><title>Đánh giá NZ / Singapore (CEO, 01/10/2027 – 15/12/2027, Kế hoạch)</title>S4 · Đánh giá NZ / Singapore</text>
+<text x="292" y="997" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="1018.8" y="987" width="149.7" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Đánh giá NZ / Singapore · 01/10 – 15/12/2027 · Kế hoạch</title></rect>
+<line x1="307.9" y1="28" x2="307.9" y2="1006" style="stroke:var(--red,#b42318);stroke-width:1.5;stroke-dasharray:4 3"/>
+<text x="311.9" y="1002" style="fill:var(--red,#b42318);font-size:11px">Lập kế hoạch 05/10/2026</text>
+<rect x="24" y="1017" width="22" height="10" rx="3" style="fill:var(--muted,#62626a)"/><text x="52" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Đang làm / xong</text>
+<rect x="160" y="1017" width="22" height="10" rx="3" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"/><text x="188" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Kế hoạch</text>
+<path d="M270 1017 L276 1022 L270 1027 L264 1022 Z" style="fill:var(--muted,#62626a)"/><text x="284" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Cổng quyết định (milestone)</text>
+</svg>

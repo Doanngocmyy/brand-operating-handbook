@@ -1,0 +1,34 @@
+id,workstream,task,owner,start,end,type,status,depends_on,gate
+F1,Nền tảng,"Tên miền, handle 4 kênh, email hỗ trợ",CEO,2026-10-05,2026-10-18,task,in_progress,,
+F2,Nền tảng,"Shopify, Pixel/CAPI, TikTok pixel",MKT,2026-10-05,2026-10-25,task,planned,F1,
+F3,Nền tảng,Tracker / Source of truth chạy thật,OPS,2026-10-05,2026-10-18,task,in_progress,,
+F4,Nền tảng,Chốt bên bán hàng + GST (blocker),CEO,2026-10-12,2026-11-15,task,planned,,
+P1,Sản phẩm & NCC,Đối chiếu 60 mã hạng A,SRC,2026-10-19,2026-11-08,task,planned,,
+P2,Sản phẩm & NCC,"Hàng mẫu: đo, chụp, thử lắp",SRC,2026-10-26,2026-11-15,task,planned,P1,
+P3,Sản phẩm & NCC,NCC ký bộ chứng từ,SRC,2026-11-02,2026-11-15,task,planned,P1,
+P4,Sản phẩm & NCC,Chốt forwarder + đại lý hải quan Úc,LOG,2026-10-19,2026-11-15,task,planned,,
+G2,Sản phẩm & NCC,Cổng: ≥ 20 mã đạt 7 tiêu chí,SRC,2026-11-15,2026-11-15,milestone,planned,P2;P3,K05>=20
+W1,Web & nội dung,Đăng 20–30 mã chuẩn lên web,MKT,2026-11-16,2026-12-06,task,planned,G2;F2,
+W2,Web & nội dung,Luật sư Úc rà chính sách,CEO,2026-11-16,2026-12-13,task,planned,F4,
+W3,Web & nội dung,Kho nội dung 4 trụ + lịch TikTok/FB,MKT,2026-10-19,2026-12-13,task,planned,F1,
+W4,Web & nội dung,Ký 3–5 creator Úc,MKT,2026-11-23,2026-12-13,task,planned,W3,
+G3,Web & nội dung,Cổng: web + chính sách đã duyệt,CEO,2026-12-13,2026-12-13,milestone,planned,W1;W2,K13=0
+D1,Bán & tăng trưởng,"Bán thử: TikTok → Meta, đo MER",MKT,2026-12-14,2027-01-03,task,planned,G3,
+G4,Bán & tăng trưởng,Cổng: MER ≥ 4 trong 2 tuần,CEO,2027-01-03,2027-01-03,milestone,planned,D1,K04>=4
+D2,Bán & tăng trưởng,Mở rộng quảng cáo theo MER,MKT,2027-01-04,2027-03-31,task,planned,G4,
+D3,Bán & tăng trưởng,Tìm mã thắng + creator/UGC luân phiên,MKT,2027-04-01,2027-06-30,task,planned,D2,
+D4,Bán & tăng trưởng,"Bán ""giao nhanh từ kho Úc"" trên Shopify",MKT,2027-08-16,2027-09-30,task,planned,L3,
+D5,Bán & tăng trưởng,Cao điểm Black Friday / Giáng sinh,MKT,2027-11-01,2027-12-31,task,planned,,
+L1,Logistics & kho,Lô LCL đầu tiên (gom tuần),LOG,2026-12-21,2027-01-24,task,planned,P4,
+L2,Logistics & kho,Giao đơn đầu tiên tới khách Úc,LOG,2027-02-01,2027-03-31,task,planned,L1,
+L3,Logistics & kho,"Chọn 3PL Úc, báo giá, hợp đồng",LOG,2027-05-01,2027-06-30,task,planned,,
+G5,Logistics & kho,Cổng kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng,CEO,2027-06-30,2027-06-30,milestone,planned,D3,K01>=35;K09>=3
+L4,Logistics & kho,Nhập lô đầu vào 3PL (5–10 mã thắng),LOG,2027-07-01,2027-08-15,task,planned,G5,
+O1,Quản trị & dữ liệu,Rà khung ETA theo dữ liệu thật,OPS,2027-03-01,2027-03-15,task,planned,L2,
+O2,Quản trị & dữ liệu,Thêm / loại mã theo lãi thực,FIN,2027-03-01,2027-03-31,task,planned,L2,
+O3,Quản trị & dữ liệu,"Theo dõi tồn: sell-through, vòng quay",FIN,2027-08-16,2027-12-31,task,planned,L4,
+O4,Quản trị & dữ liệu,Kế hoạch 2028,CEO,2027-12-01,2027-12-20,task,planned,,
+S1,Mở rộng,Cổng nhãn hiệu: quyết nộp đơn IP Australia,CEO,2027-06-30,2027-06-30,milestone,planned,G5,K01>=35
+S2,Mở rộng,Nộp nhãn hiệu (nhóm 20 + 35),CEO,2027-07-01,2027-07-31,task,planned,S1,
+S3,Mở rộng,Amazon AU (FBM từ 3PL) – chỉ mã có tồn,OPS,2027-10-01,2027-11-15,task,planned,L4,
+S4,Mở rộng,Đánh giá NZ / Singapore,CEO,2027-10-01,2027-12-15,task,planned,,

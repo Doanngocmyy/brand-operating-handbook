@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strategy, OKR &amp; Roadmap · [BRAND] Operating Handbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body class="" id="top">
+<a class="skip" href="#main">Bỏ qua tới nội dung</a>
+<header class="top"><a class="brand" href="index.html">[BRAND]<span class="sub">Operating System</span></a>
+<nav class="topnav" aria-label="Khu vực"><a href="index.html">Start here</a><a href="sop-a-don-chuan.html">Run the business</a><a href="chuan-san-pham.html">Standards</a><a href="vai-tro-quyen-han.html" aria-current="true" class="on">Management</a></nav>
+<button class="menu" type="button" aria-expanded="false" aria-controls="side" onclick="var o=document.body.classList.toggle('nav-open');this.setAttribute('aria-expanded',o)">Menu</button></header>
+<div class="wrap">
+<nav class="side" id="side" aria-label="Mục lục"><div class="nav-group"><p class="nav-h">Start here</p><a href="index.html">Operating Map</a><a href="tim-theo-vai-tro.html">Find by role</a><a href="tim-theo-su-kien.html">Find by task / event</a></div><div class="nav-group"><p class="nav-h">Run the business</p><a href="sop-a-don-chuan.html">Standard Order (SOP-A)</a><a href="sop-b-hau-mai.html">Exceptions &amp; Cases (SOP-B)</a><a href="kpi-sla-nhip.html">KPI, SLA &amp; Rhythm</a></div><div class="nav-group"><p class="nav-h">Standards</p><a href="chuan-san-pham.html">Product &amp; SKU Standard</a><a href="nha-cung-cap-qc.html">Supplier &amp; QC Standard</a><a href="dong-goi-chung-tu.html">Packaging, Labels &amp; Import Docs</a><a href="thuong-hieu-marketing.html">Brand &amp; Marketing Rules</a><a href="chinh-sach-khach-hang.html">Customer-facing Policy</a></div><div class="nav-group"><p class="nav-h">Management</p><a href="vai-tro-quyen-han.html">Roles, Authority &amp; Access</a><a href="mo-hinh-kinh-doanh.html">Business Model &amp; Unit Economics</a><a href="chien-luoc-ke-hoach.html" aria-current="page" class="on">Strategy, OKR &amp; Roadmap</a><a href="lo-trinh-90-ngay.html">90-Day Launch Plan</a><a href="cong-cu-bieu-mau.html">Tools &amp; Templates</a></div><p class="meta">About: <a href="nguyen-tac.html">Operating principles</a> · <a href="thu-founder.html">Founder note</a><br>Cập nhật 05/10/2026 · <a href="https://github.com/Doanngocmyy/brand-operating-handbook">GitHub</a></p></nav>
+<main id="main"><article><p class="crumb">Management</p><h1>Chiến lược, OKR &amp; Roadmap</h1><div class="badges"><span class="badge b-int">Internal</span></div>
+<p>Trang này là lớp <strong>chiến lược</strong> của handbook: vì sao [BRAND] tồn tại, đo thành công bằng gì, và đi theo lộ trình nào từ Q4/2026 đến hết 2027. Việc chi tiết từng tuần của 90 ngày đầu nằm ở <a href="lo-trinh-90-ngay.html">90-Day Launch Plan</a>.</p>
+<p>Mọi con số và mốc thời gian trên trang này được dựng từ dữ liệu trong <a href="https://github.com/Doanngocmyy/brand-operating-handbook/tree/main/plan">plan/*.csv</a> và được kiểm tra tự động khi build. Đây là <strong>kế hoạch và mục tiêu</strong>, không phải kết quả thực tế.</p>
+<h2 id="vision">Tầm nhìn, sứ mệnh, lợi thế cốt lõi</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tầm nhìn</strong> (Vision)</td>
+<td>Trở thành thương hiệu nội thất bán trực tiếp đáng tin nhất cho các gia đình ở Úc và New Zealand: khách luôn biết chính xác hàng của mình đang ở đâu và khi nào tới.</td>
+</tr>
+<tr>
+<td><strong>Sứ mệnh</strong> (Mission)</td>
+<td>Đưa nội thất tối giản, bền, giá hợp lý từ xưởng tới tận nhà khách qua một chuỗi cung ứng do chính đội ngũ điều phối từ đầu tới cuối, với thời gian giao trung thực và người thật chăm sóc sau bán.</td>
+</tr>
+<tr>
+<td><strong>Lợi thế cốt lõi</strong></td>
+<td>Năng lực vận hành chuỗi cung ứng end-to-end: chọn NCC và QC tại kho gom, gom lô LCL theo lịch tàu, chứng từ và hải quan, theo dõi từng lô, giao chặng cuối. Tên thương hiệu có thể bị sao chép, còn cách vận hành này thì khó sao chép hơn nhiều.</td>
+</tr>
+<tr>
+<td><strong>Định vị</strong></td>
+<td>"Quiet, honest furniture": ít mã, mã nào cũng chuẩn hoá, mô tả đúng, khung giao lấy từ dữ liệu thật.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Khi nói với khách, dùng cách diễn đạt <em>"we manage every step from sourcing to your door"</em>. Không viết "own factory" hay "own warehouse" khi chưa có, theo <a href="nguyen-tac.html">Nguyên tắc</a>.</p>
+<h2 id="north-star">North Star và cây KPI</h2>
+<p><strong>North Star: số đơn được giao trong khung thời gian đã hứa mỗi tháng (NS1).</strong> Chỉ số này chỉ tăng khi cả hai cùng tăng: nhu cầu (có đơn) và độ tin cậy (giao đúng lời hứa). Bán nhiều mà giao trễ thì NS1 không tăng.</p>
+<pre><code class="language-text">NS1  Đơn giao trong khung / tháng
+ ├─ Kết quả     K01 đơn đã thanh toán · K02 doanh thu · K03 lãi thực/đơn · K04 MER
+ ├─ Đòn bẩy     danh mục (K14, K05, K06) · nội dung (K07) · chuyển đổi (K08) · mã thắng (K09) · tồn Úc (K10, K11)
+ └─ Rào chắn    G01 giao trong khung % · G02 phản hồi · G03 case · G04 chargeback · G05 huỷ/hoàn · G06–G07 Amazon
+</code></pre>
+<p>Quy tắc đọc: đòn bẩy là thứ team tác động trực tiếp hằng tuần. Rào chắn là lằn ranh: vượt ngưỡng thì <strong>dừng mở rộng</strong> dù chỉ số kết quả đang đẹp.</p>
+<div class="tbl"><table data-plan><thead><tr><th>ID</th><th>Loại</th><th>Chỉ số</th><th>Đơn vị</th><th>Cách gộp theo kỳ</th><th>Chủ</th><th>Nguồn đo</th></tr></thead><tbody><tr><td><code>NS1</code></td><td>North Star</td><td>Đơn giao trong khung đã hứa</td><td>đơn/tháng</td><td>giá trị tháng cuối kỳ</td><td><span class="r ops">OPS</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Tracker DON: Giao trong khung = Có</a></td></tr><tr><td><code>K01</code></td><td>Kết quả</td><td>Đơn đã thanh toán</td><td>đơn/tháng</td><td>giá trị tháng cuối kỳ</td><td><span class="r mkt">MKT</span></td><td><a href="kpi-sla-nhip.html#dashboard">Shopify + Amazon (từ Q4/2027)</a></td></tr><tr><td><code>K02</code></td><td>Kết quả</td><td>Doanh thu ước tính</td><td>A$</td><td>cộng dồn kỳ</td><td><span class="r fin">FIN</span></td><td><a href="mo-hinh-kinh-doanh.html#reference">Đơn × AOV giả định (plan/assumptions.csv)</a></td></tr><tr><td><code>K03</code></td><td>Kết quả</td><td>Lãi thực / đơn</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r fin">FIN</span></td><td><a href="mo-hinh-kinh-doanh.html#pricing">File chi phí thực (không public)</a></td></tr><tr><td><code>K04</code></td><td>Kết quả</td><td>MER (doanh thu ÷ chi quảng cáo)</td><td>lần</td><td>tỉ lệ trong kỳ</td><td><span class="r mkt">MKT</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Ads Manager + Shopify</a></td></tr><tr><td><code>K05</code></td><td>Đòn bẩy</td><td>Mã đạt 7 tiêu chí (luỹ kế)</td><td>mã</td><td>giá trị tháng cuối kỳ</td><td><span class="r src">SRC</span></td><td><a href="chuan-san-pham.html">Danh mục chuẩn</a></td></tr><tr><td><code>K06</code></td><td>Đòn bẩy</td><td>Mã đang bán trên web</td><td>mã</td><td>giá trị tháng cuối kỳ</td><td><span class="r mkt">MKT</span></td><td><a href="chuan-san-pham.html">Shopify</a></td></tr><tr><td><code>K07</code></td><td>Đòn bẩy</td><td>Bài nội dung tự nhiên</td><td>bài/tháng</td><td>giá trị tháng cuối kỳ</td><td><span class="r mkt">MKT</span></td><td><a href="thuong-hieu-marketing.html">Lịch nội dung</a></td></tr><tr><td><code>K08</code></td><td>Đòn bẩy</td><td>Tỉ lệ chuyển đổi web</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r mkt">MKT</span></td><td><a href="thuong-hieu-marketing.html">Shopify Analytics</a></td></tr><tr><td><code>K09</code></td><td>Đòn bẩy</td><td>Mã thắng (≥ 5 đơn/tháng × 2 tháng)</td><td>mã</td><td>giá trị tháng cuối kỳ</td><td><span class="r src">SRC</span></td><td><a href="chuan-san-pham.html">Tracker DON theo SKU</a></td></tr><tr><td><code>K10</code></td><td>Đòn bẩy</td><td>Mã có tồn tại kho Úc</td><td>mã</td><td>giá trị tháng cuối kỳ</td><td><span class="r log">LOG</span></td><td><a href="mo-hinh-kinh-doanh.html#phase-2">3PL</a></td></tr><tr><td><code>K11</code></td><td>Đòn bẩy</td><td>Sell-through tồn trong 90 ngày</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r fin">FIN</span></td><td><a href="mo-hinh-kinh-doanh.html#phase-2">3PL + tracker</a></td></tr><tr><td><code>K13</code></td><td>Đòn bẩy</td><td>Launch blockers còn mở</td><td>mục</td><td>giá trị tháng cuối kỳ</td><td><span class="r ceo">CEO</span></td><td><a href="lo-trinh-90-ngay.html#blockers">Launch blockers</a></td></tr><tr><td><code>K14</code></td><td>Đòn bẩy</td><td>Mã hạng A đã đối chiếu (luỹ kế)</td><td>mã</td><td>giá trị tháng cuối kỳ</td><td><span class="r src">SRC</span></td><td><a href="chuan-san-pham.html">Danh mục chuẩn</a></td></tr><tr><td><code>K15</code></td><td>Đòn bẩy</td><td>Đơn Amazon AU</td><td>đơn/tháng</td><td>giá trị tháng cuối kỳ</td><td><span class="r ops">OPS</span></td><td><a href="mo-hinh-kinh-doanh.html#phase-2">Seller Central AU</a></td></tr><tr><td><code>G01</code></td><td>Rào chắn</td><td>Giao trong khung đã hứa</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r ops">OPS</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Tracker DON</a></td></tr><tr><td><code>G02</code></td><td>Rào chắn</td><td>Phản hồi đầu (trung vị)</td><td>giờ LV</td><td>tỉ lệ trong kỳ</td><td><span class="r cx">CX</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Tracker CASE</a></td></tr><tr><td><code>G03</code></td><td>Rào chắn</td><td>Tỉ lệ case</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r ops">OPS</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Tracker CASE</a></td></tr><tr><td><code>G04</code></td><td>Rào chắn</td><td>Chargeback</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r ops">OPS</span></td><td><a href="kpi-sla-nhip.html#kpi-tree">Tracker CASE</a></td></tr><tr><td><code>G05</code></td><td>Rào chắn</td><td>Huỷ / hoàn tiền</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r ops">OPS</span></td><td><a href="mo-hinh-kinh-doanh.html#pricing">Shopify + tracker</a></td></tr><tr><td><code>G06</code></td><td>Rào chắn</td><td>Amazon Late Shipment Rate</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r log">LOG</span></td><td><a href="mo-hinh-kinh-doanh.html#phase-2">Seller Central AU</a></td></tr><tr><td><code>G07</code></td><td>Rào chắn</td><td>Amazon Valid Tracking Rate</td><td>%</td><td>tỉ lệ trong kỳ</td><td><span class="r log">LOG</span></td><td><a href="mo-hinh-kinh-doanh.html#phase-2">Seller Central AU</a></td></tr></tbody></table></div>
+
+<h2 id="gantt">Roadmap Q4/2026 – 2027</h2>
+<p>Bảy luồng việc. Cổng (hình thoi) là điểm dừng để quyết định bằng dữ liệu: chưa qua cổng thì không làm bước sau.</p>
+<div class="swim" tabindex="0" role="region" aria-label="Biểu đồ, kéo ngang để xem hết"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1216 1040" width="1216" height="1040" font-family="Inter,system-ui,sans-serif" font-size="12" role="img" aria-label="Gantt roadmap Q4/2026 – 2027">
+<rect x="0" y="0" width="1216" height="1040" style="fill:var(--panel,#ffffff)"/>
+<line x1="300.0" y1="28" x2="300.0" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="330.5" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<text x="303.0" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q4/2026</text>
+<line x1="361.1" y1="28" x2="361.1" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="390.6" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<line x1="420.1" y1="28" x2="420.1" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="450.7" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<rect x="481.2" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="481.2" y1="28" x2="481.2" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="511.7" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T1</text>
+<text x="484.2" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q1/2027</text>
+<rect x="542.2" y="28" width="55.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="542.2" y1="28" x2="542.2" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="569.8" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T2</text>
+<rect x="597.4" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="597.4" y1="28" x2="597.4" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="627.9" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T3</text>
+<line x1="658.4" y1="28" x2="658.4" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="688.0" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T4</text>
+<text x="661.4" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q2/2027</text>
+<line x1="717.5" y1="28" x2="717.5" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="748.0" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T5</text>
+<line x1="778.6" y1="28" x2="778.6" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="808.1" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T6</text>
+<rect x="837.6" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="837.6" y1="28" x2="837.6" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="868.2" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T7</text>
+<text x="840.6" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q3/2027</text>
+<rect x="898.7" y="28" width="61.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="898.7" y1="28" x2="898.7" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="929.2" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T8</text>
+<rect x="959.7" y="28" width="59.1" height="978" style="fill:var(--code,#f5f5f4);opacity:.6"/>
+<line x1="959.7" y1="28" x2="959.7" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="989.3" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T9</text>
+<line x1="1018.8" y1="28" x2="1018.8" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1049.3" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<text x="1021.8" y="22" style="fill:var(--ink,#1d1d1f);font-weight:600">Q4/2027</text>
+<line x1="1079.9" y1="28" x2="1079.9" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1109.4" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<line x1="1138.9" y1="28" x2="1138.9" y2="1006" style="stroke:var(--line,#e5e5e7)"/>
+<text x="1169.5" y="42" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<rect x="8" y="52" width="10" height="10" rx="2" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"/>
+<text x="24" y="61" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Nền tảng</text>
+<line x1="8" y1="69" x2="1208" y2="69" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="85" style="fill:var(--ink,#1d1d1f)"><title>Tên miền, handle 4 kênh, email hỗ trợ (CEO, 05/10/2026 – 18/10/2026, Đang làm)</title>F1 · Tên miền, handle 4 kênh, email hỗ …</text>
+<text x="292" y="85" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="307.9" y="75" width="27.6" height="14" rx="4" style="fill:var(--accent,#6b5a45);stroke:var(--accent,#6b5a45)"><title>Tên miền, handle 4 kênh, email hỗ trợ · 05/10 – 18/10/2026 · Đang làm</title></rect>
+<text x="24" y="109" style="fill:var(--ink,#1d1d1f)"><title>Shopify, Pixel/CAPI, TikTok pixel (MKT, 05/10/2026 – 25/10/2026, Kế hoạch)</title>F2 · Shopify, Pixel/CAPI, TikTok pixel</text>
+<text x="292" y="109" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="307.9" y="99" width="41.4" height="14" rx="4" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>Shopify, Pixel/CAPI, TikTok pixel · 05/10 – 25/10/2026 · Kế hoạch</title></rect>
+<text x="24" y="133" style="fill:var(--ink,#1d1d1f)"><title>Tracker / Source of truth chạy thật (OPS, 05/10/2026 – 18/10/2026, Đang làm)</title>F3 · Tracker / Source of truth chạy thật</text>
+<text x="292" y="133" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="307.9" y="123" width="27.6" height="14" rx="4" style="fill:var(--accent,#6b5a45);stroke:var(--accent,#6b5a45)"><title>Tracker / Source of truth chạy thật · 05/10 – 18/10/2026 · Đang làm</title></rect>
+<text x="24" y="157" style="fill:var(--ink,#1d1d1f)"><title>Chốt bên bán hàng + GST (blocker) (CEO, 12/10/2026 – 15/11/2026, Kế hoạch)</title>F4 · Chốt bên bán hàng + GST (blocker)</text>
+<text x="292" y="157" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="321.7" y="147" width="68.9" height="14" rx="4" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>Chốt bên bán hàng + GST (blocker) · 12/10 – 15/11/2026 · Kế hoạch</title></rect>
+<rect x="8" y="172" width="10" height="10" rx="2" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"/>
+<text x="24" y="181" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Sản phẩm &amp; NCC</text>
+<line x1="8" y1="189" x2="1208" y2="189" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="205" style="fill:var(--ink,#1d1d1f)"><title>Đối chiếu 60 mã hạng A (SRC, 19/10/2026 – 08/11/2026, Kế hoạch)</title>P1 · Đối chiếu 60 mã hạng A</text>
+<text x="292" y="205" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="335.4" y="195" width="41.4" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Đối chiếu 60 mã hạng A · 19/10 – 08/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="229" style="fill:var(--ink,#1d1d1f)"><title>Hàng mẫu: đo, chụp, thử lắp (SRC, 26/10/2026 – 15/11/2026, Kế hoạch)</title>P2 · Hàng mẫu: đo, chụp, thử lắp</text>
+<text x="292" y="229" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="349.2" y="219" width="41.4" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Hàng mẫu: đo, chụp, thử lắp · 26/10 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="253" style="fill:var(--ink,#1d1d1f)"><title>NCC ký bộ chứng từ (SRC, 02/11/2026 – 15/11/2026, Kế hoạch)</title>P3 · NCC ký bộ chứng từ</text>
+<text x="292" y="253" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<rect x="363.0" y="243" width="27.6" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>NCC ký bộ chứng từ · 02/11 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="277" style="fill:var(--ink,#1d1d1f)"><title>Chốt forwarder + đại lý hải quan Úc (LOG, 19/10/2026 – 15/11/2026, Kế hoạch)</title>P4 · Chốt forwarder + đại lý hải quan Úc</text>
+<text x="292" y="277" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="335.4" y="267" width="55.1" height="14" rx="4" style="fill:var(--green-soft,#e6f4ea);stroke:var(--green,#1e6b3a)"><title>Chốt forwarder + đại lý hải quan Úc · 19/10 – 15/11/2026 · Kế hoạch</title></rect>
+<text x="24" y="301" style="fill:var(--ink,#1d1d1f)"><title>Cổng: ≥ 20 mã đạt 7 tiêu chí (SRC, 15/11/2026 – 15/11/2026, Kế hoạch)</title>G2 · Cổng: ≥ 20 mã đạt 7 tiêu chí</text>
+<text x="292" y="301" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">SRC</text>
+<path d="M388.6 291.0 L395.6 298.0 L388.6 305.0 L381.6 298.0 Z" style="fill:var(--green,#1e6b3a)"><title>Cổng: ≥ 20 mã đạt 7 tiêu chí · 15/11/2026</title></path>
+<rect x="8" y="316" width="10" height="10" rx="2" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"/>
+<text x="24" y="325" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Web &amp; nội dung</text>
+<line x1="8" y1="333" x2="1208" y2="333" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="349" style="fill:var(--ink,#1d1d1f)"><title>Đăng 20–30 mã chuẩn lên web (MKT, 16/11/2026 – 06/12/2026, Kế hoạch)</title>W1 · Đăng 20–30 mã chuẩn lên web</text>
+<text x="292" y="349" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="390.6" y="339" width="41.4" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Đăng 20–30 mã chuẩn lên web · 16/11 – 06/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="373" style="fill:var(--ink,#1d1d1f)"><title>Luật sư Úc rà chính sách (CEO, 16/11/2026 – 13/12/2026, Kế hoạch)</title>W2 · Luật sư Úc rà chính sách</text>
+<text x="292" y="373" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="390.6" y="363" width="55.1" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Luật sư Úc rà chính sách · 16/11 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="397" style="fill:var(--ink,#1d1d1f)"><title>Kho nội dung 4 trụ + lịch TikTok/FB (MKT, 19/10/2026 – 13/12/2026, Kế hoạch)</title>W3 · Kho nội dung 4 trụ + lịch TikTok/FB</text>
+<text x="292" y="397" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="335.4" y="387" width="110.3" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Kho nội dung 4 trụ + lịch TikTok/FB · 19/10 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="421" style="fill:var(--ink,#1d1d1f)"><title>Ký 3–5 creator Úc (MKT, 23/11/2026 – 13/12/2026, Kế hoạch)</title>W4 · Ký 3–5 creator Úc</text>
+<text x="292" y="421" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="404.4" y="411" width="41.4" height="14" rx="4" style="fill:var(--violet-soft,#f1ebf8);stroke:var(--violet,#5f3b86)"><title>Ký 3–5 creator Úc · 23/11 – 13/12/2026 · Kế hoạch</title></rect>
+<text x="24" y="445" style="fill:var(--ink,#1d1d1f)"><title>Cổng: web + chính sách đã duyệt (CEO, 13/12/2026 – 13/12/2026, Kế hoạch)</title>G3 · Cổng: web + chính sách đã duyệt</text>
+<text x="292" y="445" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M443.8 435.0 L450.8 442.0 L443.8 449.0 L436.8 442.0 Z" style="fill:var(--violet,#5f3b86)"><title>Cổng: web + chính sách đã duyệt · 13/12/2026</title></path>
+<rect x="8" y="460" width="10" height="10" rx="2" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"/>
+<text x="24" y="469" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Bán &amp; tăng trưởng</text>
+<line x1="8" y1="477" x2="1208" y2="477" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="493" style="fill:var(--ink,#1d1d1f)"><title>Bán thử: TikTok → Meta, đo MER (MKT, 14/12/2026 – 03/01/2027, Kế hoạch)</title>D1 · Bán thử: TikTok → Meta, đo MER</text>
+<text x="292" y="493" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="445.7" y="483" width="41.4" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Bán thử: TikTok → Meta, đo MER · 14/12 – 03/01/2027 · Kế hoạch</title></rect>
+<text x="24" y="517" style="fill:var(--ink,#1d1d1f)"><title>Cổng: MER ≥ 4 trong 2 tuần (CEO, 03/01/2027 – 03/01/2027, Kế hoạch)</title>G4 · Cổng: MER ≥ 4 trong 2 tuần</text>
+<text x="292" y="517" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M485.1 507.0 L492.1 514.0 L485.1 521.0 L478.1 514.0 Z" style="fill:var(--amber,#8a5a00)"><title>Cổng: MER ≥ 4 trong 2 tuần · 03/01/2027</title></path>
+<text x="24" y="541" style="fill:var(--ink,#1d1d1f)"><title>Mở rộng quảng cáo theo MER (MKT, 04/01/2027 – 31/03/2027, Kế hoạch)</title>D2 · Mở rộng quảng cáo theo MER</text>
+<text x="292" y="541" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="487.1" y="531" width="171.3" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Mở rộng quảng cáo theo MER · 04/01 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="565" style="fill:var(--ink,#1d1d1f)"><title>Tìm mã thắng + creator/UGC luân phiên (MKT, 01/04/2027 – 30/06/2027, Kế hoạch)</title>D3 · Tìm mã thắng + creator/UGC luân ph…</text>
+<text x="292" y="565" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="658.4" y="555" width="179.2" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Tìm mã thắng + creator/UGC luân phiên · 01/04 – 30/06/2027 · Kế hoạch</title></rect>
+<text x="24" y="589" style="fill:var(--ink,#1d1d1f)"><title>Bán &quot;giao nhanh từ kho Úc&quot; trên Shopify (MKT, 16/08/2027 – 30/09/2027, Kế hoạch)</title>D4 · Bán &quot;giao nhanh từ kho Úc&quot; trên Sh…</text>
+<text x="292" y="589" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="928.2" y="579" width="90.6" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Bán &quot;giao nhanh từ kho Úc&quot; trên Shopify · 16/08 – 30/09/2027 · Kế hoạch</title></rect>
+<text x="24" y="613" style="fill:var(--ink,#1d1d1f)"><title>Cao điểm Black Friday / Giáng sinh (MKT, 01/11/2027 – 31/12/2027, Kế hoạch)</title>D5 · Cao điểm Black Friday / Giáng sinh</text>
+<text x="292" y="613" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">MKT</text>
+<rect x="1079.9" y="603" width="120.1" height="14" rx="4" style="fill:var(--amber-soft,#fff4dc);stroke:var(--amber,#8a5a00)"><title>Cao điểm Black Friday / Giáng sinh · 01/11 – 31/12/2027 · Kế hoạch</title></rect>
+<rect x="8" y="628" width="10" height="10" rx="2" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"/>
+<text x="24" y="637" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Logistics &amp; kho</text>
+<line x1="8" y1="645" x2="1208" y2="645" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="661" style="fill:var(--ink,#1d1d1f)"><title>Lô LCL đầu tiên (gom tuần) (LOG, 21/12/2026 – 24/01/2027, Kế hoạch)</title>L1 · Lô LCL đầu tiên (gom tuần)</text>
+<text x="292" y="661" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="459.5" y="651" width="68.9" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Lô LCL đầu tiên (gom tuần) · 21/12 – 24/01/2027 · Kế hoạch</title></rect>
+<text x="24" y="685" style="fill:var(--ink,#1d1d1f)"><title>Giao đơn đầu tiên tới khách Úc (LOG, 01/02/2027 – 31/03/2027, Kế hoạch)</title>L2 · Giao đơn đầu tiên tới khách Úc</text>
+<text x="292" y="685" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="542.2" y="675" width="116.2" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Giao đơn đầu tiên tới khách Úc · 01/02 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="709" style="fill:var(--ink,#1d1d1f)"><title>Chọn 3PL Úc, báo giá, hợp đồng (LOG, 01/05/2027 – 30/06/2027, Kế hoạch)</title>L3 · Chọn 3PL Úc, báo giá, hợp đồng</text>
+<text x="292" y="709" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="717.5" y="699" width="120.1" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Chọn 3PL Úc, báo giá, hợp đồng · 01/05 – 30/06/2027 · Kế hoạch</title></rect>
+<text x="24" y="733" style="fill:var(--ink,#1d1d1f)"><title>Cổng kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng (CEO, 30/06/2027 – 30/06/2027, Kế hoạch)</title>G5 · Cổng kho Úc: 30–40 đơn/tháng × 2 t…</text>
+<text x="292" y="733" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M835.7 723.0 L842.7 730.0 L835.7 737.0 L828.7 730.0 Z" style="fill:var(--blue,#1f5a94)"><title>Cổng kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng · 30/06/2027</title></path>
+<text x="24" y="757" style="fill:var(--ink,#1d1d1f)"><title>Nhập lô đầu vào 3PL (5–10 mã thắng) (LOG, 01/07/2027 – 15/08/2027, Kế hoạch)</title>L4 · Nhập lô đầu vào 3PL (5–10 mã thắng)</text>
+<text x="292" y="757" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">LOG</text>
+<rect x="837.6" y="747" width="90.6" height="14" rx="4" style="fill:var(--blue-soft,#e8f0f9);stroke:var(--blue,#1f5a94)"><title>Nhập lô đầu vào 3PL (5–10 mã thắng) · 01/07 – 15/08/2027 · Kế hoạch</title></rect>
+<rect x="8" y="772" width="10" height="10" rx="2" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"/>
+<text x="24" y="781" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Quản trị &amp; dữ liệu</text>
+<line x1="8" y1="789" x2="1208" y2="789" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="805" style="fill:var(--ink,#1d1d1f)"><title>Rà khung ETA theo dữ liệu thật (OPS, 01/03/2027 – 15/03/2027, Kế hoạch)</title>O1 · Rà khung ETA theo dữ liệu thật</text>
+<text x="292" y="805" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="597.4" y="795" width="29.5" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Rà khung ETA theo dữ liệu thật · 01/03 – 15/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="829" style="fill:var(--ink,#1d1d1f)"><title>Thêm / loại mã theo lãi thực (FIN, 01/03/2027 – 31/03/2027, Kế hoạch)</title>O2 · Thêm / loại mã theo lãi thực</text>
+<text x="292" y="829" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">FIN</text>
+<rect x="597.4" y="819" width="61.1" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Thêm / loại mã theo lãi thực · 01/03 – 31/03/2027 · Kế hoạch</title></rect>
+<text x="24" y="853" style="fill:var(--ink,#1d1d1f)"><title>Theo dõi tồn: sell-through, vòng quay (FIN, 16/08/2027 – 31/12/2027, Kế hoạch)</title>O3 · Theo dõi tồn: sell-through, vòng q…</text>
+<text x="292" y="853" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">FIN</text>
+<rect x="928.2" y="843" width="271.8" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Theo dõi tồn: sell-through, vòng quay · 16/08 – 31/12/2027 · Kế hoạch</title></rect>
+<text x="24" y="877" style="fill:var(--ink,#1d1d1f)"><title>Kế hoạch 2028 (CEO, 01/12/2027 – 20/12/2027, Kế hoạch)</title>O4 · Kế hoạch 2028</text>
+<text x="292" y="877" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="1138.9" y="867" width="39.4" height="14" rx="4" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"><title>Kế hoạch 2028 · 01/12 – 20/12/2027 · Kế hoạch</title></rect>
+<rect x="8" y="892" width="10" height="10" rx="2" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"/>
+<text x="24" y="901" style="fill:var(--ink,#1d1d1f);font-weight:700;font-size:12.5px">Mở rộng</text>
+<line x1="8" y1="909" x2="1208" y2="909" style="stroke:var(--line,#e5e5e7)"/>
+<text x="24" y="925" style="fill:var(--ink,#1d1d1f)"><title>Cổng nhãn hiệu: quyết nộp đơn IP Australia (CEO, 30/06/2027 – 30/06/2027, Kế hoạch)</title>S1 · Cổng nhãn hiệu: quyết nộp đơn IP A…</text>
+<text x="292" y="925" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<path d="M835.7 915.0 L842.7 922.0 L835.7 929.0 L828.7 922.0 Z" style="fill:var(--red,#b42318)"><title>Cổng nhãn hiệu: quyết nộp đơn IP Australia · 30/06/2027</title></path>
+<text x="24" y="949" style="fill:var(--ink,#1d1d1f)"><title>Nộp nhãn hiệu (nhóm 20 + 35) (CEO, 01/07/2027 – 31/07/2027, Kế hoạch)</title>S2 · Nộp nhãn hiệu (nhóm 20 + 35)</text>
+<text x="292" y="949" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="837.6" y="939" width="61.1" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Nộp nhãn hiệu (nhóm 20 + 35) · 01/07 – 31/07/2027 · Kế hoạch</title></rect>
+<text x="24" y="973" style="fill:var(--ink,#1d1d1f)"><title>Amazon AU (FBM từ 3PL) – chỉ mã có tồn (OPS, 01/10/2027 – 15/11/2027, Kế hoạch)</title>S3 · Amazon AU (FBM từ 3PL) – chỉ mã có…</text>
+<text x="292" y="973" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">OPS</text>
+<rect x="1018.8" y="963" width="90.6" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Amazon AU (FBM từ 3PL) – chỉ mã có tồn · 01/10 – 15/11/2027 · Kế hoạch</title></rect>
+<text x="24" y="997" style="fill:var(--ink,#1d1d1f)"><title>Đánh giá NZ / Singapore (CEO, 01/10/2027 – 15/12/2027, Kế hoạch)</title>S4 · Đánh giá NZ / Singapore</text>
+<text x="292" y="997" text-anchor="end" style="fill:var(--muted,#62626a);font-size:11px">CEO</text>
+<rect x="1018.8" y="987" width="149.7" height="14" rx="4" style="fill:var(--red-soft,#fdecea);stroke:var(--red,#b42318)"><title>Đánh giá NZ / Singapore · 01/10 – 15/12/2027 · Kế hoạch</title></rect>
+<line x1="307.9" y1="28" x2="307.9" y2="1006" style="stroke:var(--red,#b42318);stroke-width:1.5;stroke-dasharray:4 3"/>
+<text x="311.9" y="1002" style="fill:var(--red,#b42318);font-size:11px">Lập kế hoạch 05/10/2026</text>
+<rect x="24" y="1017" width="22" height="10" rx="3" style="fill:var(--muted,#62626a)"/><text x="52" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Đang làm / xong</text>
+<rect x="160" y="1017" width="22" height="10" rx="3" style="fill:var(--code,#f5f5f4);stroke:var(--muted,#62626a)"/><text x="188" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Kế hoạch</text>
+<path d="M270 1017 L276 1022 L270 1027 L264 1022 Z" style="fill:var(--muted,#62626a)"/><text x="284" y="1026" style="fill:var(--muted,#62626a);font-size:11px">Cổng quyết định (milestone)</text>
+</svg></div>
+<p class="swim-cap">Kéo ngang để xem hết · <a href="plan/gantt.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a> · Dữ liệu: <a href="https://github.com/Doanngocmyy/brand-operating-handbook/tree/main/plan">plan/*.csv</a></p>
+
+<h2 id="orders">Kế hoạch đơn hàng và North Star</h2>
+<p>Cột là số đơn đã thanh toán theo kế hoạch. Đường xanh là North Star suy ra từ giả định: đơn đặt ở tháng <em>m</em> được giao ở tháng <em>m + 2</em> (trung vị 8–9 tuần), với 90% giao trong khung. Từ Q3/2027, phần hàng có sẵn ở kho Úc sẽ giao nhanh hơn, nên North Star thực tế có thể cao hơn đường này.</p>
+<div class="swim" tabindex="0" role="region" aria-label="Biểu đồ, kéo ngang để xem hết"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 300" width="1060" height="300" font-family="Inter,system-ui,sans-serif" font-size="11.5" role="img" aria-label="Kế hoạch đơn hàng theo tháng và North Star">
+<rect width="1060" height="300" style="fill:var(--panel,#ffffff)"/>
+<line x1="46" x2="1044" y1="256.0" y2="256.0" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="260.0" text-anchor="end" style="fill:var(--muted,#62626a)">0</text>
+<line x1="46" x2="1044" y1="217.7" y2="217.7" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="221.7" text-anchor="end" style="fill:var(--muted,#62626a)">20</text>
+<line x1="46" x2="1044" y1="179.3" y2="179.3" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="183.3" text-anchor="end" style="fill:var(--muted,#62626a)">40</text>
+<line x1="46" x2="1044" y1="141.0" y2="141.0" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="145.0" text-anchor="end" style="fill:var(--muted,#62626a)">60</text>
+<line x1="46" x2="1044" y1="102.7" y2="102.7" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="106.7" text-anchor="end" style="fill:var(--muted,#62626a)">80</text>
+<line x1="46" x2="1044" y1="64.3" y2="64.3" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="68.3" text-anchor="end" style="fill:var(--muted,#62626a)">100</text>
+<line x1="46" x2="1044" y1="26.0" y2="26.0" style="stroke:var(--line,#e5e5e7)"/>
+<text x="40" y="30.0" text-anchor="end" style="fill:var(--muted,#62626a)">120</text>
+<rect x="58.0" y="256.0" width="42.6" height="0.0" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2026-10: 0 đơn kế hoạch · Chưa bán: xây nền tảng</title></rect>
+<text x="79.3" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<text x="48.0" y="288" style="fill:var(--ink,#1d1d1f);font-weight:600">2026</text>
+<rect x="124.5" y="256.0" width="42.6" height="0.0" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2026-11: 0 đơn kế hoạch · Chưa bán: mẫu + web</title></rect>
+<text x="145.8" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<rect x="191.0" y="240.7" width="42.6" height="15.3" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2026-12: 8 đơn kế hoạch · Bán thử 2–3 tuần</title></rect>
+<text x="212.3" y="235.7" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">8</text>
+<text x="212.3" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<rect x="257.6" y="236.8" width="42.6" height="19.2" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-01: 10 đơn kế hoạch · Mở rộng theo MER</title></rect>
+<text x="278.9" y="231.8" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">10</text>
+<text x="278.9" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T1</text>
+<text x="247.6" y="288" style="fill:var(--ink,#1d1d1f);font-weight:600">2027</text>
+<rect x="324.1" y="227.2" width="42.6" height="28.8" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-02: 15 đơn kế hoạch</title></rect>
+<text x="345.4" y="222.2" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">15</text>
+<text x="345.4" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T2</text>
+<rect x="390.6" y="217.7" width="42.6" height="38.3" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-03: 20 đơn kế hoạch · Đơn đầu tiên tới tay khách</title></rect>
+<text x="411.9" y="212.7" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">20</text>
+<text x="411.9" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T3</text>
+<rect x="457.2" y="208.1" width="42.6" height="47.9" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-04: 25 đơn kế hoạch</title></rect>
+<text x="478.5" y="203.1" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">25</text>
+<text x="478.5" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T4</text>
+<rect x="523.7" y="198.5" width="42.6" height="57.5" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-05: 30 đơn kế hoạch</title></rect>
+<text x="545.0" y="193.5" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">30</text>
+<text x="545.0" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T5</text>
+<rect x="590.2" y="188.9" width="42.6" height="67.1" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-06: 35 đơn kế hoạch · Cổng kho Úc</title></rect>
+<text x="611.5" y="183.9" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">35</text>
+<text x="611.5" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T6</text>
+<rect x="656.8" y="179.3" width="42.6" height="76.7" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-07: 40 đơn kế hoạch</title></rect>
+<text x="678.1" y="174.3" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">40</text>
+<text x="678.1" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T7</text>
+<rect x="723.3" y="160.2" width="42.6" height="95.8" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-08: 50 đơn kế hoạch · Hàng có sẵn tại Úc</title></rect>
+<text x="744.6" y="155.2" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">50</text>
+<text x="744.6" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T8</text>
+<rect x="789.8" y="141.0" width="42.6" height="115.0" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-09: 60 đơn kế hoạch</title></rect>
+<text x="811.1" y="136.0" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">60</text>
+<text x="811.1" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T9</text>
+<rect x="856.4" y="112.2" width="42.6" height="143.8" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-10: 75 đơn kế hoạch · Amazon AU</title></rect>
+<text x="877.7" y="107.2" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">75</text>
+<text x="877.7" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T10</text>
+<rect x="922.9" y="64.3" width="42.6" height="191.7" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-11: 100 đơn kế hoạch · Black Friday</title></rect>
+<text x="944.2" y="59.3" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">100</text>
+<text x="944.2" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T11</text>
+<rect x="989.4" y="45.2" width="42.6" height="210.8" rx="3" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"><title>2027-12: 110 đơn kế hoạch · Giáng sinh</title></rect>
+<text x="1010.7" y="40.2" text-anchor="middle" style="fill:var(--ink,#1d1d1f);font-weight:600">110</text>
+<text x="1010.7" y="272" text-anchor="middle" style="fill:var(--muted,#62626a)">T12</text>
+<polyline fill="none" style="stroke:var(--green,#1e6b3a);stroke-width:2" points="79.3,256.0 145.8,256.0 212.3,256.0 278.9,256.0 345.4,242.6 411.9,238.8 478.5,229.2 545.0,221.5 611.5,211.9 678.1,204.2 744.6,194.7 811.1,187.0 877.7,169.8 944.2,152.5 1010.7,125.7"/>
+<circle cx="79.3" cy="256.0" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2026-10: North Star kế hoạch 0 đơn giao trong khung</title></circle>
+<circle cx="145.8" cy="256.0" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2026-11: North Star kế hoạch 0 đơn giao trong khung</title></circle>
+<circle cx="212.3" cy="256.0" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2026-12: North Star kế hoạch 0 đơn giao trong khung</title></circle>
+<circle cx="278.9" cy="256.0" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-01: North Star kế hoạch 0 đơn giao trong khung</title></circle>
+<circle cx="345.4" cy="242.6" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-02: North Star kế hoạch 7 đơn giao trong khung</title></circle>
+<circle cx="411.9" cy="238.8" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-03: North Star kế hoạch 9 đơn giao trong khung</title></circle>
+<circle cx="478.5" cy="229.2" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-04: North Star kế hoạch 14 đơn giao trong khung</title></circle>
+<circle cx="545.0" cy="221.5" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-05: North Star kế hoạch 18 đơn giao trong khung</title></circle>
+<circle cx="611.5" cy="211.9" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-06: North Star kế hoạch 23 đơn giao trong khung</title></circle>
+<circle cx="678.1" cy="204.2" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-07: North Star kế hoạch 27 đơn giao trong khung</title></circle>
+<circle cx="744.6" cy="194.7" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-08: North Star kế hoạch 32 đơn giao trong khung</title></circle>
+<circle cx="811.1" cy="187.0" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-09: North Star kế hoạch 36 đơn giao trong khung</title></circle>
+<circle cx="877.7" cy="169.8" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-10: North Star kế hoạch 45 đơn giao trong khung</title></circle>
+<circle cx="944.2" cy="152.5" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-11: North Star kế hoạch 54 đơn giao trong khung</title></circle>
+<circle cx="1010.7" cy="125.7" r="3.5" style="fill:var(--green,#1e6b3a)"><title>2027-12: North Star kế hoạch 68 đơn giao trong khung</title></circle>
+<rect x="54" y="6" width="14" height="10" rx="2" style="fill:var(--accent-soft,#f3efe9);stroke:var(--accent,#6b5a45)"/><text x="74" y="15" style="fill:var(--muted,#62626a)">Đơn đã thanh toán (K01, kế hoạch)</text><line x1="296" x2="314" y1="11" y2="11" style="stroke:var(--green,#1e6b3a);stroke-width:2"/><text x="320" y="15" style="fill:var(--muted,#62626a)">North Star: đơn giao trong khung (NS1, suy ra)</text>
+</svg></div>
+<p class="swim-cap">Kéo ngang để xem hết · <a href="plan/orders.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a> · Dữ liệu: <a href="https://github.com/Doanngocmyy/brand-operating-handbook/tree/main/plan">plan/*.csv</a></p>
+
+<div class="tbl"><table data-plan><thead><tr><th>Năm</th><th>Tổng đơn kế hoạch</th><th>Đơn/tháng cuối năm</th><th>Đơn giao trong khung (NS1, suy ra)</th><th>Doanh thu ước tính</th></tr></thead><tbody><tr><th scope="row">2026</th><td>8</td><td>8</td><td>0</td><td>A$7,200</td></tr><tr><th scope="row">2027</th><td>570</td><td>110</td><td>333</td><td>A$513,000</td></tr></tbody></table></div>
+
+<h2 id="q4-2026">Q4/2026 theo tháng</h2>
+<p>Mục tiêu năm 2026: <strong>sẵn sàng bán một cách trung thực.</strong> Hết tháng 12 phải có web và chính sách đã duyệt, 0 launch blocker, và dữ liệu nhu cầu thật từ đợt bán thử.</p>
+<section class="guide okr" id="2026-10"><header class="g-head"><span class="badge b-int">2026-10</span><h3>O-10 · Nền tảng xong để làm thật</h3></header><p class="g-purpose">Tên, kênh, tracker và danh mục kiểm tra là điều kiện để mọi việc sau chạy được</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>K05</code></td><td>Mã đạt 7 tiêu chí (luỹ kế)</td><td><strong>≥ 5 mã</strong></td><td>Đòn bẩy</td><td><span class="r src">SRC</span></td></tr><tr><td><code>K07</code></td><td>Bài nội dung tự nhiên</td><td><strong>≥ 12 bài/tháng</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K13</code></td><td>Launch blockers còn mở</td><td><strong>≤ 4 mục</strong></td><td>Đòn bẩy</td><td><span class="r ceo">CEO</span></td></tr><tr><td><code>K14</code></td><td>Mã hạng A đã đối chiếu (luỹ kế)</td><td><strong>≥ 30 mã</strong></td><td>Đòn bẩy</td><td><span class="r src">SRC</span></td></tr></tbody></table></div><p><strong>Việc chính:</strong> F1 Tên miền, handle 4 kênh, email hỗ trợ, F2 Shopify, Pixel/CAPI, TikTok pixel, F3 Tracker / Source of truth chạy thật, F4 Chốt bên bán hàng + GST (blocker), P1 Đối chiếu 60 mã hạng A, P2 Hàng mẫu: đo, chụp, thử lắp, P4 Chốt forwarder + đại lý hải quan Úc, W3 Kho nội dung 4 trụ + lịch TikTok/FB</p></section>
+
+<section class="guide okr" id="2026-11"><header class="g-head"><span class="badge b-int">2026-11</span><h3>O-11 · Danh mục chuẩn + chuỗi cung ứng đã ký</h3></header><p class="g-purpose">Chỉ bán mã đã có mẫu và NCC đã ký chứng từ</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>K05</code></td><td>Mã đạt 7 tiêu chí (luỹ kế)</td><td><strong>≥ 20 mã</strong></td><td>Đòn bẩy</td><td><span class="r src">SRC</span></td></tr><tr><td><code>K06</code></td><td>Mã đang bán trên web</td><td><strong>≥ 10 mã</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K07</code></td><td>Bài nội dung tự nhiên</td><td><strong>≥ 20 bài/tháng</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K13</code></td><td>Launch blockers còn mở</td><td><strong>≤ 2 mục</strong></td><td>Đòn bẩy</td><td><span class="r ceo">CEO</span></td></tr><tr><td><code>K14</code></td><td>Mã hạng A đã đối chiếu (luỹ kế)</td><td><strong>≥ 60 mã</strong></td><td>Đòn bẩy</td><td><span class="r src">SRC</span></td></tr></tbody></table></div><p><strong>Việc chính:</strong> F4 Chốt bên bán hàng + GST (blocker), P1 Đối chiếu 60 mã hạng A, P2 Hàng mẫu: đo, chụp, thử lắp, P3 NCC ký bộ chứng từ, P4 Chốt forwarder + đại lý hải quan Úc, W1 Đăng 20–30 mã chuẩn lên web, W2 Luật sư Úc rà chính sách, W3 Kho nội dung 4 trụ + lịch TikTok/FB, W4 Ký 3–5 creator Úc</p><p><strong>Cổng:</strong> ≥ 20 mã đạt 7 tiêu chí</p></section>
+
+<section class="guide okr" id="2026-12"><header class="g-head"><span class="badge b-int">2026-12</span><h3>O-12 · Mở bán thử một cách trung thực</h3></header><p class="g-purpose">Web và chính sách được duyệt, đo nhu cầu thật bằng quảng cáo nhỏ</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>K01</code></td><td>Đơn đã thanh toán</td><td><strong>≥ 8 đơn/tháng</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K04</code></td><td>MER (doanh thu ÷ chi quảng cáo)</td><td><strong>≥ 3 lần</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K06</code></td><td>Mã đang bán trên web</td><td><strong>≥ 25 mã</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K07</code></td><td>Bài nội dung tự nhiên</td><td><strong>≥ 25 bài/tháng</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K08</code></td><td>Tỉ lệ chuyển đổi web</td><td><strong>≥ 0,8%</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K13</code></td><td>Launch blockers còn mở</td><td><strong>≤ 0 mục</strong></td><td>Đòn bẩy</td><td><span class="r ceo">CEO</span></td></tr><tr><td><code>G02</code></td><td>Phản hồi đầu (trung vị)</td><td><strong>≤ 4 giờ LV</strong></td><td>Rào chắn</td><td><span class="r cx">CX</span></td></tr><tr><td><code>G05</code></td><td>Huỷ / hoàn tiền</td><td><strong>≤ 5%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr></tbody></table></div><p><strong>Việc chính:</strong> W1 Đăng 20–30 mã chuẩn lên web, W2 Luật sư Úc rà chính sách, W3 Kho nội dung 4 trụ + lịch TikTok/FB, W4 Ký 3–5 creator Úc, D1 Bán thử: TikTok → Meta, đo MER, L1 Lô LCL đầu tiên (gom tuần)</p><p><strong>Cổng:</strong> web + chính sách đã duyệt</p></section>
+
+<h2 id="y2027">2027 theo quý</h2>
+<p>Mục tiêu năm 2027: <strong>từ dropship minh bạch sang có hàng sẵn tại Úc cho mã thắng, rồi mở Amazon AU</strong>, trong khi luôn giữ ≥ 90% đơn giao trong khung đã hứa.</p>
+<section class="guide okr" id="2027-q1"><header class="g-head"><span class="badge b-int">2027-Q1</span><h3>O-Q1 · Giao đúng lời hứa cho lứa khách đầu</h3></header><p class="g-purpose">Lứa đơn đầu quyết định đánh giá và tỉ lệ quay lại</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>NS1</code></td><td>Đơn giao trong khung đã hứa</td><td><strong>≥ 9 đơn/tháng</strong></td><td>North Star</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>K01</code></td><td>Đơn đã thanh toán</td><td><strong>≥ 20 đơn/tháng</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K03</code></td><td>Lãi thực / đơn</td><td><strong>≥ 30%</strong></td><td>Kết quả</td><td><span class="r fin">FIN</span></td></tr><tr><td><code>K04</code></td><td>MER (doanh thu ÷ chi quảng cáo)</td><td><strong>≥ 4 lần</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K06</code></td><td>Mã đang bán trên web</td><td><strong>≥ 30 mã</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>G01</code></td><td>Giao trong khung đã hứa</td><td><strong>≥ 90%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G02</code></td><td>Phản hồi đầu (trung vị)</td><td><strong>≤ 4 giờ LV</strong></td><td>Rào chắn</td><td><span class="r cx">CX</span></td></tr><tr><td><code>G03</code></td><td>Tỉ lệ case</td><td><strong>≤ 3%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G04</code></td><td>Chargeback</td><td><strong>≤ 0,5%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G05</code></td><td>Huỷ / hoàn tiền</td><td><strong>≤ 5%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr></tbody></table></div><p class="muted">Cả quý: 45 đơn kế hoạch · doanh thu ước tính A$40,500 (AOV giả định A$900).</p><p><strong>Việc chính:</strong> D1 Bán thử: TikTok → Meta, đo MER, D2 Mở rộng quảng cáo theo MER, L1 Lô LCL đầu tiên (gom tuần), L2 Giao đơn đầu tiên tới khách Úc, O1 Rà khung ETA theo dữ liệu thật, O2 Thêm / loại mã theo lãi thực</p><p><strong>Cổng:</strong> MER ≥ 4 trong 2 tuần</p></section>
+
+<section class="guide okr" id="2027-q2"><header class="g-head"><span class="badge b-int">2027-Q2</span><h3>O-Q2 · Tìm ra mã thắng và nhịp tăng trưởng ổn định</h3></header><p class="g-purpose">Dữ liệu bán thật để chọn mã nhập kho</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>NS1</code></td><td>Đơn giao trong khung đã hứa</td><td><strong>≥ 23 đơn/tháng</strong></td><td>North Star</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>K01</code></td><td>Đơn đã thanh toán</td><td><strong>≥ 35 đơn/tháng</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K03</code></td><td>Lãi thực / đơn</td><td><strong>≥ 30%</strong></td><td>Kết quả</td><td><span class="r fin">FIN</span></td></tr><tr><td><code>K04</code></td><td>MER (doanh thu ÷ chi quảng cáo)</td><td><strong>≥ 4 lần</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K07</code></td><td>Bài nội dung tự nhiên</td><td><strong>≥ 30 bài/tháng</strong></td><td>Đòn bẩy</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K09</code></td><td>Mã thắng (≥ 5 đơn/tháng × 2 tháng)</td><td><strong>≥ 3 mã</strong></td><td>Đòn bẩy</td><td><span class="r src">SRC</span></td></tr><tr><td><code>G01</code></td><td>Giao trong khung đã hứa</td><td><strong>≥ 90%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G03</code></td><td>Tỉ lệ case</td><td><strong>≤ 3%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G05</code></td><td>Huỷ / hoàn tiền</td><td><strong>≤ 4%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr></tbody></table></div><p class="muted">Cả quý: 90 đơn kế hoạch · doanh thu ước tính A$81,000 (AOV giả định A$900).</p><p><strong>Việc chính:</strong> D3 Tìm mã thắng + creator/UGC luân phiên, L3 Chọn 3PL Úc, báo giá, hợp đồng</p><p><strong>Cổng:</strong> kho Úc: 30–40 đơn/tháng × 2 tháng + ≥ 3 mã thắng; nhãn hiệu: quyết nộp đơn IP Australia</p></section>
+
+<section class="guide okr" id="2027-q3"><header class="g-head"><span class="badge b-int">2027-Q3</span><h3>O-Q3 · Có hàng sẵn tại Úc cho mã thắng</h3></header><p class="g-purpose">Rút thời gian giao từ 8–12 tuần xuống 2–7 ngày</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>NS1</code></td><td>Đơn giao trong khung đã hứa</td><td><strong>≥ 36 đơn/tháng</strong></td><td>North Star</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>K01</code></td><td>Đơn đã thanh toán</td><td><strong>≥ 60 đơn/tháng</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K03</code></td><td>Lãi thực / đơn</td><td><strong>≥ 30%</strong></td><td>Kết quả</td><td><span class="r fin">FIN</span></td></tr><tr><td><code>K10</code></td><td>Mã có tồn tại kho Úc</td><td><strong>≥ 8 mã</strong></td><td>Đòn bẩy</td><td><span class="r log">LOG</span></td></tr><tr><td><code>K11</code></td><td>Sell-through tồn trong 90 ngày</td><td><strong>≥ 60%</strong></td><td>Đòn bẩy</td><td><span class="r fin">FIN</span></td></tr><tr><td><code>G01</code></td><td>Giao trong khung đã hứa</td><td><strong>≥ 92%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G03</code></td><td>Tỉ lệ case</td><td><strong>≤ 3%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr></tbody></table></div><p class="muted">Cả quý: 150 đơn kế hoạch · doanh thu ước tính A$135,000 (AOV giả định A$900).</p><p><strong>Việc chính:</strong> D4 Bán &quot;giao nhanh từ kho Úc&quot; trên Shopify, L4 Nhập lô đầu vào 3PL (5–10 mã thắng), O3 Theo dõi tồn: sell-through, vòng quay, S2 Nộp nhãn hiệu (nhóm 20 + 35)</p></section>
+
+<section class="guide okr" id="2027-q4"><header class="g-head"><span class="badge b-int">2027-Q4</span><h3>O-Q4 · Mở kênh Amazon AU và chạy mùa cao điểm</h3></header><p class="g-purpose">Chỉ mở khi đã có tồn để không vỡ chỉ số Amazon</p><div class="tbl"><table data-plan><thead><tr><th>KPI</th><th>Chỉ số</th><th>Mục tiêu</th><th>Loại</th><th>Chủ</th></tr></thead><tbody><tr><td><code>NS1</code></td><td>Đơn giao trong khung đã hứa</td><td><strong>≥ 68 đơn/tháng</strong></td><td>North Star</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>K01</code></td><td>Đơn đã thanh toán</td><td><strong>≥ 110 đơn/tháng</strong></td><td>Kết quả</td><td><span class="r mkt">MKT</span></td></tr><tr><td><code>K03</code></td><td>Lãi thực / đơn</td><td><strong>≥ 30%</strong></td><td>Kết quả</td><td><span class="r fin">FIN</span></td></tr><tr><td><code>K15</code></td><td>Đơn Amazon AU</td><td><strong>≥ 15 đơn/tháng</strong></td><td>Đòn bẩy</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G01</code></td><td>Giao trong khung đã hứa</td><td><strong>≥ 92%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G04</code></td><td>Chargeback</td><td><strong>≤ 0,5%</strong></td><td>Rào chắn</td><td><span class="r ops">OPS</span></td></tr><tr><td><code>G06</code></td><td>Amazon Late Shipment Rate</td><td><strong>≤ 4%</strong></td><td>Rào chắn</td><td><span class="r log">LOG</span></td></tr><tr><td><code>G07</code></td><td>Amazon Valid Tracking Rate</td><td><strong>≥ 95%</strong></td><td>Rào chắn</td><td><span class="r log">LOG</span></td></tr></tbody></table></div><p class="muted">Cả quý: 285 đơn kế hoạch · doanh thu ước tính A$256,500 (AOV giả định A$900).</p><p><strong>Việc chính:</strong> D5 Cao điểm Black Friday / Giáng sinh, O3 Theo dõi tồn: sell-through, vòng quay, O4 Kế hoạch 2028, S3 Amazon AU (FBM từ 3PL) – chỉ mã có tồn, S4 Đánh giá NZ / Singapore</p></section>
+
+<h2 id="gates">Cổng quyết định</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Cổng</th>
+<th>Điều kiện (đo bằng dữ liệu)</th>
+<th>Quyết định khi đạt</th>
+<th>Dự kiến</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mở rộng quảng cáo</td>
+<td>MER ≥ 4 trong 2 tuần liên tiếp, G05 ≤ 5%</td>
+<td>Tăng ngân sách theo bậc, mỗi bậc giữ 1 tuần</td>
+<td>01/2027</td>
+</tr>
+<tr>
+<td>Kho tại Úc (3PL)</td>
+<td>30–40 đơn Úc/tháng ổn định 2 tháng <strong>và</strong> ≥ 3 mã thắng</td>
+<td>Nhập lô LCL đầu cho 5–10 mã thắng vào 3PL</td>
+<td>06/2027</td>
+</tr>
+<tr>
+<td>Nộp nhãn hiệu tại Úc</td>
+<td>Qua cổng kho Úc, hoặc chuẩn bị chi quảng cáo lớn, hoặc trước khi lên Amazon</td>
+<td>Nộp IP Australia nhóm 20 (nội thất) + 35 (bán lẻ online)</td>
+<td>07/2027</td>
+</tr>
+<tr>
+<td>Amazon AU</td>
+<td>Có tồn tại Úc; tự đo được Late Shipment &lt; 4%, Valid Tracking &gt; 95%, huỷ &lt; 2,5%</td>
+<td>Mở FBM từ kho 3PL, chỉ mã có sẵn</td>
+<td>10/2027</td>
+</tr>
+<tr>
+<td>NZ / Singapore</td>
+<td>G01 ≥ 90% trong 3 tháng liên tiếp, lãi thực ≥ 30%</td>
+<td>Lập kế hoạch thị trường thứ hai cho 2028</td>
+<td>Q4/2027</td>
+</tr>
+</tbody>
+</table></div>
+<p>Trước khi qua cổng nhãn hiệu: giữ tên miền và handle, lưu bằng chứng ngày bắt đầu dùng tên. Đây là hướng dẫn vận hành, không phải tư vấn pháp lý.</p>
+<h2 id="update">Cập nhật kế hoạch</h2>
+<div class="tbl"><table>
+<thead>
+<tr>
+<th>Nhịp</th>
+<th>Ai</th>
+<th>Việc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thứ Sáu hằng tuần</td>
+<td><span class="r ops">OPS</span></td>
+<td>Cập nhật cột <code>status</code> trong <code>plan/roadmap.csv</code></td>
+</tr>
+<tr>
+<td>Ngày 01 hằng tháng</td>
+<td><span class="r ceo">CEO</span> + <span class="r ops">OPS</span></td>
+<td>So kết quả thực (Google Sheet) với mục tiêu tháng/quý; chỉnh <code>kpi_targets.csv</code>, <code>orders_plan.csv</code> nếu cần</td>
+</tr>
+<tr>
+<td>Cuối quý</td>
+<td><span class="r ceo">CEO</span></td>
+<td>Chấm OKR quý, chốt Objective quý sau trong <code>objectives.csv</code></td>
+</tr>
+</tbody>
+</table></div>
+<pre><code class="language-bash">python tools/build_plan.py   # kiểm tra dữ liệu, tạo plan/README.md (Gantt Mermaid) + SVG
+python build.py              # build lại website
+python tools/check_links.py  # phải báo 0 broken
+</code></pre>
+<p>Repo này công khai: <strong>chỉ commit kế hoạch và mục tiêu</strong>. Số thực tế (doanh thu, chi phí, đơn hàng) chỉ nằm trong Google Sheet nội bộ.</p></article>
+<div class="pager"><a class="prev" href="mo-hinh-kinh-doanh.html">← Business Model &amp; Unit Economics</a><a class="next" href="lo-trinh-90-ngay.html">90-Day Launch Plan →</a></div>
+<footer>[BRAND] · Quiet, honest furniture — how we work.</footer></main></div>
+<script>
+function openTarget(){var id=decodeURIComponent(location.hash.slice(1));if(!id)return;var el=document.getElementById(id);if(!el)return;var d=el.closest("details")||(el.tagName==="DETAILS"?el:null);if(d){d.open=true;}}
+window.addEventListener("hashchange",openTarget);openTarget();
+</script>
+</body></html>

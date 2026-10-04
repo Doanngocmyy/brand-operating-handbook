@@ -1,0 +1,5 @@
+key,value,source
+as_of,2026-10-05,Ngày lập kế hoạch
+aov_aud,900,Trung vị giá trị đơn Úc của mô hình tham khảo (mo-hinh-kinh-doanh.html#reference)
+delivery_lag_months,2,Trung vị giao Úc ~8–9 tuần → đơn tháng m giao xong ở tháng m+2
+in_window_rate,0.9,Mục tiêu G01: ≥ 90% đơn giao trong khung đã hứa

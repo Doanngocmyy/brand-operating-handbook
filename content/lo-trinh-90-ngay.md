@@ -5,13 +5,13 @@ badges: internal, blocker
 
 # Lộ trình 90 ngày
 
-Bốn giai đoạn, mỗi giai đoạn chỉ bắt đầu khi qua cổng duyệt phía trước. Ngày bắt đầu giả định: 05/10/2026.
+Bốn giai đoạn, mỗi giai đoạn chỉ bắt đầu khi qua cổng duyệt phía trước. Ngày bắt đầu giả định: 05/10/2026. Lộ trình dài hạn, OKR và KPI theo tháng/quý: [Strategy, OKR & Roadmap](chien-luoc-ke-hoach.html).
 
 <p class="anchor-p" id="phases">Bốn giai đoạn</p>
 
 | Giai đoạn | Thời gian | Việc chính | Cổng để qua |
 |---|---|---|---|
-| 1. Nền tảng | Tuần 1–2 (05–18/10) | Chốt tên brand, tên miền, nhãn hiệu; pháp nhân và tài khoản; Meta Business Portfolio riêng; Shopify + Pixel/CAPI | Tên + pháp nhân đã xong |
+| 1. Nền tảng | Tuần 1–2 (05–18/10) | Chốt tên brand, tên miền, handle (nhãn hiệu: nộp theo [cổng quyết định](chien-luoc-ke-hoach.html#gates)); pháp nhân và tài khoản; Meta Business Portfolio riêng; Shopify + Pixel/CAPI | Tên + pháp nhân đã xong |
 | 2. Sản phẩm & NCC | Tuần 3–6 (19/10–15/11) | Đối chiếu 60 mã hạng A; hàng mẫu: đo, chụp, thử lắp; NCC ký bộ chứng từ; chốt forwarder và đại lý hải quan Úc | ≥ 20 mã đạt 7 tiêu chí |
 | 3. Web & nội dung | Tuần 7–10 (16/11–13/12) | Đăng 20–30 mã chuẩn; chính sách được luật sư rà; kho nội dung 4 trụ; ký 3–5 creator Úc | Web + chính sách đã duyệt |
 | 4. Bán thử | Tuần 11–13 (14/12–03/01) | Quảng cáo test Meta + Google; email/SMS theo mốc thật; container đầu tiên; đo MER, hủy, chargeback | MER ≥ 4 trong 2 tuần → mở rộng |

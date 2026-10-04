@@ -11,13 +11,15 @@ Hệ điều hành vận hành cho một brand nội thất bán trực tiếp (
 | Start here | Operating Map · Find by role · Find by task / event |
 | Run the business | Standard Order (SOP-A) · Exceptions & Cases (SOP-B) · KPI, SLA & Rhythm |
 | Standards | Product & SKU · Supplier & QC · Packaging, Labels & Import Docs · Brand & Marketing Rules · Customer-facing Policy |
-| Management | Roles, Authority & Access · Business Model & Unit Economics · 90-Day Launch Plan · Tools & Templates |
+| Management | Roles, Authority & Access · Business Model & Unit Economics · Strategy, OKR & Roadmap · 90-Day Launch Plan · Tools & Templates |
 | About | Operating principles · Founder note |
 
 ## Cấu trúc repo
 
 ```
 content/      Markdown của từng trang (sửa nội dung ở đây)
+plan/         Roadmap (Gantt), OKR, KPI targets dạng CSV: nguồn dữ liệu của trang Strategy, OKR & Roadmap
+plan_data.py  Đọc + kiểm tra plan/*.csv, vẽ Gantt/biểu đồ SVG, bảng OKR
 site_map.py   Menu, thẻ vị trí/sự kiện, bản đồ S1–S8, control panel SOP, source of truth, launch blockers
 assets/       CSS + swimlane SVG (assets/sop, tạo bởi tools/swimlane.py)
 docs/         Website đã build (GitHub Pages) + trang chuyển hướng từ URL cũ
@@ -29,6 +31,7 @@ build.py      Tạo lại docs/ từ content/ + site_map.py
 
 ```bash
 pip install markdown
+python tools/build_plan.py   # kiểm tra plan/*.csv, tạo plan/README.md
 python build.py
 python tools/check_links.py   # phải báo 0 broken
 ```

@@ -1,0 +1,23 @@
+kpi_id,name,level,unit,direction,aggregation,owner,source,page
+NS1,Đơn giao trong khung đã hứa,north_star,đơn/tháng,>=,exit,OPS,Tracker DON: Giao trong khung = Có,kpi-sla-nhip.html#kpi-tree
+K01,Đơn đã thanh toán,outcome,đơn/tháng,>=,exit,MKT,Shopify + Amazon (từ Q4/2027),kpi-sla-nhip.html#dashboard
+K02,Doanh thu ước tính,outcome,A$,>=,sum,FIN,Đơn × AOV giả định (plan/assumptions.csv),mo-hinh-kinh-doanh.html#reference
+K03,Lãi thực / đơn,outcome,%,>=,rate,FIN,File chi phí thực (không public),mo-hinh-kinh-doanh.html#pricing
+K04,MER (doanh thu ÷ chi quảng cáo),outcome,lần,>=,rate,MKT,Ads Manager + Shopify,kpi-sla-nhip.html#kpi-tree
+K05,Mã đạt 7 tiêu chí (luỹ kế),driver,mã,>=,exit,SRC,Danh mục chuẩn,chuan-san-pham.html
+K06,Mã đang bán trên web,driver,mã,>=,exit,MKT,Shopify,chuan-san-pham.html
+K07,Bài nội dung tự nhiên,driver,bài/tháng,>=,exit,MKT,Lịch nội dung,thuong-hieu-marketing.html
+K08,Tỉ lệ chuyển đổi web,driver,%,>=,rate,MKT,Shopify Analytics,thuong-hieu-marketing.html
+K09,Mã thắng (≥ 5 đơn/tháng × 2 tháng),driver,mã,>=,exit,SRC,Tracker DON theo SKU,chuan-san-pham.html
+K10,Mã có tồn tại kho Úc,driver,mã,>=,exit,LOG,3PL,mo-hinh-kinh-doanh.html#phase-2
+K11,Sell-through tồn trong 90 ngày,driver,%,>=,rate,FIN,3PL + tracker,mo-hinh-kinh-doanh.html#phase-2
+K13,Launch blockers còn mở,driver,mục,<=,exit,CEO,Launch blockers,lo-trinh-90-ngay.html#blockers
+K14,Mã hạng A đã đối chiếu (luỹ kế),driver,mã,>=,exit,SRC,Danh mục chuẩn,chuan-san-pham.html
+K15,Đơn Amazon AU,driver,đơn/tháng,>=,exit,OPS,Seller Central AU,mo-hinh-kinh-doanh.html#phase-2
+G01,Giao trong khung đã hứa,guardrail,%,>=,rate,OPS,Tracker DON,kpi-sla-nhip.html#kpi-tree
+G02,Phản hồi đầu (trung vị),guardrail,giờ LV,<=,rate,CX,Tracker CASE,kpi-sla-nhip.html#kpi-tree
+G03,Tỉ lệ case,guardrail,%,<=,rate,OPS,Tracker CASE,kpi-sla-nhip.html#kpi-tree
+G04,Chargeback,guardrail,%,<=,rate,OPS,Tracker CASE,kpi-sla-nhip.html#kpi-tree
+G05,Huỷ / hoàn tiền,guardrail,%,<=,rate,OPS,Shopify + tracker,mo-hinh-kinh-doanh.html#pricing
+G06,Amazon Late Shipment Rate,guardrail,%,<=,rate,LOG,Seller Central AU,mo-hinh-kinh-doanh.html#phase-2
+G07,Amazon Valid Tracking Rate,guardrail,%,>=,rate,LOG,Seller Central AU,mo-hinh-kinh-doanh.html#phase-2

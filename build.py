@@ -7,6 +7,7 @@ Requires: pip install markdown
 - Placeholders that must sit on their own line in a page:
     {{SVG:a}} {{PANEL:sop-a}} {{ROLE_CARDS}} {{TASK_CARDS}} {{LIFECYCLE}} {{RHYTHM}} {{ROLE_GUIDES}}
     {{TASK_ROUTES}} {{CASE_ROUTER}} {{SOT:order,case}} {{SOT_TABLE}} {{BLOCKER:gst}} {{BLOCKERS}} {{BLOCKER_STRIP}}
+    {{PLAN:gantt}} {{PLAN:orders}} {{OKR:2027-Q1}} {{KPI_DICT}} {{YEAR_SUMMARY}}   (data: plan/*.csv via plan_data.py)
   Inline: {{BLK:gst}} (launch-blocker pill), {{BRAND}}, {{REPO}}.
 - Old page URLs get redirect stubs so existing links keep working.
 """
@@ -17,6 +18,7 @@ from pathlib import Path
 
 import markdown
 
+import plan_data as PD
 import site_map as SM
 
 ROOT = Path(__file__).parent
@@ -209,12 +211,27 @@ def c_blk_inline(m):
     return f'<a class="blk" href="lo-trinh-90-ngay.html#blk-{k}" title="Launch blocker: {E(SM.BLOCKERS[k][0])}">⚠ {E(SM.BLOCKERS[k][0])}</a>'
 
 
+PLAN = PD.load()
+_plan_errs = PD.validate(PLAN)
+if _plan_errs:
+    raise SystemExit("plan/*.csv has problems, run tools/build_plan.py:\n  " + "\n  ".join(_plan_errs))
+PLAN_SVG = {"gantt": PD.render_gantt_svg(PLAN), "orders": PD.render_orders_svg(PLAN)}
+
+
+def c_plan(name):
+    return (f'<div class="swim" tabindex="0" role="region" aria-label="Biểu đồ, kéo ngang để xem hết">{PLAN_SVG[name]}</div>\n'
+            f'<p class="swim-cap">Kéo ngang để xem hết · <a href="plan/{name}.svg" target="_blank" rel="noopener">Mở bản lớn / in ↗</a> · '
+            f'Dữ liệu: <a href="https://github.com/{REPO}/tree/main/plan">plan/*.csv</a></p>')
+
+
 BLOCK = {
+    "KPI_DICT": lambda: PD.render_kpi_dict(PLAN), "YEAR_SUMMARY": lambda: PD.render_year_summary(PLAN),
     "ROLE_CARDS": c_role_cards, "TASK_CARDS": c_task_cards, "LIFECYCLE": c_lifecycle, "RHYTHM": c_rhythm,
     "ROLE_GUIDES": c_role_guides, "TASK_ROUTES": c_task_routes, "CASE_ROUTER": c_case_router,
     "SOT_TABLE": c_sot_table, "BLOCKERS": c_blockers, "BLOCKER_STRIP": c_blocker_strip,
 }
-BLOCK_ARG = {"SVG": c_svg, "PANEL": c_panel, "SOT": c_sot, "BLOCKER": c_blocker}
+BLOCK_ARG = {"SVG": c_svg, "PANEL": c_panel, "SOT": c_sot, "BLOCKER": c_blocker,
+             "PLAN": c_plan, "OKR": lambda period: PD.render_okr(PLAN, period)}
 
 
 def expand(raw):
@@ -266,6 +283,9 @@ CSS = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
 (OUT / "sop").mkdir(exist_ok=True)
 for f in (ROOT / "assets" / "sop").glob("*.svg"):
     (OUT / "sop" / f.name).write_text(f.read_text(encoding="utf-8"), encoding="utf-8")
+(OUT / "plan").mkdir(exist_ok=True)
+for _name, _svg in PLAN_SVG.items():
+    (OUT / "plan" / f"{_name}.svg").write_text(_svg, encoding="utf-8")
 
 
 CUR = ' aria-current="page" class="on"'

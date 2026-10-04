@@ -29,6 +29,7 @@ PAGES = [
     ("chinh-sach-khach-hang",   "std",   "Customer-facing Policy",               "chinh-sach-khach-hang.md",  "09-chinh-sach"),
     ("vai-tro-quyen-han",       "mgmt",  "Roles, Authority & Access",            "vai-tro-quyen-han.md",      "03-to-chuc-vai-tro"),
     ("mo-hinh-kinh-doanh",      "mgmt",  "Business Model & Unit Economics",      "mo-hinh-kinh-doanh.md",     "02-mo-hinh-kinh-doanh"),
+    ("chien-luoc-ke-hoach",     "mgmt",  "Strategy, OKR & Roadmap",              "chien-luoc-ke-hoach.md",    None),
     ("lo-trinh-90-ngay",        "mgmt",  "90-Day Launch Plan",                   "lo-trinh-90-ngay.md",       "12-lo-trinh-90-ngay"),
     ("cong-cu-bieu-mau",        "mgmt",  "Tools & Templates",                    "cong-cu-bieu-mau.md",       "13-cong-cu-mau"),
     # low-priority "About" pages: linked under the sidebar, not in the main hierarchy
