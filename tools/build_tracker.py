@@ -371,18 +371,18 @@ def d(n):
     return T0 + timedelta(days=n) if n is not None else None
 
 demo = [  # id, mkt, sku, value, paid, conf, po, promise, sup, qc, ship, cust, hand, deliv, close, cancel, lastupd
-    ("DEMO-1001", "AU", "TVC-OAK-180", 980, -95, -95, -94, -80, -79, -74, -70, -45, -36, -33, -19, None, -40),
-    ("DEMO-1002", "AU", "CFT-WAL-120", 720, -88, -88, -86, -73, -71, -67, -63, -40, -34, -30, None, None, -35),
-    ("DEMO-1003", "SG", "SHO-WHT-100", 540, -45, -45, -44, -32, -31, -27, -21, -6, -3, -1, None, None, -6),
-    ("DEMO-1004", "AU", "BUF-BLK-160", 1250, -70, -70, -69, -55, -50, -46, -41, -12, None, None, None, None, -12),
-    ("DEMO-1005", "AU", "BKS-OAK-080", 610, -60, -60, -59, -45, -44, -40, -35, None, None, None, None, None, -10),
-    ("DEMO-1006", "AU", "DTB-WAL-180", 1490, -40, -40, -39, -24, -15, -12, None, None, None, None, None, None, -9),
-    ("DEMO-1007", "SG", "TVC-WHT-160", 830, -20, -20, -19, -6, None, None, None, None, None, None, None, None, -6),
-    ("DEMO-1008", "AU", "CFT-OAK-100", 690, -12, -12, -11, -3, None, None, None, None, None, None, None, None, -12),
-    ("DEMO-1009", "AU", "SHO-GRY-120", 560, -3, -3, None, None, None, None, None, None, None, None, None, None, -3),
-    ("DEMO-1010", "AU", "BUF-OAK-140", 1100, -1, -1, None, None, None, None, None, None, None, None, None, None, -1),
-    ("DEMO-1011", "AU", "DTB-OAK-160", 1320, -80, -80, -79, -65, -64, -60, -56, None, None, None, None, None, -8),
-    ("DEMO-1012", "AU", "BKS-BLK-100", 650, -30, -30, None, None, None, None, None, None, None, None, None, -29, -29),
+    ("DEMO-1001", "AU", "TVU0001-V001", 980, -95, -95, -94, -80, -79, -74, -70, -45, -36, -33, -19, None, -40),
+    ("DEMO-1002", "AU", "COF0001-V002", 720, -88, -88, -86, -73, -71, -67, -63, -40, -34, -30, None, None, -35),
+    ("DEMO-1003", "SG", "SHO0001-V001", 540, -45, -45, -44, -32, -31, -27, -21, -6, -3, -1, None, None, -6),
+    ("DEMO-1004", "AU", "SBD0001-V002", 1250, -70, -70, -69, -55, -50, -46, -41, -12, None, None, None, None, -12),
+    ("DEMO-1005", "AU", "BKS0002-V001", 610, -60, -60, -59, -45, -44, -40, -35, None, None, None, None, None, -10),
+    ("DEMO-1006", "AU", "DTB0002-V002", 1490, -40, -40, -39, -24, -15, -12, None, None, None, None, None, None, -9),
+    ("DEMO-1007", "SG", "TVU0002-V003", 830, -20, -20, -19, -6, None, None, None, None, None, None, None, None, -6),
+    ("DEMO-1008", "AU", "COF0002-V001", 690, -12, -12, -11, -3, None, None, None, None, None, None, None, None, -12),
+    ("DEMO-1009", "AU", "SHO0002-V002", 560, -3, -3, None, None, None, None, None, None, None, None, None, None, -3),
+    ("DEMO-1010", "AU", "SBD0002-V001", 1100, -1, -1, None, None, None, None, None, None, None, None, None, None, -1),
+    ("DEMO-1011", "AU", "DTB0001-V001", 1320, -80, -80, -79, -65, -64, -60, -56, None, None, None, None, None, -8),
+    ("DEMO-1012", "AU", "BKS0001-V003", 650, -30, -30, None, None, None, None, None, None, None, None, None, -29, -29),
 ]
 for i, row in enumerate(demo):
     r = 3 + i

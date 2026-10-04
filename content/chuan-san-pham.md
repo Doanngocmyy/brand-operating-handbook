@@ -9,20 +9,35 @@ Một mã hàng chỉ được bán khi đạt đủ 7 tiêu chí bên dưới. 
 
 {{SOT:sku,listing}}
 
-## Danh mục: 8 nhóm chính, mã cố định {#catalogue}
+## Mã sản phẩm và SKU {#catalogue}
 
-Mã sản phẩm có dạng `{nhóm chính}-{nhóm con}-{số thứ tự}`, ví dụ `LIV-TVU-0001`. SKU biến thể có dạng `{mã SP}-{mã màu}-{chiều rộng cm}`, ví dụ `LIV-TVU-0001-WAL-180`.
-
-| Nhóm chính | Mã | Nhóm con (mã) |
+| Mã | Ví dụ | Quy tắc |
 |---|---|---|
-| Living Room | LIV | TV Units (TVU) · Coffee Tables (COF) · Side Tables (SID) · Sofas (SOF) · Armchairs (ARM) |
-| Dining & Kitchen | DIN | Dining Tables (DTB) · Dining Chairs (DCH) · Bar Stools & Tables (BAR) · Sideboards & Buffets (SBD) · Wine & Display (WIN) · Kitchen Islands (KIS) |
-| Bedroom | BED | Bed Frames (BFR) · Bedside Tables (BST) · Chests & Dressers (DRS) · Wardrobes (WRD) |
-| Entryway & Storage | STO | Shoe Cabinets (SHO) · Console Tables (CON) · Bookshelves (SHE) · Storage Cabinets (CAB) · Benches (BEN) |
-| Home Office | OFF | Desks (DSK) · Office Chairs (OCH) |
-| Bathroom | BTH | Vanities (VAN) · Bathroom Cabinets (BCB) |
-| Decor & Lighting | DEC | Mirrors (MIR) · Lighting (LGT) · Rugs (RUG) · Wall Decor (WAL) |
-| Outdoor | OUT | Outdoor Furniture (ODF) |
+| Mã mẫu | `TVU0001` | Loại hàng (3 chữ) + số mẫu trong loại (4 số). Cấp một lần, không đổi, không tái sử dụng. |
+| SKU | `TVU0001-V001` | Mã mẫu + số cấu hình bán. Một SKU = một cấu hình cụ thể. |
+| Vị trí kho (sau này) | `AU01-A-01-03` | Kho, khu, kệ, tầng. Không nằm trong SKU. |
+
+Ý nghĩa của SKU (màu thân, màu chân/khung, W × D × H, cấu hình, vật liệu) nằm trong bảng **master SKU**, không nằm trong mã. Nhãn và phiếu soạn hàng in cả SKU lẫn mô tả, ví dụ `TVU0001-V001 · TV Unit · Walnut body / Black legs · W180 × D40 × H50 cm · CARTON 1 OF 3`.
+
+**Khi nào cấp SKU mới:** đổi màu, đổi kích thước quá 2 cm, đổi vật liệu, thêm hoặc bớt bộ phận (LED, ngăn kéo, chân…). **Giữ nguyên SKU** khi đổi NCC, đổi tên hiển thị màu hoặc đổi giá. SKU ngừng bán chuyển sang `ARCHIVED`, không cấp lại cho sản phẩm khác.
+
+**Mã đã cấp được khóa** trong file đăng ký mã (lưu nội bộ, không đưa lên repo công khai): chạy lại công cụ chuẩn hóa không đánh số lại.
+
+### Loại hàng: mỗi mẫu có đúng một loại chính {#types}
+
+Khi một chiếc tủ có thể thuộc nhiều loại, chọn loại **đầu tiên khớp** theo thứ tự: **TVU** kệ TV (thấp, H ≤ 70, để TV) → **VAN / BCB** phòng tắm (có chậu hoặc chịu ẩm) → **WIN** tủ trưng bày (cửa kính là chính) → **SHO** tủ giày (ngăn nghiêng/lật) → **SBD** tủ buffet (H ≤ 100, W ≥ 120) → **CAB** tủ đựng đồ còn lại.
+
+| Phòng (collection) | Loại hàng (mã) |
+|---|---|
+| Living | TV Units (TVU) · Coffee Tables (COF) · Side Tables (SID) · Sofas (SOF) · Armchairs (ARM) |
+| Dining | Dining Tables (DTB) · Dining Chairs (DCH) · Bar Tables (BRT) · Bar Stools (BSL) · Sideboards (SBD) · Display Cabinets (WIN) · Kitchen Islands (KIS) |
+| Bedroom | Bed Frames (BFR) · Bedside Tables (BST) · Chests of Drawers (DRS) · Wardrobes (WRD) |
+| Entryway & Storage | Shoe Cabinets (SHO) · Console Tables (CON) · Bookshelves (BKS) · Storage Cabinets (CAB) · Benches (BEN) |
+| Office | Desks (DSK) · Office Chairs (OCH) |
+| Bathroom | Vanities (VAN) · Bathroom Cabinets (BCB) |
+| Decor | Mirrors (MIR) · Lighting (LGT) · Rugs (RUG) · Wall Panels (WPN) |
+
+Phòng là **collection**, không phải loại: ghế dài, bàn console, kệ sách có thể nằm ở nhiều collection. Đồ ngoài trời ghi theo loại thật (bàn, ghế, sofa) kèm thuộc tính `outdoor`. Mã loại không đổi sau khi đã cấp cho mẫu; muốn tách nhóm thì chỉ cập nhật danh mục mã.
 
 ## Phân hạng: hàng chuẩn đi trước {#grading}
 
@@ -51,13 +66,13 @@ Mọi tên màu của NCC ("胡桃色", "walnut", "black walnut", "dark wood"…
 | Kim loại | Gold (GLD) · Silver (SLV) | brass, champagne, bronze → Gold |
 | Đặc biệt | Stone Pattern (STN) | các vân đá đặt tên riêng |
 
-**Hai tông màu** ghi theo thứ tự cố định: gỗ trước, kim loại sau, ví dụ `Walnut / Black`, `White / Gold`.
+**Hai tông màu** ghi theo thứ tự cố định: màu thân/mặt chính trước, màu chân/khung/viền sau, ví dụ `Walnut / Black`, `White / Gold`. Trong master SKU lưu thành hai cột `body_colour` và `accent_colour`.
 
 **Core palette của {{BRAND}}** (ưu tiên cho phong cách tối giản): Natural Oak · Walnut · Dark Walnut · Black · White · Cream · Beige · Grey · Light Grey · Dark Grey. Màu ngoài core chỉ thêm khi bán chạy.
 
 ## Kích thước và dung sai {#dimensions}
 
-Mọi kích thước ghi theo **W (rộng) × D (sâu) × H (cao), đơn vị cm**. Nguồn duy nhất là bản vẽ của NCC đã được kiểm bằng hàng mẫu.
+Mọi kích thước ghi theo chuẩn Úc **W × D × H, đơn vị cm**: W = ngang/dài mặt trước, D = sâu, H = cao. Bàn tròn ghi đường kính ở W. Nguồn duy nhất là bản vẽ của NCC đã được kiểm bằng hàng mẫu.
 
 | Việc | Dung sai | Vượt thì sao |
 |---|---|---|
