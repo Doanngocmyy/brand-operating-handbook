@@ -1,0 +1,2 @@
+asset_id,sku_version,market,asset_type,angle,real_or_render,source,usage_rights_status,rights_expiry,claims_checked,claims_evidence_source,mandatory_disclosure,channels_allowed,format,production_owner,approver,approved_date,review_date,status,notes
+A-EXAMPLE-001,TVU0001-V001 (SYNTHETIC),AU,image,Measured to fit,render,3D render from approved drawing,owned,n/a,W x D x H matches master SKU version,Master SKU vX,Label "Render",meta;instagram;pinterest,1080x1350 carousel,MKT,CEO,YYYY-MM-DD,YYYY-MM-DD,DRAFT,Synthetic example row only - no real data in public repo

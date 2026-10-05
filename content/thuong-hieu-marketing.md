@@ -9,6 +9,8 @@ badges: internal, onboarding
 
 {{SOT:listing,promise}}
 
+<aside class="note-cust" role="note"><b>Đọc cùng <a href="ke-hoach-marketing.html">Integrated Marketing Plan</a></b> · Trang này giữ quy tắc thương hiệu, câu cấm và quy ước hình ảnh. Khách mục tiêu, kênh, phễu, ngân sách và luật test ở mục 6–8 dưới đây là <b>giả thuyết kế thừa</b>; khi mâu thuẫn, kế hoạch tích hợp được ưu tiên. Không dùng câu "tracked at every step" hay "Made to order" khi chưa có bằng chứng.</aside>
+
 ## 1. Định vị {#positioning}
 
 > **Quiet, honest furniture.** Một món được cân nhắc kỹ. Kích thước chính xác. Chất liệu nói thật. Thời gian giao nói thật.
